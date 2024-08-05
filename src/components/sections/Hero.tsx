@@ -33,10 +33,10 @@ const Hero: React.FC = () => {
           transition={{ duration: 1.5 }} // Slower slide-in and fade-in
           ref={textRef}
         >
-          <h1 className="text-4xl font-bold w-[424px] h-[106px] text-center mb-4">
+          <h1 className="font-overpass text-4xl  leading-[53.17px]  *:text-4xl font-bold w-[424px] h-[106px] text-center mb-4">
             Welcome to Skill Spot Australia
           </h1>
-          <p className="text-base md:text-base lg:text-base mb-6 w-full md:w-[603px]">
+          <p className="font-overpass text-lg font-medium leading-[22.79px] text-left md:text-base lg:text-base mb-6 w-full md:w-[603px]">
             Welcome to Skill Spot Australia Pty Ltd, your RPL destination
             nationwide.
             <br /> Celebrating your unique journey, we recognize and honor your
