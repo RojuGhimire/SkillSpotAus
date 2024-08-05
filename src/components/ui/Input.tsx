@@ -17,6 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     let mouseX = useMotionValue(0);
     let mouseY = useMotionValue(0);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function handleMouseMove({ currentTarget, clientX, clientY }: any) {
       let { left, top } = currentTarget.getBoundingClientRect();
 
