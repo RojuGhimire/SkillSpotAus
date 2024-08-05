@@ -7,9 +7,14 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,js,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(to right, #203174 60%, #B5BBD2 30%)',
+      },
+      
       fontFamily: {
         primary: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        overpass: ['Overpass', 'sans-serif'], 
       },
       fontWeight: {
         regular: 400,
