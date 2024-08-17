@@ -13,13 +13,13 @@ const Hero2: React.FC = () => {
             <h1 className="text-3xl font-bold text-gray-800">Who Are We?</h1>
           </div>
           <div className="mx-auto  ">
-            <p className="text-[#6C757D] text-[17px] leading-[25px] text-left lg:mb-8">
+            <p className="text-[#6C757D] text-[17px] font-semibold leading-[25px] text-left lg:mb-8">
               Skill Spot Australia is not just an educational consultant; we're
               your partners in success. With a focus on Recognition of Prior
               Learning (RPL), training and qualifications, we’re your gateway to
               certifications across Australia.
             </p>
-            <p className="text-[#6C757D] text-[17px] leading-[25px] text-left">
+            <p className="text-[#6C757D] text-[17px] font-semibold leading-[25px] text-left">
               We understand that each individual's journey is unique. That's why
               we're committed to providing personalized guidance and support
               every step of the way. Whether you're aiming to advance in your
