@@ -6,7 +6,7 @@ import {
   FaMapMarkerAlt,
   FaFacebookF,
   FaWhatsapp,
-  FaLinkedinIn, 
+  FaLinkedinIn,
   FaInstagram,
   FaSearch,
   FaBars,
@@ -42,8 +42,9 @@ export default function Header() {
   };
 
   return (
-    <header className="z-50 fixed top-0 h-[146px]  left-0 w-full ">
-      <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-cente lg:px-20 mx-auto px-4 sm:px-6 py-2 md:px-8 md:py-2 text-sm">
+    <header className="z-50 fixed top-0 left-0 w-full">
+      {/* Top Bar */}
+      <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-center lg:px-20 px-4 py-2 text-sm">
         {/* Contact Info */}
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-1">
@@ -61,62 +62,65 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="bg-white h-[75px]  shadow-lg lg:px-20 mx-auto px-4 sm:px-6 ">
-        <div className="">
-          <div className="flex  h-16">
-            {/* Logo */}
-            <a
-              href="/"
-              onClick={() => {
-                setActiveLink("Home");
-                setTimeOfLastClick(Date.now());
-              }}
-            >
-              <img src="logo.png" alt="Logo" className="w-[100px] h-[73px] " />
-            </a>
+      {/* Main Navigation */}
+      <nav className="bg-white shadow-lg lg:px-20 px-4">
+        <div className="flex justify-between items-center h-[75px]">
+          {/* Logo */}
+          <a
+            href="/"
+            onClick={() => {
+              setActiveLink("Home");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            <img
+              src="logo.png"
+              alt="Logo"
+              className="w-[100px] h-[73px] object-contain"
+            />
+          </a>
 
-            {/* Navigation Links */}
-            <ul className="hidden lg:flex gap-8 items-center h-[75px] flex-grow justify-center">
-              {NAVLINKS.map((link) => (
-                <motion.li
-                  className={`font-bold cursor-pointer hover:text-primary ${
-                    activeLink === link.name ? "text-primary" : "text-text"
-                  }`}
-                  key={link.path}
-                  initial="hidden"
-                  animate="visible"
-                  variants={linkVariants}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                >
-                  <a
-                    href={link.path}
-                    className="font-poppins font-medium uppercase text-[15px] leading-[15px]"
-                    onClick={() => {
-                      setActiveLink(link.name);
-                      setTimeOfLastClick(Date.now());
-                      setMenuOpen(false);
-                    }}
-                  >
-                    {link.name}
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-
-            {/* Hamburger Menu Icon */}
-            <div className="lg:hidden flex items-end justify-end md:justify-end">
-              <button
-                onClick={() => setMenuOpen(!menuOpen)}
-                className="text-black focus:outline-none"
+          {/* Navigation Links */}
+          <ul className="hidden lg:flex gap-8 items-center">
+            {NAVLINKS.map((link) => (
+              <motion.li
+                className={`font-bold cursor-pointer hover:text-primary ${
+                  activeLink === link.name ? "text-primary" : "text-text"
+                }`}
+                key={link.path}
+                initial="hidden"
+                animate="visible"
+                variants={linkVariants}
+                transition={{ duration: 0.3, delay: 0.1 }}
               >
-                <FaBars className="h-6 w-6" />
-              </button>
-            </div>
+                <a
+                  href={link.path}
+                  className="font-poppins font-medium uppercase text-[15px] leading-[15px]"
+                  onClick={() => {
+                    setActiveLink(link.name);
+                    setTimeOfLastClick(Date.now());
+                    setMenuOpen(false);
+                  }}
+                >
+                  {link.name}
+                </a>
+              </motion.li>
+            ))}
+          </ul>
 
-            {/* Search Icon */}
-            <div className="hidden lg:flex items-center h-[75px] ">
-              <FaSearch className="text-white bg-primary h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
-            </div>
+          {/* Hamburger Menu Icon */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-black focus:outline-none"
+            >
+              <FaBars className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Search Icon */}
+          <div className="hidden lg:flex items-center">
+            <FaSearch className="text-white bg-primary h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
           </div>
         </div>
 
