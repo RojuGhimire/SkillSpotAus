@@ -4,31 +4,23 @@ export const NAVLINKS = [
     path: "#home",
   },
   {
-    name: "Our Team",
+    name: "About Us",
     path: "#about",
   },
 
   {
-    name: "Our Services",
-    path: "#services",
+    name: "RPL",
+    path: "#rpl",
   },
   {
-    name: "Software",
+    name: "Blog",
     path: "#software",
   },
+
   {
-    name: "Pricing",
-    path: "#pricing",
-  },
-  {
-    name: "Meeting",
-    path: "#appointment",
-  },
-  {
-    name: "Contact",
+    name: "Contact Us",
     path: "#contact",
   },
-
 ] as const;
 
 export const fadeInAnimationVariants = {
