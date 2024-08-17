@@ -10,6 +10,9 @@ export default {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to right, #203174 60%, #B5BBD2 30%)',
       },
+      boxShadow: {
+        'custom-shadow': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)', // Equivalent to #00000040
+      },
       
       fontFamily: {
         primary: ["Inter", "sans-serif"],

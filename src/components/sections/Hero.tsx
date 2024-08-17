@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
             <br />
             Unlocking potential, we help you achieve formal qualifications effortlessly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="flex flex-row md:px-44 lg:px-0 sm:flex-row gap-4 items-center justify-center lg:justify-start">
             <motion.button
               className="bg-[#001B6A] text-white px-4 py-2 rounded h-[38px] w-[117px]"
               whileHover={{ scale: 1.05 }}
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
           <motion.img
             src="/small.jpeg"
             alt="Small Image"
-            className="shadow-lg rounded-tl-[146.72px] rounded-br-[146.72px] w-[300px] sm:w-[400px] lg:w-[550px] h-auto lg:h-[334px]"
+            className="hidden md:flex shadow-lg rounded-tl-[146.72px] rounded-br-[146.72px] w-[300px] sm:w-[400px] lg:w-[550px] h-auto lg:h-[334px]"
             style={{
               borderTop: "none",
               borderRight: "5.14px solid #FFFFFF",
