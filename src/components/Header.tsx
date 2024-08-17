@@ -95,7 +95,7 @@ export default function Header() {
               >
                 <a
                   href={link.path}
-                  className="font-poppins font-medium uppercase text-[15px] leading-[15px]"
+                  className="font-overpass font-bold uppercase text-[15px] leading-[15px]"
                   onClick={() => {
                     setActiveLink(link.name);
                     setTimeOfLastClick(Date.now());

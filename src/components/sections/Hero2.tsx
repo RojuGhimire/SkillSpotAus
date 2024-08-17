@@ -3,9 +3,9 @@ import React from "react";
 const Hero2: React.FC = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:items-start p-8 lg:px-20 lg:h-[550px] lg:p-16">
-      <div className="flex flex-col lg:flex-row lg:-mt-8 ">
+      <div className="flex flex-col lg:flex-row  lg:-mt-8 ">
         {/* Left Content */}
-        <div className="lg:w-1/2  space-y-8 ">
+        <div className="lg:w-1/2  space-y-6 ">
           <div className="w-[242px] h-[92px] gap-[8px] ">
             <h2 className="text-secondary leading-[30px] text-lg font-bold">
               Skill Spot Australia
@@ -13,7 +13,7 @@ const Hero2: React.FC = () => {
             <h1 className="text-3xl font-bold text-gray-800">Who Are We?</h1>
           </div>
           <div className="mx-auto  ">
-            <p className="text-[#6C757D] text-[17px] leading-[25px] text-left mb-4">
+            <p className="text-[#6C757D] text-[17px] leading-[25px] text-left lg:mb-8">
               Skill Spot Australia is not just an educational consultant; we're
               your partners in success. With a focus on Recognition of Prior
               Learning (RPL), training and qualifications, we’re your gateway to
@@ -41,14 +41,14 @@ const Hero2: React.FC = () => {
             alt="Who Are We"
             className=" w-[700px] h-[425px] object-cover "
           />
-          <div className=" -mt-10  bg-white rounded-xl shadow-lg items-center justify-center  p-4 border-l-4 md:w-[364px] h-[85px] md:top-[350px] lg:left-[35px] hover:bg-white  border-secondary">
+          <div className=" -mt-10  bg-white rounded-xl shadow-lg items-center justify-center  p-4 border-l-4 md:w-[364px] h-[85px] md:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white  border-secondary">
             <div className="w-[231.61px] h-[39px] top-[17.59px] left-[25.73px] ">
-              <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left text-secondary">
+              <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left   " >
                 We Build for your comfort
               </h2>
-              <span className="font-overpass text-gray-800 font-bold text-lg">
+              <p className="font-overpass font-bold text-lg">
                 Call: +61 450 545 073
-              </span>
+              </p>
             </div>
           </div>
         </div>
