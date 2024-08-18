@@ -43,7 +43,7 @@ const Hero2: React.FC = () => {
           />
           <div className=" -mt-10  bg-white rounded-xl shadow-lg items-center justify-center  p-4 border-l-4 md:w-[364px] h-[85px] md:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white  border-secondary">
             <div className="w-[231.61px] h-[39px] top-[17.59px] left-[25.73px] ">
-              <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left   " >
+              <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left   ">
                 We Build for your comfort
               </h2>
               <p className="font-overpass font-bold text-lg">
