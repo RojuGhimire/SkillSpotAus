@@ -15,7 +15,7 @@
     @apply scroll-smooth;
   }
   .h {
-    @apply border border-red-500;
+    @apply border border-secondary;
   }
   .flex_center {
     @apply flex justify-center items-center;
