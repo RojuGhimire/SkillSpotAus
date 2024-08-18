@@ -3,6 +3,8 @@ import Hero from "../sections/Hero";
 import Frame from "../sections/Frame";
 import Footer2 from "../sections/Footer2";
 import Hero2 from "../sections/Hero2";
+import CourseGrid from "../sections/Course";
+// import NewsAndEvents from "../sections/News";
 
 const Homepage: React.FC = () => {
   return (
@@ -11,6 +13,8 @@ const Homepage: React.FC = () => {
         <Hero />
         <Frame />
         <Hero2 />
+        <CourseGrid />
+        {/* <NewsAndEvents /> */}
         <Footer2 />
       </div>
     </RootLayout>
