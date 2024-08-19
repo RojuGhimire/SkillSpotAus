@@ -7,25 +7,25 @@ const Hero2: React.FC = () => {
       <div className="flex flex-col lg:flex-row lg:-mt-8">
         {/* Left Content */}
         <motion.div
-          className="lg:w-1/2 space-y-6"
+          className="lg:w-1/2  space-y-6"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="w-[242px] h-[92px] gap-[8px]">
+          <div className="w-[242px] h-[92px]  lg:mt-12 gap-[8px]">
             <h2 className="text-secondary leading-[30px] text-lg font-bold">
               Skill Spot Australia
             </h2>
             <h1 className="text-3xl font-bold text-gray-800">Who Are We?</h1>
           </div>
           <div className="mx-auto">
-            <p className="text-[#6C757D] text-[17px] font-semibold leading-[25px] text-left lg:mb-8">
+            <p className="text-[#6C757D] text-[17px] font-semibold leading-[28px] text-left lg:mb-8">
               Skill Spot Australia is not just an educational consultant; we're
               your partners in success. With a focus on Recognition of Prior
               Learning (RPL), training and qualifications, we’re your gateway to
               certifications across Australia.
             </p>
-            <p className="text-[#6C757D] text-[17px] font-semibold leading-[25px] text-left">
+            <p className="text-[#6C757D] text-[17px] font-semibold leading-[28px] text-left">
               We understand that each individual's journey is unique. That's why
               we're committed to providing personalized guidance and support
               every step of the way. Whether you're aiming to advance in your
