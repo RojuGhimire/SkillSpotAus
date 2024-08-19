@@ -71,7 +71,6 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
 
-
         {/* Right Content - Image */}
         <motion.div
           className="relative  mt-8   lg:mt-0 flex justify-center w-full lg:w-[60%] "
