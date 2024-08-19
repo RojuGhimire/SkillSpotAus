@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           <h1 className="text-2xl font-overpass sm:text-3xl lg:text-4xl leading-snug lg:leading-[53.17px] font-extrabold text-center lg:text-left w-full ">
             Welcome to Skill Spot
             <br />
-            <span className="block text-center lg:text-center lg:w-[70%]">
+            <span className="block text-center lg:text-center lg:w-[60%]">
               Australia
             </span>
           </h1>

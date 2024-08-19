@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { NAVLINKS } from "@/constants";
 import { useActiveLinkContext } from "@/context/active-link-context";
 import {
-  FaMapMarkerAlt,
   FaFacebookF,
   FaWhatsapp,
   FaLinkedinIn,
@@ -11,6 +10,8 @@ import {
   FaSearch,
   FaBars,
 } from "react-icons/fa";
+import { IoCallSharp } from "react-icons/io5";
+import { IoMdMail } from "react-icons/io";
 
 export default function Header() {
   const { setActiveLink, setTimeOfLastClick, activeLink } =
@@ -47,24 +48,27 @@ export default function Header() {
       <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-center lg:px-20 px-4 py-2 text-sm">
         {/* Contact Info */}
         <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-1">
-            <FaMapMarkerAlt />
-            <span>Pepsicola, Kathmandu, Nepal</span>
+          <div className="flex items-center space-x-3 w-full font-bold ">
+            <IoCallSharp className="text-secondary h-[24px] w-[24px]" />
+            <span>+61 450 545 073</span>
+            <span>|</span>
+            <IoMdMail className="text-secondary h-[24px] w-[24px]" />
+            <span>Info@skillspotaustralia.edu.au</span>
           </div>
         </div>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-4">
-          <FaFacebookF className="hover:text-gray-300 cursor-pointer transition duration-300" />
-          <FaWhatsapp className="hover:text-gray-300 cursor-pointer transition duration-300" />
-          <FaLinkedinIn className="hover:text-gray-300 cursor-pointer transition duration-300" />
-          <FaInstagram className="hover:text-gray-300 cursor-pointer transition duration-300" />
+        <div className="flex items-center gap-6">
+          <FaFacebookF className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px]" />
+          <FaWhatsapp className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
+          <FaLinkedinIn className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
+          <FaInstagram className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px] " />
         </div>
       </div>
 
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg lg:px-20 px-4">
-        <div className="flex justify-between items-center h-[75px]">
+        <div className="flex justify-between  items-center h-[75px]">
           {/* Logo */}
           <a
             href="/"
@@ -81,32 +85,34 @@ export default function Header() {
           </a>
 
           {/* Navigation Links */}
-          <ul className="hidden lg:flex gap-8 items-center">
-            {NAVLINKS.map((link) => (
-              <motion.li
-                className={`font-bold cursor-pointer hover:text-primary ${
-                  activeLink === link.name ? "text-primary" : "text-text"
-                }`}
-                key={link.path}
-                initial="hidden"
-                animate="visible"
-                variants={linkVariants}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <a
-                  href={link.path}
-                  className="font-overpass font-bold uppercase text-[15px] leading-[15px]"
-                  onClick={() => {
-                    setActiveLink(link.name);
-                    setTimeOfLastClick(Date.now());
-                    setMenuOpen(false);
-                  }}
+          <div className="flex-1  lg:flex justify-end  gap-20 ">
+            <ul className="flex gap-28 items-center">
+              {NAVLINKS.map((link) => (
+                <motion.li
+                  className={`font-bold cursor-pointer hover:text-primary ${
+                    activeLink === link.name ? "text-primary" : "text-text"
+                  }`}
+                  key={link.path}
+                  initial="hidden"
+                  animate="visible"
+                  variants={linkVariants}
+                  transition={{ duration: 0.3, delay: 0.1 }}
                 >
-                  {link.name}
-                </a>
-              </motion.li>
-            ))}
-          </ul>
+                  <a
+                    href={link.path}
+                    className="font-overpass font-bold uppercase text-[15px] leading-[15px]"
+                    onClick={() => {
+                      setActiveLink(link.name);
+                      setTimeOfLastClick(Date.now());
+                      setMenuOpen(false);
+                    }}
+                  >
+                    {link.name}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+         
 
           {/* Hamburger Menu Icon */}
           <div className="lg:hidden">
@@ -119,9 +125,10 @@ export default function Header() {
           </div>
 
           {/* Search Icon */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center justify-end ">
             <FaSearch className="text-white bg-primary h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
           </div>
+        </div>
         </div>
 
         {/* Mobile Menu */}
