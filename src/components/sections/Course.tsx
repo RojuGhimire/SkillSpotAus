@@ -122,7 +122,7 @@ const CourseGrid: React.FC = () => {
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-[200px] object-cover"
+                  className="w-full h-[224px] rounded-lg object-cover"
                 />
               ) : (
                 <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
