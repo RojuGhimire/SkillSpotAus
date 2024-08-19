@@ -82,7 +82,7 @@ const CourseGrid: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
           Popular Courses
         </h2>
-        <p className="text-center text-[#A4A4A4] mb-8">
+        <p className="text-center text-[#A4A4A4] font-semibold mb-8">
           Explore our popular courses designed to elevate your skills and career
           prospects. From childcare to construction,
           <br />

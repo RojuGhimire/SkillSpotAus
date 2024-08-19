@@ -22,8 +22,8 @@ const Hero2: React.FC = () => {
             <p className="text-[#6C757D] text-[17px] font-semibold leading-[25px] text-left lg:mb-8">
               Skill Spot Australia is not just an educational consultant; we're
               your partners in success. With a focus on Recognition of Prior
-              Learning (RPL), training and qualifications, we’re your gateway
-              to certifications across Australia.
+              Learning (RPL), training and qualifications, we’re your gateway to
+              certifications across Australia.
             </p>
             <p className="text-[#6C757D] text-[17px] font-semibold leading-[25px] text-left">
               We understand that each individual's journey is unique. That's why
@@ -42,7 +42,7 @@ const Hero2: React.FC = () => {
               color: "#fff",
               borderColor: "#001B6A",
             }}
-            className="w-[117px] h-[38px] gap-[10px] border border-secondary hover:border-white hover:bg-primary font-semibold rounded-lg text-secondary hover:text-white bg-white transition-all duration-300"
+            className="w-[117px]  h-[38px] gap-[10px] border border-secondary hover:border-white hover:bg-primary font-semibold rounded-lg text-secondary hover:text-white bg-white transition-all duration-300"
           >
             Explore more
           </motion.button>
@@ -50,7 +50,7 @@ const Hero2: React.FC = () => {
 
         {/* Right Content - Image and Call to Action */}
         <motion.div
-          className="lg:w-1/2 flex flex-col items-center h-[503px] lg:items-end mt-16 lg:mt-0"
+          className="lg:w-1/2  flex flex-col items-center h-[503px] lg:items-end mt-16 lg:mt-0"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -68,7 +68,9 @@ const Hero2: React.FC = () => {
               <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left">
                 We Build for your comfort
               </h2>
-              <p className="font-overpass font-bold text-lg">Call: +61 450 545 073</p>
+              <p className="font-overpass font-bold text-lg">
+                Call: +61 450 545 073
+              </p>
             </div>
           </motion.div>
         </motion.div>

@@ -28,23 +28,30 @@ const Hero: React.FC = () => {
       <div className="relative z-10 container flex flex-col lg:flex-row items-center justify-center mt-12 lg:mt-24">
         {/* Left Content */}
         <motion.div
-          className="flex-1 flex flex-col justify-center items-start gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[603px]"
+          className="flex flex-col justify-center items-center lg:items-start gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[603px]"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: textInView ? 0 : -100, opacity: textInView ? 1 : 0 }}
           transition={{ duration: 1.5 }}
           ref={textRef}
         >
           <h1 className="text-2xl sm:text-3xl lg:text-4xl leading-snug lg:leading-[53.17px] font-bold text-center lg:text-left w-full lg:w-[424px]">
-            Welcome to Skill Spot Australia
+            Welcome to Skill Spot
+            <br />
+            <span className="block text-center lg:text-center lg:w-full">
+              Australia
+            </span>
           </h1>
+
           <p className="text-sm sm:text-base lg:text-lg font-medium leading-normal lg:leading-[22.79px] text-center lg:text-left w-full">
-            Welcome to Skill Spot Australia Pty Ltd, your RPL destination nationwide.
+            Welcome to Skill Spot Australia Pty Ltd, your RPL destination
+            nationwide.
             <br />
             Celebrating your unique journey, we recognize and honor your skills.
             <br />
-            Unlocking potential, we help you achieve formal qualifications effortlessly.
+            Unlocking potential, we help you achieve formal qualifications
+            effortlessly.
           </p>
-          <div className="flex flex-row md:px-44 lg:px-0 sm:flex-row gap-4 items-center justify-center lg:justify-start">
+          <div className="flex flex-row md:px-44 lg:px-0 gap-4 items-center justify-center lg:justify-start">
             <motion.button
               className="bg-[#001B6A] text-white px-4 py-2 rounded h-[38px] w-[117px]"
               whileHover={{ scale: 1.05 }}
@@ -64,9 +71,10 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
 
+
         {/* Right Content - Image */}
         <motion.div
-          className="flex-1 mt-8 lg:mt-0 flex justify-center lg:justify-end relative w-full"
+          className="relative  mt-8   lg:mt-0 flex justify-center w-full lg:w-[60%] "
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{
             scale: imageInView ? 1 : 0.9,
@@ -78,7 +86,7 @@ const Hero: React.FC = () => {
           <motion.img
             src="/small.jpeg"
             alt="Small Image"
-            className="hidden md:flex shadow-lg rounded-tl-[146.72px] rounded-br-[146.72px] w-[300px] sm:w-[400px] lg:w-[550px] h-auto lg:h-[334px]"
+            className="hidden lg:flex shadow-lg rounded-tl-[146.72px]  rounded-br-[146.72px] w-[300px] sm:w-[400px] lg:w-[550px] h-auto lg:h-[334px]"
             style={{
               borderTop: "none",
               borderRight: "5.14px solid #FFFFFF",
@@ -89,6 +97,11 @@ const Hero: React.FC = () => {
             animate={{ x: imageInView ? 0 : 100, opacity: imageInView ? 1 : 0 }}
             transition={{ duration: 1.5 }}
           />
+
+          {/* Button Overlapping the Image */}
+          <button className="hidden lg:block absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center text-sm items-center text-white font-bold">
+            Apply <br /> Now!
+          </button>
         </motion.div>
       </div>
     </div>
