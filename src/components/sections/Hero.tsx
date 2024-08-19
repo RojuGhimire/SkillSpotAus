@@ -23,12 +23,12 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#203174] via-[#20317466] to-[#B5BBD2] opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#203180] via-[#18255c66] to-[#18255c66] opacity-85"></div>
       </div>
-      <div className="relative z-10 container flex flex-col lg:flex-row items-center justify-center mt-12 lg:mt-24">
+      <div className="relative flex flex-col lg:flex-row items-center justify-center  gap-[1px] mt-12 lg:mt-24">
         {/* Left Content */}
         <motion.div
-          className="flex flex-col justify-center items-center lg:items-start gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[603px]"
+          className="flex flex-col justify-center lg:px-20  items-center lg:items-start gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[70%]"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: textInView ? 0 : -100, opacity: textInView ? 1 : 0 }}
           transition={{ duration: 1.5 }}
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base lg:text-lg font-medium leading-normal lg:leading-[22.79px] text-center lg:text-left w-full">
+          <p className="text-sm sm:text-base lg:text-lg font-medium leading-normal lg:leading-[29px] text-center lg:text-left w-full">
             Welcome to Skill Spot Australia Pty Ltd, your RPL destination
             nationwide.
             <br />
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
 
         {/* Right Content - Image */}
         <motion.div
-          className="relative  mt-8   lg:mt-0 flex justify-center w-full lg:w-[60%] "
+          className="relative lg:px-20 mt-8 lg:mt-0 flex justify-center w-full lg:w-[70%] "
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{
             scale: imageInView ? 1 : 0.9,
@@ -97,9 +97,8 @@ const Hero: React.FC = () => {
             transition={{ duration: 1.5 }}
           />
 
-          {/* Button Overlapping the Image */}
-          <button className="hidden lg:block absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center text-sm items-center text-white font-bold">
-            Apply <br /> Now!
+          <button className="hidden lg:block absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center text-sm items-center text-white font-extrabold">
+            Apply  Now!
           </button>
         </motion.div>
       </div>
