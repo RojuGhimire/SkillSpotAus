@@ -85,7 +85,7 @@ export default function Header() {
           </a>
 
           {/* Navigation Links */}
-          <div className="flex-1  lg:flex justify-end  gap-20 ">
+          <div className="hidden  flex-1  lg:flex justify-end  gap-20 ">
             <ul className="flex gap-28 items-center">
               {NAVLINKS.map((link) => (
                 <motion.li
