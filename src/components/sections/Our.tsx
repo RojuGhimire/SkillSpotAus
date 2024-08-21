@@ -5,7 +5,7 @@ const Affiliates: React.FC = () => {
     <section className="py-10 lg:h-[350px] flex flex-col items-center p-8 lg:px-20  lg:p-16 lg:justify-center text-center">
       {/* Heading and Subtitle */}
       <h2 className="text-3xl font-overpass font-semibold">Our Affiliates</h2>
-      <p className="text-gray-500 mt-5 lg:w-[800px] mb-10">
+      <p className="text-gray-400 font-overpass mt-2 lg:w-[800px] mb-12">
         Our programmes are comprehensive educational experiences that develop and enhance skill sets that can be applied to diverse job profiles.
       </p>
       

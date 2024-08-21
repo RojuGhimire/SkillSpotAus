@@ -11,7 +11,7 @@ import { IoCall, IoMail } from "react-icons/io5";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-slate-100 py-10  p-8 lg:px-20 lg:p-16 ">
+    <div className="bg-slate-100 py-10  p-8 lg:px-20 lg:p-16 font-overpass ">
       {/* Footer Links */}
       <div className="container mx-auto   grid grid-cols-1   h-[209px] top-[129.81px]  lg:grid-cols-4 gap-10 lg:gap-[250px]  ">
         {/* Logo and Description */}
@@ -70,8 +70,8 @@ const Footer: React.FC = () => {
             <FaTwitter className="text-blue-400 h-6 w-10" />
             <FaWhatsapp className="text-green-600 h-6 w-10" />
           </div>
-          <img src="/QR.png" alt="QR" className="mt-4 lg:ml-12 mb-2" />
-          <button className=" w-[108px] h-[38px] lg:ml-8 bg-secondary rounded-lg text-white font-overpass ">Call Us Today</button>
+          <img src="/QR.png" alt="QR" className="mt-4 lg:ml-16 mb-2" />
+          <button className=" w-[115px] h-[38px] lg:ml-8 bg-primary rounded-lg text-white font-overpass ">Call Us Today</button>
         </div>
       </div>
     </div>
