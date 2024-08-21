@@ -11,9 +11,9 @@ import { IoCall, IoMail } from "react-icons/io5";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-[#F3ECEC] py-10">
+    <div className="bg-[#F3ECEC] py-10 ">
       {/* Footer Links */}
-      <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1   h-[209px] top-[129.81px]  lg:grid-cols-4 gap-[235px]">
+      <div className="container mx-auto  grid grid-cols-1   h-[209px] top-[129.81px]  lg:grid-cols-4 gap-[235px]">
         {/* Logo and Description */}
         <div className=" items-center w-[350px] h-[209px] gap-[15px] ">
           <img
