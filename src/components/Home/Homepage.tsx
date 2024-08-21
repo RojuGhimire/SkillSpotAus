@@ -5,6 +5,7 @@ import Footer2 from "../sections/Footer2";
 import Hero2 from "../sections/Hero2";
 import CourseGrid from "../sections/Course";
 import ContactSection from "../sections/ContactSection";
+import Footer from "../sections/Footer";
 // import NewsAndEvents from "../sections/News";
 
 const Homepage: React.FC = () => {
@@ -17,6 +18,7 @@ const Homepage: React.FC = () => {
         <CourseGrid />
         <ContactSection />
         {/* <NewsAndEvents /> */}
+        <Footer />
         <Footer2 />
       </div>
     </RootLayout>

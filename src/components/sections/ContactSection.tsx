@@ -80,17 +80,17 @@ const ContactSection: React.FC = () => {
         <div className="hidden lg:block absolute w-[34.59px] h-[10.28px] top-[80.9px] left-[360.38px] bg-primary rounded-tl-[9.35px]"></div>
 
         <div className="space-y-8 mt-9">
-          <div className="flex items-center space-x-8">
-            <FaLocationDot className="text-secondary h-6 w-4" />
-            <p className="font-semibold">Perth, Australia</p>
+          <div className="flex items-center ">
+            <FaLocationDot className="text-secondary mr-5 h-6 w-4" />
+            <p className="font-semibold ">Perth, Australia</p>
           </div>
-          <div className="flex items-center space-x-8">
-            <IoCall className="text-secondary h-8 w-6" />
-            <p className="font-semibold">+61 450 545 073</p>
+          <div className="flex items-center ">
+            <IoCall className="text-secondary h-8 w-5 mr-5 " />
+            <p className="font-semibold ">+61 450 545 073</p>
           </div>
-          <div className="flex items-center space-x-8">
-            <IoMdMail className="text-secondary h-8 w-6" />
-            <p className="font-semibold">skillspotaustralia@gmail.com</p>
+          <div className="flex items-center ">
+            <IoMdMail className="text-secondary h-8  mr-5 w-6" />
+            <p className="font-semibold ">skillspotaustralia@gmail.com</p>
           </div>
         </div>
 
@@ -109,7 +109,7 @@ const ContactSection: React.FC = () => {
         <img
           src="/Contact.png"
           alt="Support Person"
-          className="rounded-lg shadow-lg w-full lg:w-auto"
+          className=" w-full lg:w-[374px] lg:h-[281px] "
         />
       </div>
     </div>
