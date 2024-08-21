@@ -1,7 +1,6 @@
 import RootLayout from "@/layouts/RootLayout";
 import Hero from "../sections/Hero";
 import Frame from "../sections/Frame";
-import Footer2 from "../sections/Footer2";
 import Hero2 from "../sections/Hero2";
 import CourseGrid from "../sections/Course";
 import ContactSection from "../sections/ContactSection";
@@ -21,7 +20,6 @@ const Homepage: React.FC = () => {
         {/* <NewsAndEvents /> */}
         <Affiliates />
         <Footer />
-        <Footer2 />
       </div>
     </RootLayout>
   );
