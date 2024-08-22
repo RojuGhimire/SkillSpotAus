@@ -21,11 +21,11 @@ const Footer: React.FC = () => {
           <img
             src="/logo2.png"
             alt="Skill Spot Australia"
-            className="w-[112px] h-[105px]"
+            className="w-[112px] h-[105px] lg:ml-12 "
           />
           <p className="text-[#6C757D] text-sm lg:text-base">
             In publishing and graphic design, Lorem ipsum is
-            <br /> a placeholder text commonly used to <br />
+            a placeholder text commonly used to 
             demonstrate the visual form of a document.
           </p>
         </div>
@@ -73,8 +73,8 @@ const Footer: React.FC = () => {
             <FaTwitter className="text-blue-500" />
             <FaWhatsapp className="text-green-800" />
           </div>
-          <img src="/QR.png" alt="QR" className="mb-4" />
-          <button className="w-[115px] h-[38px] bg-primary rounded-lg text-white font-overpass text-sm lg:text-base">
+          <img src="/QR.png" alt="QR" className="mb-4 lg:ml-12" />
+          <button className="w-[115px] h-[38px] bg-secondary hover:bg-primary rounded-lg text-white font-overpass text-sm lg:text-base lg:ml-6">
             Call Us Today
           </button>
         </div>
