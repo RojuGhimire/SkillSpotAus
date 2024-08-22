@@ -24,9 +24,8 @@ const Footer: React.FC = () => {
             className="w-[112px] h-[105px] lg:ml-12 "
           />
           <p className="text-[#6C757D] text-sm lg:text-base">
-            In publishing and graphic design, Lorem ipsum is
-            a placeholder text commonly used to 
-            demonstrate the visual form of a document.
+            In publishing and graphic design, Lorem ipsum is a placeholder text
+            commonly used to demonstrate the visual form of a document.
           </p>
         </div>
 
@@ -124,7 +123,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center bg-white mt-2 text-gray-600 text-sm lg:text-base py-2">
+      <div className="text-center bg-primary text-white font-overpass text-sm lg:text-base py-2">
         © {currentYear} Skill Spot Australia, All Rights Reserved
       </div>
     </div>

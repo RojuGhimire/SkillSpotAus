@@ -8,9 +8,9 @@ const frameVariants = {
 
 const Frame: React.FC = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row font-overpass">
+    <div className="w-full  flex flex-col md:flex-row font-overpass">
       <motion.div
-        className="flex-1 h-[120px] md:h-[99px] bg-[#001B6A] p-4 md:p-[25px_89px_25px_20px] text-white"
+        className="flex-1 h-[120px]  md:h-[99px] bg-[#001B6A] p-4 md:p-[25px_89px_25px_20px] text-white"
         variants={frameVariants}
         initial="hidden"
         animate="visible"
