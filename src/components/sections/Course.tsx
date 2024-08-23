@@ -77,8 +77,8 @@ const CourseGrid: React.FC = () => {
   ];
 
   return (
-    <div className="p-4 md:p-8 lg:h-[1079.81px] lg:px-20">
-      <div className="h-[100px] items-center justify-center mb-12">
+    <div className="p-4 md:p-8  lg:h-[1050.81px] lg:px-20">
+      <div className="h-[100px] items-center justify-center  mb-12">
         <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
           Popular Courses
         </h2>
