@@ -6,6 +6,7 @@ import CourseGrid from "../sections/Course";
 import ContactSection from "../sections/ContactSection";
 import Footer from "../sections/Footer";
 import Affiliates from "../sections/Our";
+import Services from "../sections/Service";
 // import NewsAndEvents from "../sections/News";
 
 const Homepage: React.FC = () => {
@@ -16,6 +17,7 @@ const Homepage: React.FC = () => {
         <Frame />
         <Hero2 />
         <CourseGrid />
+        <Services />
         <ContactSection />
         {/* <NewsAndEvents /> */}
         <Affiliates />
