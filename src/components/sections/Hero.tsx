@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
           />
 
           <button className="hidden lg:block absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center text-sm items-center text-white font-extrabold">
-            Apply  Now!
+            Apply Now!
           </button>
         </motion.div>
       </div>
