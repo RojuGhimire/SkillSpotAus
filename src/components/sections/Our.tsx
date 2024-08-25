@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Affiliates: React.FC = () => {
   return (
@@ -6,9 +6,10 @@ const Affiliates: React.FC = () => {
       {/* Heading and Subtitle */}
       <h2 className="text-3xl font-overpass font-semibold">Our Affiliates</h2>
       <p className="text-gray-400 font-overpass mt-2 lg:w-[800px] mb-12">
-        Our programmes are comprehensive educational experiences that develop and enhance skill sets that can be applied to diverse job profiles.
+        Our programmes are comprehensive educational experiences that develop
+        and enhance skill sets that can be applied to diverse job profiles.
       </p>
-      
+
       {/* Logos */}
       <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-[70px]">
         <img src="/1.png" alt="Affiliate 1" className="h-16" />
