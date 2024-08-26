@@ -7,6 +7,7 @@ import ContactSection from "../sections/ContactSection";
 import Footer from "../sections/Footer";
 import Affiliates from "../sections/Our";
 import Services from "../sections/Service";
+import MainComponent from "../sections/Notice";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -16,6 +17,7 @@ const Homepage: React.FC = () => {
         <Hero2 />
         <CourseGrid />
         <Services />
+        <MainComponent />
         <ContactSection />
         <Affiliates />
         <Footer />
