@@ -1,25 +1,25 @@
 export const NAVLINKS = [
   {
     name: "Home",
-    path: "#home",
+    path: "home",
   },
   {
     name: "About Us",
-    path: "#about",
+    path: "about",
   },
 
   {
     name: "RPL",
-    path: "#rpl",
+    path: "rpl",
   },
   {
     name: "Blog",
-    path: "#software",
+    path: "software",
   },
 
   {
     name: "Contact Us",
-    path: "#contact",
+    path: "contact",
   },
 ] as const;
 
