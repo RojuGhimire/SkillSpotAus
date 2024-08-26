@@ -8,6 +8,7 @@ import Footer from "../sections/Footer";
 import Affiliates from "../sections/Our";
 import Services from "../sections/Service";
 import MainComponent from "../sections/Notice";
+import Testimonials from "../sections/Testimonial";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -18,6 +19,7 @@ const Homepage: React.FC = () => {
         <CourseGrid />
         <Services />
         <MainComponent />
+        <Testimonials />
         <ContactSection />
         <Affiliates />
         <Footer />

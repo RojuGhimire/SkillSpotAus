@@ -59,22 +59,14 @@ const courses: Course[] = [
 ];
 
 const CourseGrid: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [activeCategory] = useState<string>("All");
 
   const filteredCourses =
     activeCategory === "All"
       ? courses
       : courses.filter((course) => course.category === activeCategory);
 
-  const categories = [
-    "All",
-    "Trade",
-    "Construction",
-    "Automation",
-    "Management",
-    "TAE Courses",
-    "Health & Childcare",
-  ];
+  
 
   return (
     <div className="p-4 md:p-8  lg:h-[1050.81px] lg:px-20">
@@ -90,22 +82,6 @@ const CourseGrid: React.FC = () => {
         </p>
       </div>
 
-      {/* Categories */}
-      <div className="flex justify-center flex-wrap gap-3 mb-8">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveCategory(category)}
-            className={`px-4 py-2 rounded ${
-              activeCategory === category
-                ? "bg-primary text-white"
-                : "bg-white text-primary font-bold border border-gray-300"
-            } `}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
 
       {/* Courses Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -122,10 +98,10 @@ const CourseGrid: React.FC = () => {
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-[224px] rounded-lg object-cover"
+                  className="w-full h-[274px]  rounded object-cover"
                 />
               ) : (
-                <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+                <div className="w-full h-[200px]  bg-gray-200 flex items-center justify-center text-gray-500">
                   No Image Available
                 </div>
               )}
