@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <div className="relative h-auto lg:h-[577px]  justify-center   items-center px-5 sm:px-10 lg:px-20 mt-12 lg:mt-24 w-full text-white p-8 font-overpass">
+    <div className="relative h-auto lg:h-[577px] px-10 lg:px-40 mt-12 lg:mt-24 w-full text-white  font-overpass">
       <div className="absolute inset-0 z-0">
         <motion.img
           src="/BG.jpeg"
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1.5 }}
           />
 
-          <button className="hidden lg:block absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center text-sm items-center text-white font-extrabold">
+          <button className="hidden lg:block text-xl absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold">
             Apply <br /> Now!
           </button>
         </motion.div>
