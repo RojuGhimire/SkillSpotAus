@@ -23,18 +23,18 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#203180] via-[#18255c66] to-[#18255c66] opacity-85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#203180] via-[#18255c66] to-[#12121366] opacity-85"></div>
       </div>
-      <div className="absolute flex flex-row   lg:w-[1440px]  mt-12 lg:mt-28">
+      <div className="absolute flex flex-row h-[334px]  lg:w-[1440px] gap-[95px] top-[146px] left-[200px] ">
         {/* Left Content */}
         <motion.div
-          className="flex flex-col  lg:items-start gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[70%]"
+          className="flex flex-col  lg:items-start justify-center gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[70%]"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: textInView ? 0 : -100, opacity: textInView ? 1 : 0 }}
           transition={{ duration: 1.5 }}
           ref={textRef}
         >
-          <h1 className="text-xl font-overpass sm:text-3xl lg:text-5xl leading-snug lg:leading-[53.17px] font-extrabold text-center lg:text-left w-full ">
+          <h1 className="text-xl font-overpass sm:text-3xl lg:text-4xl leading-snug lg:leading-[53.17px] font-extrabold text-center lg:text-left w-full ">
             Welcome to Skill Spot
             <br />
             <span className="block text-center lg:text-center lg:justify-center lg:w-[60%]">
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base lg:text-xl font-bold leading-normal lg:leading-[30px] text-center lg:text-left w-full">
+          <p className="text-sm sm:text-base lg:text-lg font-bold leading-normal lg:leading-[30px] text-center lg:text-left w-full">
             Welcome to Skill Spot Australia Pty Ltd, your RPL destination
             nationwide.
             <br />
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1.5 }}
           />
 
-          <button className="hidden lg:block text-xl absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold">
+          <button className="hidden lg:block text-md absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold">
             Apply <br /> Now!
           </button>
         </motion.div>
