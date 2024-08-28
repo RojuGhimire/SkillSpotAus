@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
   return (
     <div className="bg-slate-100 font-overpass">
       {/* Footer Links */}
-      <div className="container  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  p-4">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  p-4">
         {/* Logo and Description */}
         <div className="flex flex-col  items-center lg:w-[450px]  gap-4">
           <img

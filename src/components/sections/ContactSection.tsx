@@ -24,27 +24,16 @@ const ContactSection: React.FC = () => {
         </h2>
         <p className="mb-4">Advance Your Career with us.</p>
 
-        {/* RPL and Online Checkboxes */}
-        <div className="flex items-center space-x-4 mb-4">
-          <label className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox" />
-            <span className="text-primary font-semibold">RPL</span>
-          </label>
-          <label className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox" />
-            <span className="text-primary font-semibold">Online</span>
-          </label>
-        </div>
 
         {/* Form Inputs */}
         <input
           type="text"
-          placeholder="Enter Name"
+          placeholder="Enter Full Name"
           className="w-full lg:w-[426px] h-[43px] border border-gray-300 p-2 rounded mb-4"
         />
         <input
           type="email"
-          placeholder="Enter Email"
+          placeholder="Enter Your Email"
           className="w-full lg:w-[426px] h-[43px] border border-gray-300 p-2 rounded mb-4"
         />
         <input
@@ -54,12 +43,15 @@ const ContactSection: React.FC = () => {
         />
         <select className="w-full lg:w-[426px] h-[43px] border border-gray-300 p-2 rounded mb-4">
           <option>Select course applying for*</option>
+          <option>Automobile</option>
+          <option>TAE*</option>
+          <option>RPL</option>
           {/* Add more options here */}
         </select>
         <input
           type="text"
-          placeholder="Enter Mobile Number"
-          className="w-full lg:w-[426px] h-[43px] border border-gray-300 p-2 rounded mb-4"
+          placeholder="Leave your message"
+          className="w-full lg:w-[426px] h-[88px] border border-gray-300 p-2 rounded mb-4"
         />
 
         {/* Enroll Button */}
@@ -71,13 +63,12 @@ const ContactSection: React.FC = () => {
       {/* Office Information Box */}
       <div className="bg-primary text-white p-8 w-full lg:w-[365.69px] lg:h-[434.27px] mt-6 lg:mt-0 lg:top-[90.65px] lg:right-[100.31px] rounded-2xl ml-0 lg:ml-10 relative">
         <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-          DROP IN OUR <br /> OFFICE
+          LET'S HAVE A<br /> TALK
         </h3>
         <p className="text-white font-semibold mb-1">
           Lorem Ipsum has been the industry's standard dummy text ever since
           the...
         </p>
-        <div className="hidden lg:block absolute w-[34.59px] h-[10.28px] top-[80.9px] left-[360.38px] bg-primary rounded-tl-[9.35px]"></div>
 
         <div className="space-y-8 mt-9">
           <div className="flex items-center ">
