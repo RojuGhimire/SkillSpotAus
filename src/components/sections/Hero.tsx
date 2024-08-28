@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <div className="relative h-auto lg:h-[577px] px-5 sm:px-10 lg:px-20 mt-12 lg:mt-24 w-full text-white p-8 font-overpass">
+    <div className="relative h-auto lg:h-[577px]  justify-center   items-center px-5 sm:px-10 lg:px-20 mt-12 lg:mt-24 w-full text-white p-8 font-overpass">
       <div className="absolute inset-0 z-0">
         <motion.img
           src="/BG.jpeg"
@@ -25,24 +25,24 @@ const Hero: React.FC = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#203180] via-[#18255c66] to-[#18255c66] opacity-85"></div>
       </div>
-      <div className="relative flex flex-col lg:flex-row items-center justify-center  gap-[1px] mt-12 lg:mt-24">
+      <div className="absolute flex flex-row   lg:w-[1440px]  mt-12 lg:mt-28">
         {/* Left Content */}
         <motion.div
-          className="flex flex-col justify-center lg:px-20  items-center lg:items-start gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[70%]"
+          className="flex flex-col  lg:items-start gap-6 lg:gap-[42px] h-auto lg:h-[297px] w-full lg:w-[70%]"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: textInView ? 0 : -100, opacity: textInView ? 1 : 0 }}
           transition={{ duration: 1.5 }}
           ref={textRef}
         >
-          <h1 className="text-2xl font-overpass sm:text-3xl lg:text-4xl leading-snug lg:leading-[53.17px] font-extrabold text-center lg:text-left w-full ">
+          <h1 className="text-xl font-overpass sm:text-3xl lg:text-5xl leading-snug lg:leading-[53.17px] font-extrabold text-center lg:text-left w-full ">
             Welcome to Skill Spot
             <br />
-            <span className="block text-center lg:text-center lg:w-[60%]">
+            <span className="block text-center lg:text-center lg:justify-center lg:w-[60%]">
               Australia
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base lg:text-lg font-medium leading-normal lg:leading-[29px] text-center lg:text-left w-full">
+          <p className="text-sm sm:text-base lg:text-xl font-bold leading-normal lg:leading-[30px] text-center lg:text-left w-full">
             Welcome to Skill Spot Australia Pty Ltd, your RPL destination
             nationwide.
             <br />
@@ -53,20 +53,12 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-row md:px-44 lg:px-0 gap-4 items-center justify-center lg:justify-start">
             <motion.button
-              className="bg-[#001B6A] text-white px-4 py-2 rounded h-[38px] w-[117px]"
+              className="bg-secondary hover:bg-primary text-white px-4 py-2 rounded-lg h-[38px] w-[320px]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
             >
-              Contact
-            </motion.button>
-            <motion.button
-              className="bg-[#CB2026] text-white px-4 py-2 rounded h-[38px] w-[109px]"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-            >
-              Apply Now
+              Free 60 second Skill Assesment
             </motion.button>
           </div>
         </motion.div>
@@ -98,7 +90,7 @@ const Hero: React.FC = () => {
           />
 
           <button className="hidden lg:block absolute transform translate-x-[300%] -translate-y-1/2 w-[85.45px] h-[86.45px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center text-sm items-center text-white font-extrabold">
-            Apply Now!
+            Apply <br /> Now!
           </button>
         </motion.div>
       </div>
