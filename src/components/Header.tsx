@@ -67,7 +67,7 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white shadow-lg lg:px-20 px-4">
+      <nav className="bg-white  shadow-lg lg:px-20 px-4">
         <div className="flex justify-between  items-center h-[75px]">
           {/* Logo */}
           <a
@@ -85,8 +85,8 @@ export default function Header() {
           </a>
 
           {/* Navigation Links */}
-          <div className="hidden   flex-1  lg:flex justify-end  gap-10 ">
-            <ul className="flex gap-20 items-center">
+          <div className="hidden  flex-1  lg:flex justify-end  gap-20 ">
+            <ul className="flex gap-28 items-center">
               {NAVLINKS.map((link) => (
                 <motion.li
                   className={`font-bold cursor-pointer hover:text-primary ${

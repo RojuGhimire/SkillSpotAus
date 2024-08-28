@@ -12,7 +12,7 @@ import Testimonials from "../sections/Testimonial";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
-      <div className="flex flex-col mx-auto w-full  space-y-25 ">
+      <div className="flex flex-col mx-auto w-full overflow-hidden space-y-25 ">
         <Hero />
         <Frame />
         <Hero2 />
