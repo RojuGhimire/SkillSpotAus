@@ -15,23 +15,22 @@ const Footer: React.FC = () => {
   return (
     <div className="bg-slate-100 font-overpass">
       {/* Footer Links */}
-      <div className="container  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-4">
+      <div className="container  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  p-4">
         {/* Logo and Description */}
-        <div className="flex flex-col  items-start lg:w-[250px] gap-4">
+        <div className="flex flex-col  items-center lg:w-[450px]  gap-4">
           <img
             src="/logo2.png"
             alt="Skill Spot Australia"
-            className="w-[112px] h-[105px] lg:ml-12 "
+            className="w-[112px] h-[105px]  "
           />
-          <p className="text-[#6C757D] text-sm lg:text-base">
-            In publishing and graphic design, Lorem ipsum is a placeholder text
-            commonly used to demonstrate the visual form of a document.
+          <p className="text-[#6C757D] htext-sm lg:text-base">
+          In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
           </p>
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col">
-          <h3 className="text-xl font-bold font-overpass text-secondary mb-4">
+        <div className="flex flex-col  items-center">
+          <h3 className="text-xl font-bold  font-overpass text-secondary mb-4">
             Quick <span className="text-black">Link</span>
           </h3>
           <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
@@ -44,7 +43,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Quick Contact */}
-        <div className="flex flex-col">
+        <div className="flex  items-center   flex-col">
           <h3 className="text-xl font-bold font-overpass text-secondary mb-4">
             Quick <span className="text-black">Contact</span>
           </h3>
@@ -61,7 +60,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Social Media and QR Code */}
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col  items-center">
           <h3 className="text-xl font-bold font-overpass text-secondary mb-4">
             Let's <span className="text-black">Get Social</span>
           </h3>
@@ -72,8 +71,8 @@ const Footer: React.FC = () => {
             <FaTwitter className="text-blue-500" />
             <FaWhatsapp className="text-green-800" />
           </div>
-          <img src="/QR.png" alt="QR" className="mb-4 lg:ml-12" />
-          <button className="w-[115px] h-[38px] bg-secondary hover:bg-primary rounded-lg text-white font-overpass text-sm lg:text-base lg:ml-6">
+          <img src="/QR.png" alt="QR" className="mb-4 " />
+          <button className="w-[115px] h-[38px] bg-secondary hover:bg-primary rounded-lg text-white font-overpass text-sm lg:text-base ">
             Call Us Today
           </button>
         </div>

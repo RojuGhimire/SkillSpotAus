@@ -49,11 +49,11 @@ const Testimonials: React.FC = () => {
         <span className="font-semibold">specific needs</span>:
       </p>
 
-      <div className="flex overflow-x-auto w-full  space-x-6 items-center justify-center md:space-x-8 snap-x snap-mandatory  px-4">
+      <div className="flex overflow-x-auto w-full   space-x-6 items-center justify-center md:space-x-8 snap-x snap-mandatory  px-4">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex-shrink-0 border border-gray-100  w-72 md:w-80 lg:w-[303px] bg-white p-6 lg:h-[435px] rounded-2xl shadow-xl snap-center"
+            className="flex-shrink-0 border border-gray-300    w-72 md:w-80 lg:w-[303px] bg-white p-6 lg:h-[435px] rounded-2xl shadow-xl snap-center"
           >
             <div className="flex mb-6 lg:mb-20  items-center">
               <img
