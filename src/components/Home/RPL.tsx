@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../Header";
+import Footer from "../sections/Footer";
 
 interface Course {
   id: number;
@@ -144,8 +145,11 @@ const RPL: React.FC = () => {
         ))}
       </div>
     </div>
+    <Footer />
     </div>
+   
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default RPL;
