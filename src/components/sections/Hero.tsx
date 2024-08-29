@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-row md:px-44 lg:px-0 gap-4 items-center justify-center lg:justify-start">
             <motion.button
-              className="bg-secondary hover:bg-primary text-white px-4 py-2 rounded-lg h-[38px] w-[320px]"
+              className="bg-secondary hover:bg-primary font-bold text-white px-4 py-2 rounded-lg h-[45px] w-[300px]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
