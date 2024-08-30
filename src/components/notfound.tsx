@@ -30,7 +30,7 @@ const NotFound: React.FC = () => {
         >
           Return to Homepage
         </Link>
-        
+{/*         
         <div className="mt-8">
           <p className="text-gray-500 mb-4">Or try searching for what you need:</p>
           <input
@@ -38,7 +38,7 @@ const NotFound: React.FC = () => {
             placeholder="Search..."
             className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
           />
-        </div>
+        </div> */}
 
         <div className="flex justify-center gap-4 mt-8">
           <a href="#" className="text-primary hover:text-secondary transition-colors duration-300">
