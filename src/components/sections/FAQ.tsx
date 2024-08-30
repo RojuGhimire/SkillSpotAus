@@ -69,7 +69,7 @@ const FAQ: React.FC = () => {
               >
                 <span className="text-lg font-medium">{faq.question}</span>
                 <span className="text-primary">
-                  {openIndex === index ? <FiMinus size={20} /> : <FiPlus size={20} className=' bg-primary rounded-full text-white '/>}
+                  {openIndex === index ? <FiMinus size={20} className=' bg-primary rounded-full text-white '/> : <FiPlus size={20} className=' bg-primary rounded-full text-white '/>}
                 </span>
               </button>
               <motion.div
