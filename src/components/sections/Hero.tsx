@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
           <motion.img
             src="/small.jpeg"
             alt="Small Image"
-            className="shadow-lg rounded-tl-[146.72px] rounded-br-[146.72px] w-full sm:w-[350px] lg:w-[550px] h-full sm:h-[350px] lg:h-[350px] object-cover"
+            className="shadow-lg rounded-tl-[146.72px] rounded-br-[146.72px] w-[350px] sm:w-[450px] lg:w-[590px] h-[350px] sm:h-[300px] lg:h-[334px] object-cover"
             style={{
               borderTop: "none",
               borderRight: "5.14px solid #FFFFFF",
