@@ -75,7 +75,7 @@ const FAQ: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: openIndex === index ? 1 : 0, height: openIndex === index ? 'auto' : 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 1.5 }}
                 className="overflow-hidden"
               >
                 <p className="mt-4 text-gray-600">{faq.answer}</p>
