@@ -28,7 +28,7 @@ const Frame: React.FC = () => {
         variants={frameVariants}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
       >
         <h3 className="text-sm md:text-lg lg:text-xl font-bold">Flexibility</h3>
         <p className="text-xs md:text-base lg:text-lg">
@@ -40,7 +40,7 @@ const Frame: React.FC = () => {
         variants={frameVariants}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 1 }}
+        transition={{ duration: 3 }}
       >
         <h3 className="text-sm md:text-lg lg:text-xl font-bold">
           Certificate valid all over the world
@@ -52,7 +52,7 @@ const Frame: React.FC = () => {
         variants={frameVariants}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 1 }}
+        transition={{ duration: 4 }}
       >
         <h3 className="text-sm md:text-lg lg:text-xl font-bold">
           Blended Learning

@@ -1,31 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero2: React.FC = () => {
+  const { ref: leftContentRef, inView: leftContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: rightContentRef, inView: rightContentInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section className="flex flex-col lg:flex-row items-center lg:items-start p-8 lg:px-20 lg:h-[550px] lg:p-16">
+    <section className="flex flex-col lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
       <div className="flex flex-col lg:flex-row lg:-mt-8">
         {/* Left Content */}
         <motion.div
-          className="lg:w-1/2  space-y-6"
+          className="lg:w-1/2 space-y-4 sm:space-y-6"
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          animate={{ opacity: leftContentInView ? 1 : 0, x: leftContentInView ? 0 : -50 }}
+          transition={{ duration: 3 }}
+          ref={leftContentRef}
         >
-          <div className="w-[242px] h-[92px]  lg:mt-12 gap-[8px]">
-            <h2 className="text-secondary leading-[30px] text-lg font-bold">
+          <div className="w-full lg:w-[242px] h-auto lg:h-[92px] lg:mt-12 gap-[8px]">
+            <h2 className="text-secondary leading-[22px] sm:leading-[30px] text-lg sm:text-xl font-bold">
               Skill Spot Australia
             </h2>
-            <h1 className="text-3xl font-bold text-gray-800">Who Are We?</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">Who Are We?</h1>
           </div>
           <div className="mx-auto">
-            <p className="text-[#6C757D] text-[17px] font-semibold leading-[28px] text-left lg:mb-8">
+            <p className="text-[#6C757D] text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left lg:mb-8">
               Skill Spot Australia is not just an educational consultant; we're
               your partners in success. With a focus on Recognition of Prior
               Learning (RPL), training and qualifications, we’re your gateway to
               certifications across Australia.
             </p>
-            <p className="text-[#6C757D] text-[17px] font-semibold leading-[28px] text-left">
+            <p className="text-[#6C757D] text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left">
               We understand that each individual's journey is unique. That's why
               we're committed to providing personalized guidance and support
               every step of the way. Whether you're aiming to advance in your
@@ -42,7 +54,7 @@ const Hero2: React.FC = () => {
               color: "#fff",
               borderColor: "#001B6A",
             }}
-            className="w-[117px]  h-[38px] gap-[10px] border border-secondary hover:border-white hover:bg-primary font-semibold rounded-lg text-secondary hover:text-white bg-white transition-all duration-300"
+            className="w-[110px] sm:w-[117px] h-[36px] sm:h-[38px] gap-[10px] border border-secondary hover:border-white hover:bg-primary font-semibold rounded-lg text-secondary hover:text-white bg-white transition-all duration-300"
           >
             Explore more
           </motion.button>
@@ -50,25 +62,26 @@ const Hero2: React.FC = () => {
 
         {/* Right Content - Image and Call to Action */}
         <motion.div
-          className="lg:w-1/2  flex flex-col items-center h-[503px] lg:items-end mt-16 lg:mt-0"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          className="lg:w-1/2 sm:ml-10  flex flex-col items-center lg:items-end mt-12 sm:mt-16 lg:mt-0"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: rightContentInView ? 1 : 0, x: rightContentInView ? 0 : 100 }}
+          transition={{ duration: 4, delay: 0.5 }}
+          ref={rightContentRef}
         >
           <img
-            src="/hero.png" // Replace with actual image URL
+            src="/hero.png" 
             alt="Who Are We"
-            className="w-[700px] h-[425px] object-cover"
+            className="w-full sm:w-[500px] lg:w-[700px] mt-16 h-auto sm:h-[300px] lg:h-[425px] object-cover"
           />
           <motion.div
-            className="-mt-10 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 md:w-[364px] h-[85px] md:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
+            className="-mt-8 sm:-mt-10 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-[231.61px] h-[39px]">
-              <h2 className="font-overpass text-[18.17px] font-semibold leading-[23px] text-left">
+            <div className="w-full">
+              <h2 className="font-overpass text-[16px] sm:text-[18.17px] font-semibold leading-[22px] sm:leading-[23px] text-left">
                 We Build for your comfort
               </h2>
-              <p className="font-overpass font-bold text-lg">
+              <p className="font-overpass font-bold text-base sm:text-lg">
                 Call: +61 450 545 073
               </p>
             </div>
