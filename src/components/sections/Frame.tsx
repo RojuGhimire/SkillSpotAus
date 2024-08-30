@@ -8,7 +8,7 @@ const frameVariants = {
 
 const Frame: React.FC = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row font-overpass">
+    <div className="w-full flex flex-col mb-3 md:flex-row font-overpass">
       <motion.div
         className="flex-1 h-[120px] md:h-[140px] lg:h-[110px] p-4  bg-[#001B6A] text-white"
         variants={frameVariants}
