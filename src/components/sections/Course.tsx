@@ -89,7 +89,7 @@ const CourseGrid: React.FC = () => {
             key={course.id}
             className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 pb-16"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 5 }}
             transition={{ duration: 1.5, delay: course.id * 0.6 }}
           >
             <div className="p-4">

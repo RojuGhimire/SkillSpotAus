@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
           <motion.img
             src="/small.jpeg"
             alt="Small Image"
-            className="shadow-lg rounded-tl-[146.72px] rounded-br-[146.72px] w-[350px] sm:w-[450px] lg:w-[590px] h-[350px] sm:h-[300px] lg:h-[334px] object-cover"
+            className="hidden lg:block shadow-lg rounded-tl-[146.72px] rounded-br-[146.72px] w-[350px] sm:w-[450px] lg:w-[590px] h-[350px] sm:h-[300px] lg:h-[334px] object-cover"
             style={{
               borderTop: "none",
               borderRight: "5.14px solid #FFFFFF",
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1.5 }}
           />
 
-          <button className="absolute -top-2 -right-2 sm:-top-8 sm:right-36 lg:-top-10 lg:-right-10 text-md w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[85px] lg:h-[85px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold">
+          <button className="hidden lg:block absolute -top-2 -right-2 sm:-top-8 sm:right-36 lg:-top-10 lg:-right-10 text-md w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[85px] lg:h-[85px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold">
             Apply <br /> Now!
           </button>
         </motion.div>
