@@ -2,11 +2,11 @@ export const NAVLINKS = [
   {
     
     name: "Home",
-    path: "#home",
+    path: "/",
   },
   {
     name: "About Us",
-    path: "#about",
+    path: "about",
   },
 
   {
@@ -15,12 +15,12 @@ export const NAVLINKS = [
   },
   {
     name: "Blog",
-    path: "#software",
+    path: "blog",
   },
 
   {
     name: "Contact Us",
-    path: "#contact",
+    path: "contact",
   },
 ] as const;
 
