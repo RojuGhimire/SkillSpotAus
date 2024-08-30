@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {  FiArrowRight } from "react-icons/fi";
 
 interface Course {
   id: number;
@@ -29,31 +31,31 @@ const courses: Course[] = [
   {
     id: 4,
     title: "Certificate III in Business",
-    image: "BG.jpeg",
+    image: "/BG.jpeg",
     category: "Management",
   },
   {
     id: 5,
     title: "Certificate III in Hospitality",
-    image: "hos.png",
+    image: "/hos.png",
     category: "Health & Childcare",
   },
   {
     id: 6,
     title: "Diploma of Counselling",
-    image: "hi.png",
+    image: "/hi.png",
     category: "Health & Childcare",
   },
   {
     id: 7,
     title: "Automotive Body Repair Technology",
-    image: "hos.png",
+    image: "/hos.png",
     category: "Trade",
   },
   {
     id: 8,
     title: "Graduate Diploma of Management",
-    image: "small.jpeg",
+    image: "/small.jpeg",
     category: "Management",
   },
 ];
@@ -66,15 +68,13 @@ const CourseGrid: React.FC = () => {
       ? courses
       : courses.filter((course) => course.category === activeCategory);
 
-  
-
   return (
-    <div className="p-4 md:p-8  lg:h-[1050.81px] lg:px-20">
-      <div className="h-[100px] items-center justify-center  mb-12">
+    <div className="p-4 md:p-8 lg:h-[1050.81px] font-overpass lg:px-20 mb-10 ">
+      <div className="h-[100px] items-center justify-center mb-12">
         <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
           Popular Courses
         </h2>
-        <p className="text-center text-[#A4A4A4] font-semibold mb-8">
+        <p className="text-center text-[#A4A4A4]  mb-8">
           Explore our popular courses designed to elevate your skills and career
           prospects. From childcare to construction,
           <br />
@@ -82,13 +82,15 @@ const CourseGrid: React.FC = () => {
         </p>
       </div>
 
-
       {/* Courses Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {filteredCourses.map((course) => (
-          <div
+          <motion.div
             key={course.id}
             className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 pb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: course.id * 0.6 }}
           >
             <div className="p-4">
               <h3 className="text-lg font-bold text-primary mb-2 text-center">
@@ -98,22 +100,36 @@ const CourseGrid: React.FC = () => {
                 <img
                   src={course.image}
                   alt={course.title}
-                  className="w-full h-[274px]  rounded object-cover"
+                  className="w-full h-[264px] rounded-lg object-cover"
                 />
               ) : (
-                <div className="w-full h-[200px]  bg-gray-200 flex items-center justify-center text-gray-500">
+                <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
                   No Image Available
                 </div>
               )}
             </div>
-            <div className="absolute w-full flex justify-center">
-              <button className="text-secondary border border-secondary px-4 py-2 rounded hover:bg-secondary font-semibold hover:text-white transition-colors duration-300">
+            <div className="absolute w-full flex justify-center bottom-4">
+              <motion.button
+                className="text-secondary border border-secondary px-4 py-2 rounded-xl w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Enroll Now
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         ))}
+       
       </div>
+      <div className="flex items-center justify-center  mt-10">
+      <motion.button
+                className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center  border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View More <FiArrowRight />
+              </motion.button>
+              </div>
     </div>
   );
 };

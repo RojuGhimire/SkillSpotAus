@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
   return (
     <section className="flex flex-col items-center font-overpass text-center my-10 px-4 lg:px-0">
       <h2 className="text-2xl md:text-3xl font-semibold mb-2">What Our Client says</h2>
-      <p className="text-gray-500 mb-8">
+      <p className="text-[#A4A4A4]  mb-8">
         Our pricing is tailored to your{" "}
         <span className="font-semibold">business size</span> and{" "}
         <span className="font-semibold">specific needs</span>:

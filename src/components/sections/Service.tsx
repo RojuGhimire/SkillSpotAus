@@ -86,7 +86,7 @@ const Services: React.FC = () => {
         <h2 className="text-3xl font-overpass font-bold text-center mb-4">
           Services
         </h2>
-        <p className="text-center text-gray-500 font-overpass mb-12">
+        <p className="text-center text-[#A4A4A4]  font-overpass mb-12">
           At Skill Spot Australia, we provide top-notch facilities for effective
           learning
         </p>
