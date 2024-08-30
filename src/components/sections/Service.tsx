@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface ServiceCardProps {
   title: string;
@@ -14,7 +15,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   label,
 }) => {
   return (
-    <div className="flex flex-col w-full lg:max-w-[500px] ">
+    <motion.div
+      className="flex flex-col w-full lg:max-w-[500px]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 5.6 }}
+    >
       <div className="relative">
         <img
           src={imageUrl}
@@ -29,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <p className="text-gray-600 text-sm text-center">{description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -58,6 +65,21 @@ const Services: React.FC = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 1.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className="py-12 lg:h-[600px] mb-10">
       <div className="mx-auto px-4 sm:px-8 lg:px-16">
@@ -68,17 +90,24 @@ const Services: React.FC = () => {
           At Skill Spot Australia, we provide top-notch facilities for effective
           learning
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[56px]">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[56px]"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              imageUrl={service.imageUrl}
-              label={service.label}
-            />
+            <motion.div key={index} variants={itemVariants}>
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                imageUrl={service.imageUrl}
+                label={service.label}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

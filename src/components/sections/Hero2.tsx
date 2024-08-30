@@ -62,7 +62,7 @@ const Hero2: React.FC = () => {
 
         {/* Right Content - Image and Call to Action */}
         <motion.div
-          className="lg:w-1/2 sm:ml-10  flex flex-col items-center lg:items-end mt-12 sm:mt-16 lg:mt-0"
+          className="lg:w-1/2 sm:ml-5 flex flex-col items-center lg:items-end mt-12 sm:mt-16 lg:mt-0"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: rightContentInView ? 1 : 0, x: rightContentInView ? 0 : 100 }}
           transition={{ duration: 4, delay: 0.5 }}
@@ -71,7 +71,7 @@ const Hero2: React.FC = () => {
           <img
             src="/hero.png" 
             alt="Who Are We"
-            className="w-full sm:w-[500px] lg:w-[700px] mt-16 h-auto sm:h-[300px] lg:h-[425px] object-cover"
+            className="w-full sm:w-[900px] lg:w-[700px] mt-0 lg:mt-20 h-auto sm:h-[400px] lg:h-[425px] object-cover"
           />
           <motion.div
             className="-mt-8 sm:-mt-10 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
