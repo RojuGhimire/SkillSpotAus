@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col items-center font-overpass text-center my-10 px-4 lg:px-0">
+    <section className="flex flex-col items-center font-overpass text-center my-10 px-4 lg:px-20">
       <h2 className="text-2xl md:text-3xl font-semibold mb-2">What Our Clients Say</h2>
       <p className="text-[#A4A4A4] mb-8">
         Our pricing is tailored to your{" "}
@@ -87,14 +87,14 @@ const Testimonials: React.FC = () => {
         <span className="font-semibold">specific needs</span>:
       </p>
 
-      <div className="w-full px-4">
+      <div className="w-[380px] lg:w-[1281px] h-[450px]  px-4">
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex-shrink-0 border border-gray-300 w-72 md:w-80 lg:w-[303px] bg-white p-6 rounded-2xl shadow-xl mx-4" // Added mx-4 for gap
+              className=" shadow-xl border border-gray-100 mx-4 rounded-xl gap-[200px]  w-[303px] h-[430px]  "
             >
-              <div className="flex mb-6 sm:mb-20 items-center">
+              <div className="flex  ml-5 mt-8 mb-6 sm:mb-20 items-center">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
