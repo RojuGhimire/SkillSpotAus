@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import {  FiArrowRight } from "react-icons/fi";
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FiArrowRight } from "react-icons/fi";
 
 interface Course {
   id: number;
@@ -85,52 +86,73 @@ const CourseGrid: React.FC = () => {
       {/* Courses Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {filteredCourses.map((course) => (
-          <motion.div
-            key={course.id}
-            className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 pb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 5 }}
-            transition={{ duration: 1.5, delay: course.id * 0.6 }}
-          >
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-primary mb-2 text-center">
-                {course.title}
-              </h3>
-              {course.image ? (
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-[264px] rounded-lg object-cover"
-                />
-              ) : (
-                <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
-                  No Image Available
-                </div>
-              )}
-            </div>
-            <div className="absolute w-full flex justify-center bottom-4">
-              <motion.button
-                className="text-secondary border border-secondary px-4 py-2 rounded-xl w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Enroll Now
-              </motion.button>
-            </div>
-          </motion.div>
+          <CourseCard key={course.id} course={course} />
         ))}
-       
       </div>
-      <div className="flex items-center justify-center  mt-10">
-      <motion.button
-                className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center  border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View More <FiArrowRight />
-              </motion.button>
-              </div>
+      <div className="flex items-center justify-center mt-10">
+        <motion.button
+          className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300"
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          View More <FiArrowRight />
+        </motion.button>
+      </div>
     </div>
+  );
+};
+
+const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 pb-16"
+      initial="hidden"
+      animate={controls}
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+      }}
+      whileHover={{ scale: 1.02, y: -5 }}
+    >
+      <div className="p-4">
+        <h3 className="text-lg font-bold text-primary mb-2 text-center">
+          {course.title}
+        </h3>
+        {course.image ? (
+          <img
+            src={course.image}
+            alt={course.title}
+            className="w-full h-[264px] rounded-lg object-cover"
+          />
+        ) : (
+          <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+            No Image Available
+          </div>
+        )}
+      </div>
+      <div className="absolute w-full flex justify-center bottom-4">
+        <motion.button
+          className="text-secondary border border-secondary px-4 py-2 rounded-xl w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Enroll Now
+        </motion.button>
+      </div>
+    </motion.div>
   );
 };
 

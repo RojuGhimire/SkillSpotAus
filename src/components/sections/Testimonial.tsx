@@ -1,4 +1,7 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FaQuoteRight } from "react-icons/fa";
 
 interface Testimonial {
@@ -40,43 +43,82 @@ const testimonials: Testimonial[] = [
 ];
 
 const Testimonials: React.FC = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "0px", // Added padding for gaps between cards
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "15px", // Adjusted padding for 3 slides view
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "15px", // Adjusted padding for 2 slides view
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "10px", // Adjusted padding for 1 slide view
+        },
+      },
+    ],
+  };
+
   return (
     <section className="flex flex-col items-center font-overpass text-center my-10 px-4 lg:px-0">
-      <h2 className="text-2xl md:text-3xl font-semibold mb-2">What Our Client says</h2>
-      <p className="text-[#A4A4A4]  mb-8">
+      <h2 className="text-2xl md:text-3xl font-semibold mb-2">What Our Clients Say</h2>
+      <p className="text-[#A4A4A4] mb-8">
         Our pricing is tailored to your{" "}
         <span className="font-semibold">business size</span> and{" "}
         <span className="font-semibold">specific needs</span>:
       </p>
 
-      <div className="flex overflow-x-auto w-full   space-x-6 items-center justify-center md:space-x-8 snap-x snap-mandatory  px-4">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 border border-gray-300    w-72 md:w-80 lg:w-[303px] bg-white p-6 lg:h-[435px] rounded-2xl shadow-xl snap-center"
-          >
-            <div className="flex mb-6 lg:mb-20  items-center">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="w-[70px] h-[70px] rounded-full object-cover"
-              />
-              <div className="ml-5  text-left">
-                <div className="flex items-center mb-2">
-                  <span className="text-yellow-400 text-2xl ">
-                    {"★".repeat(Math.floor(testimonial.rating))}
-                  </span>
-                  <span className="text-yellow-400/50 text-2xl">
-                    {testimonial.rating % 1 !== 0 ? "★" : ""}
-                  </span>
+      <div className="w-full px-4">
+        <Slider {...settings}>
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 border border-gray-300 w-72 md:w-80 lg:w-[303px] bg-white p-6 rounded-2xl shadow-xl mx-4" // Added mx-4 for gap
+            >
+              <div className="flex mb-6 sm:mb-20 items-center">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-[70px] h-[70px] rounded-full object-cover"
+                />
+                <div className="ml-5 text-left">
+                  <div className="flex items-center mb-2">
+                    <span className="text-yellow-400 text-2xl">
+                      {"★".repeat(Math.floor(testimonial.rating))}
+                    </span>
+                    <span className="text-yellow-400/50 text-2xl">
+                      {testimonial.rating % 1 !== 0 ? "★" : ""}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-semibold text-blue-700">
+                    {testimonial.name}
+                  </h3>
                 </div>
-                <h3 className="text-base font-semibold text-blue-700 ">{testimonial.name}</h3>
               </div>
+              <p className="text-gray-600 mb-4">{testimonial.review}</p>
+              <FaQuoteRight className="text-primary text-2xl mx-auto mt-auto sm:mt-16" />
             </div>
-            <p className="text-gray-600 mb-4">{testimonial.review}</p>
-            <FaQuoteRight className="text-primary text-2xl mx-auto mt-auto lg:mt-16" />
-          </div>
-        ))}
+          ))}
+        </Slider>
       </div>
 
       <div className="flex justify-center mt-6 space-x-2">
