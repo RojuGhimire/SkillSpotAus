@@ -5,6 +5,7 @@ import ActiveLinkContextProvider from "@/context/active-link-context";
 import RPL from "@/components/Home/RPL";
 import NotFound from "@/components/notfound";
 import About from "@/components/Home/About";
+import ContactUS from "@/components/Home/ContactUS";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/rpl" element={<RPL />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactUS />} />
           <Route path="/error" element={<NotFound />} />
         </Routes>
       </ActiveLinkContextProvider>

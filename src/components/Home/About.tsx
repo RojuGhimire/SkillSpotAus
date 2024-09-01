@@ -4,7 +4,6 @@ import Footer from "../sections/Footer";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ContactSection from "../sections/ContactSection";
-import CourseGrid from "../sections/Course";
 
 const About: React.FC = () => {
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
@@ -19,7 +18,8 @@ const About: React.FC = () => {
   return (
     <div className="w-full">
       <Header />
-      <section className="flex flex-col mt-20 lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
+      <img src="/About.png" alt="" className="w-full" />
+      <section className="flex flex-col  lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
         <div className="flex flex-col lg:flex-row lg:-mt-8">
           {/* Left Content */}
           <motion.div
@@ -105,7 +105,6 @@ const About: React.FC = () => {
       </section>
         {/*Popular Course */}
 
-        <CourseGrid />
       <div className="  font-overpass lg:px-20 p-8">
         <div className="flex flex-col  gap-[200px]  md:flex-row">
           {/* Left section */}
