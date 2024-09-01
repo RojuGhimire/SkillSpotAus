@@ -92,8 +92,8 @@ const CourseGrid: React.FC = () => {
       <div className="flex items-center justify-center mt-10">
         <motion.button
           className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300"
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.97 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
           View More <FiArrowRight />
         </motion.button>
@@ -118,14 +118,14 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
   return (
     <motion.div
       ref={ref}
-      className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 pb-16"
+      className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-101 pb-16"
       initial="hidden"
       animate={controls}
       variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+        hidden: { opacity: 0, y: 10 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
       }}
-      whileHover={{ scale: 1.02, y: -5 }}
+      whileHover={{ scale: 1.01, y: -2 }}
     >
       <div className="p-4">
         <h3 className="text-lg font-bold text-primary mb-2 text-center">
@@ -146,8 +146,8 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
       <div className="absolute w-full flex justify-center bottom-4">
         <motion.button
           className="text-secondary border border-secondary px-4 py-2 rounded-xl w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
           Enroll Now
         </motion.button>

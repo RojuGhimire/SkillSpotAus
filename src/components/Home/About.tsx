@@ -3,6 +3,8 @@ import Header from "../Header";
 import Footer from "../sections/Footer";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ContactSection from "../sections/ContactSection";
+import CourseGrid from "../sections/Course";
 
 const About: React.FC = () => {
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
@@ -101,6 +103,9 @@ const About: React.FC = () => {
           </motion.div>
         </div>
       </section>
+        {/*Popular Course */}
+
+        <CourseGrid />
       <div className="  font-overpass lg:px-20 p-8">
         <div className="flex flex-col  gap-[200px]  md:flex-row">
           {/* Left section */}
@@ -114,7 +119,7 @@ const About: React.FC = () => {
               with tailored support and guidance every step of the way.
             </p>
             <div className="bg-[#F6ECED] p-8 rounded-lg shadow-md w-[445px] h-[490px] items-center justify-center ">
-              <h2 className="text-2xl  mt-5 font-extrabold text-center text-primary mb-6">
+              <h2 className="text-3xl  font-extrabold font-poppins text-center text-primary mb-6">
                 You're Just 60 <br /> Seconds Away <br />
                 From Transforming <br />
                 Your Life
@@ -126,7 +131,7 @@ const About: React.FC = () => {
                 your experience can translate into a nationally recognized
                 qualification, propelling your career to new heights.
               </p>
-              <button className="w-full bg-primary text-white py-2 rounded-lg">
+              <button className="w-full bg-primary hover:bg-secondary text-white py-2 rounded-lg">
                 Lets Go →
               </button>
             </div>
@@ -201,6 +206,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
+      <ContactSection />
       <Footer />
     </div>
   );
