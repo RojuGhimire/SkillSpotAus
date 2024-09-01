@@ -11,7 +11,7 @@ import { IoCall, IoLogoWhatsapp } from "react-icons/io5";
 
 const ContactSection: React.FC = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center bg-slate-100 lg:h-[657px] p-6 lg:p-10">
+    <div className="flex flex-col lg:flex-row justify-center items-center bg-[#F6ECED] lg:h-[657px] p-6 lg:p-10">
       {/* Contact Form */}
       <img
         src="/contact2.png"

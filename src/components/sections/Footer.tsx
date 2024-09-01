@@ -13,7 +13,7 @@ const currentYear: number = new Date().getFullYear();
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-slate-100 font-overpass overflow-hidden">
+    <div className="bg-[#F4ECE6] font-overpass overflow-hidden">
       {/* Footer Links */}
       <div className=" mx-auto grid grid-cols-1 md:grid-cols-1 px-12 lg:grid-cols-4  p-4">
         {/* Logo and Description */}
@@ -43,18 +43,18 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Quick Contact */}
-        <div className="flex  items-center   flex-col">
+        <div className="flex  items-start lg:ml-20   flex-col">
           <h3 className="text-xl font-bold font-overpass text-secondary mb-4">
             Quick <span className="text-black">Contact</span>
           </h3>
           <p className="flex items-center mb-4 text-gray-600 text-sm lg:text-base">
-            <FaLocationDot className="text-secondary mr-3" /> Perth, Australia
+            <FaLocationDot className="text-secondary mr-3" /> Sydney, Australia
           </p>
           <p className="flex items-center mb-4 text-gray-600 text-sm lg:text-base">
             <IoCall className="text-secondary mr-3" /> +61 450 545 073
           </p>
           <p className="flex items-center mb-4 text-gray-600 text-sm lg:text-base">
-            <IoMail className="text-red-500 mr-3 w-5 h-5" />{" "}
+            <IoMail className="text-secondary mr-3 w-5 h-5" />{" "}
             skillspotaus@gmail.com
           </p>
         </div>
