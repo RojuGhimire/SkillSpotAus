@@ -17,10 +17,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <motion.div
       className="flex flex-col w-full lg:max-w-[500px]"
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 1, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 5.6 }}
+      transition={{ duration: 1.6 }}
     >
       <div className="relative">
         <img
@@ -70,13 +70,13 @@ const Services: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 1.2,
+        staggerChildren: 0.2,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 1, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
 
