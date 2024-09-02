@@ -4,6 +4,7 @@ import Footer from "../sections/Footer";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ContactSection from "../sections/ContactSection";
+import { Footer2 } from "../sections/Footer2";
 
 const About: React.FC = () => {
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
@@ -207,6 +208,7 @@ const About: React.FC = () => {
       </div>
       <ContactSection />
       <Footer />
+      <Footer2 />
     </div>
   );
 };
