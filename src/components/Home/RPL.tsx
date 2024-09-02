@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../Header";
 import Footer from "../sections/Footer";
+import { Footer2 } from "../sections/Footer2";
 
 interface Course {
   id: number;
@@ -145,6 +146,7 @@ const RPL: React.FC = () => {
         </div>
       </div>
       <Footer />
+      <Footer2 />
     </div>
   );
 };

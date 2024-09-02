@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
     <div className=" h-[510px]   font-overpass   ">
       <div>
         <div className="relative  ">
-          <div className="relative top-[79px] bg-primary text-white p-6 rounded-3xl h-[155px] lg:w-[1225px] items-center justify-center font-overpass shadow-2xl mx-auto max-w-7xl">
+          <div className="relative top-[89px] bg-primary text-white p-6 rounded-3xl h-[155px] lg:w-[1225px] items-center justify-center font-overpass shadow-2xl mx-auto max-w-7xl">
             <div className="absolute flex flex-col lg:flex-row justify-between lg:px-10 items-center space-y-4 lg:space-y-0">
               <div className="text-center lg:text-left">
                 <h2 className="text-2xl font-bold">
@@ -49,7 +49,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="bg-[#F4ECE6] h-[350px] lg:items-end grid grid-cols-1 md:grid-cols-1  lg:px-20 lg:grid-cols-4  p-8">
+        <div className="bg-[#F4ECE6] h-[450px] items-center   grid grid-cols-1 md:grid-cols-1  lg:px-20 lg:grid-cols-4  p-8">
+
           {/* Logo and Description */}
           <div className="flex flex-col   items-center lg:w-[450px]  gap-4">
             <img
@@ -66,7 +67,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="flex flex-col  items-center">
-            <h3 className="text-xl font-bold  font-overpass text-secondary mb-4">
+            <h3 className="text-2xl font-bold  font-overpass text-secondary mb-4">
               Quick <span className="text-black">Link</span>
             </h3>
             <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
@@ -80,7 +81,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Contact */}
           <div className="flex  items-start lg:ml-20   flex-col">
-            <h3 className="text-xl font-bold font-overpass text-secondary mb-4">
+            <h3 className="text-2xl font-bold font-overpass text-secondary mb-4">
               Quick <span className="text-black">Contact</span>
             </h3>
             <p className="flex items-center mb-4 text-gray-600 text-sm lg:text-base">
@@ -98,7 +99,7 @@ const Footer: React.FC = () => {
 
           {/* Social Media and QR Code */}
           <div className="flex flex-col  items-center">
-            <h3 className="text-xl font-bold font-overpass text-secondary mb-4">
+            <h3 className="text-2xl font-bold font-overpass text-secondary mb-4">
               Let's <span className="text-black">Get Social</span>
             </h3>
             <div className="flex space-x-4 mb-4 text-2xl">
