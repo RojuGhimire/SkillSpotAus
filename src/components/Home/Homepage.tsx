@@ -10,6 +10,7 @@ import Services from "../sections/Service";
 import MainComponent from "../sections/Notice";
 import Testimonials from "../sections/Testimonial";
 import FAQ from "../sections/FAQ";
+import { Footer2 } from "../sections/Footer2";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -25,6 +26,7 @@ const Homepage: React.FC = () => {
         <FAQ />
         <Affiliates />
         <Footer />
+        <Footer2 />
       </div>
     </RootLayout>
   );

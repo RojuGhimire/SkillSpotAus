@@ -35,16 +35,16 @@ const notices: Notice[] = [
 
 const NoticeBoard: React.FC = () => {
   return (
-    <div className="p-6 bg-white  items-center justify-center md:mr-[580px] lg:mr-0 rounded-lg shadow-xl md:w-[630px]  mx-auto">
+    <div className="p-6 bg-white  items-center justify-between  rounded-lg  shadow-xl md:w-[630px]  ">
       <div className="flex justify-between items-center">
         <h2 className="text-lg sm:text-xl font-semibold flex items-center gap-2">
           <span className="bg-secondary rounded">&#128221;</span> Notice Board
         </h2>
-        <button className="text-sm sm:text-base font-semibold text-secondary hover:bg-primary hover:text-white font-overpass h-[40px] w-[100px] md:w-[150px] rounded-full shadow-xl border border-gray-200 flex items-center justify-center gap-1">
+        {/* <button className="text-sm sm:text-base font-semibold text-secondary hover:bg-primary hover:text-white font-overpass h-[40px] w-[100px] md:w-[150px] rounded-full shadow-xl border border-gray-200 flex items-center justify-center gap-1">
           View More <span>&rarr;</span>
-        </button>
+        </button> */}
       </div>
-      <div className="mt-4 space-y-5 max-h-[485px] w-full sm:w-[513px] font-overpass overflow-y-auto custom-scrollbar px-2 sm:px-6">
+      <div className="mt-4 space-y-5 max-h-[485px] w-full font-overpass overflow-y-auto  custom-scrollbar px-6 ">
         {notices.map((notice, index) => (
           <div key={index} className="border-b  pb-4 last:border-none">
             <h3 className="text-base sm:text-lg font-semibold">{notice.title}</h3>

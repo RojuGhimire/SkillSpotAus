@@ -9,11 +9,10 @@ import {
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall, IoMail } from "react-icons/io5";
 
-const currentYear: number = new Date().getFullYear();
 
 const Footer: React.FC = () => {
   return (
-    <div className=" h-[484px]   font-overpass   ">
+    <div className=" h-[510px]   font-overpass   ">
       <div>
         <div className="relative  ">
           <div className="relative top-[79px] bg-primary text-white p-6 rounded-3xl h-[155px] lg:w-[1225px] items-center justify-center font-overpass shadow-2xl mx-auto max-w-7xl">
@@ -50,7 +49,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="bg-[#F4ECE6] lg:h-[354px]  lg:items-end grid grid-cols-1 md:grid-cols-1  lg:px-20 lg:grid-cols-4  p-8">
+        <div className="bg-[#F4ECE6] h-[350px] lg:items-end grid grid-cols-1 md:grid-cols-1  lg:px-20 lg:grid-cols-4  p-8">
           {/* Logo and Description */}
           <div className="flex flex-col   items-center lg:w-[450px]  gap-4">
             <img
@@ -116,53 +115,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Footer Bottom Links */}
-        <div className="bg-primary text-white font-poppins py-4 mx-auto flex  flex-wrap justify-center space-x-4 text-sm lg:text-base">
-          <a
-            href="#"
-            aria-label="Terms and Conditions"
-            className="hover:underline"
-          >
-            Terms and Conditions
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="Privacy" className="hover:underline">
-            Privacy
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="Disclaimer" className="hover:underline">
-            Disclaimer
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="UWE Blackboard" className="hover:underline">
-            UWE Blackboard
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="Turnitin" className="hover:underline">
-            Turnitin
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="Press Archive" className="hover:underline">
-            Press Archive
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="UWE+TBC" className="hover:underline">
-            UWE+TBC
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="Downloads" className="hover:underline">
-            Downloads
-          </a>
-          <span>|</span>
-          <a href="#" aria-label="Vacancies" className="hover:underline">
-            Vacancies
-          </a>
-        </div>
-
-        {/* Footer Bottom */}
-        <div className="text-center bg-primary text-white font-overpass text-sm lg:text-base py-2">
-          © {currentYear} Skill Spot Australia, All Rights Reserved
-        </div>
+       
       </div>
     </div>
   );

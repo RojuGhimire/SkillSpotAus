@@ -2,7 +2,7 @@ import React from "react";
 
 const Affiliates: React.FC = () => {
   return (
-    <section className="py-10 lg:h-[350px] flex flex-col items-center p-8 lg:px-20  lg:p-16 lg:justify-center text-center">
+    <section className=" lg:h-[350px] flex flex-col items-center  lg:px-20  lg:justify-center text-center">
       {/* Heading and Subtitle */}
       <h2 className="text-3xl font-overpass font-semibold">Our Affiliates</h2>
       <p className="text-gray-400 font-overpass mt-2 lg:w-[800px] mb-12">
