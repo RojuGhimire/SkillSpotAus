@@ -52,13 +52,13 @@ const Footer: React.FC = () => {
         <div className="bg-[#F4ECE6] h-[450px] items-center   grid grid-cols-1 md:grid-cols-1  lg:px-20 lg:grid-cols-4  p-8">
 
           {/* Logo and Description */}
-          <div className="flex flex-col   items-center lg:w-[450px]  gap-4">
+          <div className="flex flex-col   items-center  lg:w-[390px]  gap-4">
             <img
               src="/logo2.png"
               alt="Skill Spot Australia"
               className="w-[112px] h-[105px]  "
             />
-            <p className="text-[#6C757D] htext-sm lg:text-base">
+            <p className="text-[#6C757D] text-start lg:text-base w-[380px]">
               In publishing and graphic design, Lorem ipsum is a placeholder
               text commonly used to demonstrate the visual form of a document or
               a typeface without relying on meaningful content.
