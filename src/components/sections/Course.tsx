@@ -119,7 +119,7 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
       </div>
       {/* Button outside the card */}
       <div className="mt-4  mb-4">
-        <button className="text-white border px-4 py-2 bg-primary rounded-lg w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300">
+        <button className="text-white border px-4 py-3 bg-primary rounded-lg w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300">
           Enroll Now
         </button>
       </div>

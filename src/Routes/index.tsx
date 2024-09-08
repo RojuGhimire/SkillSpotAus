@@ -1,11 +1,11 @@
-import Homepage from "@/components/Home/Homepage";
+import Homepage from "@/components/Pages/Homepage";
 import AdminLogin from "@/Pages/AdminLogin";
 import { Route, Routes } from "react-router-dom";
 import ActiveLinkContextProvider from "@/context/active-link-context";
-import RPL from "@/components/Home/RPL";
+import RPL from "@/components/Pages/RPL";
 import NotFound from "@/components/notfound";
-import About from "@/components/Home/About";
-import ContactUS from "@/components/Home/ContactUS";
+import About from "@/components/Pages/About";
+import ContactUS from "@/components/Pages/ContactUS";
 
 const AppRoutes = () => {
   return (
