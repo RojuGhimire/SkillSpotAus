@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
 interface Course {
@@ -75,7 +73,7 @@ const CourseGrid: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
           Popular Courses
         </h2>
-        <p className="text-center text-[#A4A4A4]  mb-8">
+        <p className="text-center text-[#A4A4A4] mb-8">
           Explore our popular courses designed to elevate your skills and career
           prospects. From childcare to construction,
           <br />
@@ -89,70 +87,43 @@ const CourseGrid: React.FC = () => {
           <CourseCard key={course.id} course={course} />
         ))}
       </div>
-      <div className="flex items-center justify-center mt-10">
-        <motion.button
-          className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
+      <div className="flex items-center justify-center  mt-10">
+        <button className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300">
           View More <FiArrowRight />
-        </motion.button>
+        </button>
       </div>
     </div>
   );
 };
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
   return (
-    <motion.div
-      ref={ref}
-      className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-101 pb-16"
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 10 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-      }}
-      whileHover={{ scale: 1.01, y: -2 }}
-    >
-      <div className="p-4">
-        <h3 className="text-lg font-bold text-primary mb-2 text-center">
-          {course.title}
-        </h3>
-        {course.image ? (
-          <img
-            src={course.image}
-            alt={course.title}
-            className="w-full h-[264px] rounded-lg object-cover"
-          />
-        ) : (
-          <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
-            No Image Available
-          </div>
-        )}
+    <div className="flex  flex-col items-center">
+      <div className="relative border rounded-lg shadow-xl overflow-hidden pb-4">
+        <div className="p-4">
+          <h3 className="text-lg font-bold text-primary mb-2 text-center">
+            {course.title}
+          </h3>
+          {course.image ? (
+            <img
+              src={course.image}
+              alt={course.title}
+              className="w-full h-[264px] rounded-lg object-cover"
+            />
+          ) : (
+            <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+              No Image Available
+            </div>
+          )}
+        </div>
       </div>
-      <div className="absolute w-full flex justify-center bottom-4">
-        <motion.button
-          className="text-secondary border border-secondary px-4 py-2 rounded-xl w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
+      {/* Button outside the card */}
+      <div className="mt-4  mb-4">
+        <button className="text-white border px-4 py-2 bg-primary rounded-lg w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300">
           Enroll Now
-        </motion.button>
+        </button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

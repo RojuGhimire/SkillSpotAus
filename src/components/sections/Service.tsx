@@ -81,7 +81,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section className="py-12 lg:h-[600px] mb-10">
+    <section className="py-12 lg:mt-8 lg:h-[600px] mb-10">
       <div className="mx-auto px-4 sm:px-8 lg:px-16">
         <h2 className="text-3xl font-overpass font-bold text-center mb-4">
           Services
