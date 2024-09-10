@@ -11,6 +11,7 @@ import MainComponent from "../components/sections/Notice";
 import Testimonials from "../components/sections/Testimonial";
 import FAQ from "../components/sections/FAQ";
 import { Footer2 } from "../components/sections/Footer2";
+import BlogPostSection from "@/components/sections/BlogSection";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -20,6 +21,7 @@ const Homepage: React.FC = () => {
         <Hero2 />
         <CourseGrid />
         <Services />
+        <BlogPostSection />
         <MainComponent />
         <Testimonials />
         <ContactSection />
