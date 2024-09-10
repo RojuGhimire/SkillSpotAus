@@ -37,6 +37,14 @@ const Hero2: React.FC = () => {
               Learning (RPL), training and qualifications, we’re your gateway to
               certifications across Australia.
             </p>
+            <p className="text-[#6C757D] text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left lg:mb-8">
+              We understand that each individual's journey is unique. That's why
+              we're committed to providing personalized guidance and support
+              every step of the way. Whether you're aiming to advance in your
+              career or embark on a new educational path, we're here to empower
+              you. Join us on this transformative journey and let Skill Spot
+              Australia be your guide to achieving your aspirations.
+            </p>
             <p className="text-[#6C757D] text-[15px] sm:text-[17px] font-semibold leading-[25px] sm:leading-[28px] text-left">
               We understand that each individual's journey is unique. That's why
               we're committed to providing personalized guidance and support
@@ -45,7 +53,7 @@ const Hero2: React.FC = () => {
               you. Join us on this transformative journey and let Skill Spot
               Australia be your guide to achieving your aspirations.
             </p>
-          </div>
+             </div>
 
           <motion.button
             whileHover={{
@@ -69,23 +77,23 @@ const Hero2: React.FC = () => {
           ref={rightContentRef}
         >
           <img
-            src="/hero.png" 
+            src="/he2.png" 
             alt="Who Are We"
-            className="w-full sm:w-[900px] lg:w-[700px] mt-0 lg:mt-20 h-auto sm:h-[400px] lg:h-[425px] object-cover"
+            className="w-full sm:w-[900px] lg:w-[700px] mt-0 lg:mt-20 h-auto sm:h-[400px] lg:h-[543px] object-cover"
           />
-          <motion.div
+          {/* <motion.div
             className="-mt-8 sm:-mt-10 bg-white rounded-xl shadow-lg items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
             whileHover={{ scale: 1.05 }}
-          >
-            <div className="w-full">
+          > */}
+            {/* <div className="w-full">
               <h2 className="font-overpass text-[16px] sm:text-[18.17px] font-semibold leading-[22px] sm:leading-[23px] text-left">
                 We Build for your comfort
               </h2>
               <p className="font-overpass font-bold text-base sm:text-lg">
                 Call: +61 450 545 073
               </p>
-            </div>
-          </motion.div>
+            </div> */}
+          {/* </motion.div> */}
         </motion.div>
       </div>
     </section>

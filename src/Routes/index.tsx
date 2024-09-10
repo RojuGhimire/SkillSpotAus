@@ -5,6 +5,7 @@ import RPL from "@/Pages/RPL";
 import NotFound from "@/components/notfound";
 import About from "@/Pages/About";
 import ContactUS from "@/Pages/ContactUS";
+import Login from "@/Pages/Login";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUS />} />
           <Route path="/error" element={<NotFound />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </ActiveLinkContextProvider>
     </div>

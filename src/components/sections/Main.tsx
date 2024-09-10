@@ -40,9 +40,7 @@ const NoticeBoard: React.FC = () => {
         <h2 className="text-lg sm:text-xl font-semibold flex items-center gap-2">
           <span className="bg-secondary rounded">&#128221;</span> Notice Board
         </h2>
-        {/* <button className="text-sm sm:text-base font-semibold text-secondary hover:bg-primary hover:text-white font-overpass h-[40px] w-[100px] md:w-[150px] rounded-full shadow-xl border border-gray-200 flex items-center justify-center gap-1">
-          View More <span>&rarr;</span>
-        </button> */}
+       
       </div>
       <div className="mt-4 space-y-5 max-h-[485px] w-full font-overpass overflow-y-auto  custom-scrollbar px-6 ">
         {notices.map((notice, index) => (
