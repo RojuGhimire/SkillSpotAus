@@ -2,7 +2,7 @@ import React from "react";
 
 const Affiliates: React.FC = () => {
   return (
-    <section className=" lg:h-[350px] flex flex-col items-center  lg:px-20  lg:justify-center text-center">
+    <section className=" lg:h-[350px] lg:mt-5 flex flex-col items-center  lg:px-20  lg:justify-center text-center">
       {/* Heading and Subtitle */}
       <h2 className="text-3xl font-overpass font-semibold">Our Affiliates</h2>
       <p className="text-gray-400 font-overpass mt-2 lg:w-[800px] mb-12">
@@ -11,7 +11,7 @@ const Affiliates: React.FC = () => {
       </p>
 
       {/* Logos */}
-      <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-[70px]">
+      <div className="flex flex-wrap mt-5 justify-center items-center gap-8 lg:gap-[140px]">
         <img src="/1.png" alt="Affiliate 1" className="h-16" />
         <img src="/2.png" alt="Affiliate 2" className="h-16" />
         <img src="/3.png" alt="Affiliate 3" className="h-16" />
