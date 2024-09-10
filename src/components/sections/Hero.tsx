@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <div className="relative h-[800px] lg:h-[577px] px-5 lg:px-20 mt-10 md:mt-20 lg:mt-24 w-full text-white font-overpass flex items-center justify-center">
+    <div className="relative h-[800px] lg:h-[800px] px-5 lg:px-20 mt-10 md:mt-20 lg:mt-24 w-full text-white font-overpass flex items-center justify-center">
       {/* Background Image and Gradient */}
       <div className="absolute inset-0 z-0">
         <motion.img
@@ -37,21 +37,23 @@ const Hero: React.FC = () => {
           transition={{ duration: 3.5 }}
           ref={textRef}
         >
-          <h1 className="text-2xl sm:text-3xl items-center justify-center lg:text-4xl leading-snug lg:leading-[53.17px] font-extrabold">
+          <h1 className="text-2xl sm:text-3xl items-center justify-center font-poppins lg:text-4xl leading-snug lg:leading-[53.17px] font-extrabold">
             Welcome to Skill Spot
             <br />
-            <span>Australia</span>
+            <span className="  lg:ml-32 ">Australia</span>
           </h1>
 
-          <p className="text-sm sm:text-base lg:text-lg font-bold leading-normal lg:leading-[30px]">
-            Welcome to Skill Spot Australia Pty Ltd, your RPL destination nationwide.
+          <p className="text-sm sm:text-base lg:text-xl font-bold leading-normal lg:leading-[30px]">
+            Welcome to Skill Spot Australia Pty Ltd, your RPL destination
+            nationwide.
             <br />
             Celebrating your unique journey, we recognize and honor your skills.
             <br />
-            Unlocking potential, we help you achieve formal qualifications effortlessly.
+            Unlocking potential, we help you achieve formal qualifications
+            effortlessly.
           </p>
           <motion.button
-            className="bg-secondary hover:bg-primary font-bold text-white px-4 py-2 rounded-lg h-[45px] w-full sm:w-[300px]"
+            className="bg-secondary hover:bg-primary font-bold text-white px-4 py-2 rounded-lg h-[50px] w-full sm:w-[300px]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 3.3 }}
