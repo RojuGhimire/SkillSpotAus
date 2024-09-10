@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../Header";
-import Footer from "../sections/Footer";
+import Header from "../components/Header";
+import Footer from "../components/sections/Footer";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ContactSection from "../sections/ContactSection";
-import { Footer2 } from "../sections/Footer2";
+import ContactSection from "../components/sections/ContactSection";
+import { Footer2 } from "../components/sections/Footer2";
 
 const About: React.FC = () => {
   const { ref: leftContentRef, inView: leftContentInView } = useInView({

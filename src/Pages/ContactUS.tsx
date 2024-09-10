@@ -1,6 +1,6 @@
-import Header from '../Header'
-import ContactSection from '../sections/ContactSection'
-import Footer from '../sections/Footer'
+import Header from '../components/Header'
+import ContactSection from '../components/sections/ContactSection'
+import Footer from '../components/sections/Footer'
 
 const ContactUS = () => {
   return (

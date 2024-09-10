@@ -88,9 +88,10 @@ const CourseGrid: React.FC = () => {
         ))}
       </div>
       <div className="flex items-center justify-center  mt-10">
-        <button className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300">
+        {/* <button className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300">
           View More <FiArrowRight />
-        </button>
+        </button> */}
+        <button className="flex gap-4 border border-secondary rounded-full text-center shadow-xl "> View More <FiArrowRight className="mt-1" /> </button>
       </div>
     </div>
   );

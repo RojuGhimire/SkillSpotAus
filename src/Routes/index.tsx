@@ -1,11 +1,10 @@
-import Homepage from "@/components/Pages/Homepage";
-import AdminLogin from "@/Pages/AdminLogin";
+import Homepage from "@/Pages/Homepage";
 import { Route, Routes } from "react-router-dom";
 import ActiveLinkContextProvider from "@/context/active-link-context";
-import RPL from "@/components/Pages/RPL";
+import RPL from "@/Pages/RPL";
 import NotFound from "@/components/notfound";
-import About from "@/components/Pages/About";
-import ContactUS from "@/components/Pages/ContactUS";
+import About from "@/Pages/About";
+import ContactUS from "@/Pages/ContactUS";
 
 const AppRoutes = () => {
   return (
@@ -13,7 +12,6 @@ const AppRoutes = () => {
       <ActiveLinkContextProvider>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/rpl" element={<RPL />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUS />} />

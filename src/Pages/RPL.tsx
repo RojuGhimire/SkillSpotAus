@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Header from "../Header";
-import Footer from "../sections/Footer";
-import { Footer2 } from "../sections/Footer2";
+import Header from "../components/Header";
+import Footer from "../components/sections/Footer";
+import { Footer2 } from "../components/sections/Footer2";
 
 interface Course {
   id: number;
