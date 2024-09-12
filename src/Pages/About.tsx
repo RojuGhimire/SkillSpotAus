@@ -126,7 +126,7 @@ const About: React.FC = () => {
               interested in various RPL certificates. Empowering your journey
               with tailored support and guidance every step of the way.
             </p>
-            <div className="bg-[#F6ECED] p-8 rounded-lg shadow-md w-[445px] h-[490px] items-center justify-center ">
+            <div className="bg-[#F6ECED]  p-8 rounded-lg shadow-md w-[445px] h-[490px] items-center justify-center ">
               <h2 className="text-3xl  font-extrabold font-poppins text-center text-primary mb-6">
                 You're Just 60 <br /> Seconds Away <br />
                 From Transforming <br />
@@ -139,9 +139,11 @@ const About: React.FC = () => {
                 your experience can translate into a nationally recognized
                 qualification, propelling your career to new heights.
               </p>
-              <button className="w-full bg-primary hover:bg-secondary text-white py-2 rounded-lg">
+              <div className="items-center justify-center flex">
+              <button className="w-[115px] bg-primary hover:bg-secondary text-white py-2 rounded-full">
                 Lets Go →
               </button>
+              </div>
             </div>
           </div>
           {/* middle Section */}
