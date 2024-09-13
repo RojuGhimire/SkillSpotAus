@@ -9,7 +9,6 @@ import {
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall, IoMail } from "react-icons/io5";
 
-
 const Footer: React.FC = () => {
   return (
     <div className=" h-[510px]   font-overpass   ">
@@ -50,7 +49,6 @@ const Footer: React.FC = () => {
 
         {/* Footer Links */}
         <div className="bg-[#F4ECE6] h-[450px] items-center   grid grid-cols-1 md:grid-cols-1  lg:px-20 lg:grid-cols-4  p-8">
-
           {/* Logo and Description */}
           <div className="flex flex-col   items-center  lg:w-[390px]  gap-4">
             <img
@@ -115,8 +113,6 @@ const Footer: React.FC = () => {
             </button>
           </div>
         </div>
-
-       
       </div>
     </div>
   );

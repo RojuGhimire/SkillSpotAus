@@ -92,7 +92,7 @@ const Testimonial2: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className=" shadow-xl border border-gray-100 mx-4 rounded-xl gap-[200px]  w-[303px] h-[430px]  "
+              className=" shadow-xl  border border-gray-100 mx-4 rounded-xl gap-[200px]  w-[303px] h-[430px]  "
             >
               <div className="flex  ml-5 mt-8 mb-6 sm:mb-20 items-center">
                 <img

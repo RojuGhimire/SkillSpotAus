@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
   });
 
   return (
-    <div className="relative h-[800px] lg:h-[800px] px-5 lg:px-20 mt-10 md:mt-20 lg:mt-24 w-full text-white font-overpass flex items-center justify-center">
+    <div className="relative h-[800px] lg:h-[650px] px-5 lg:px-20 mt-10 md:mt-20 lg:mt-24 w-full text-white font-overpass flex items-center justify-center">
       {/* Background Image and Gradient */}
       <div className="absolute inset-0 z-0">
         <motion.img

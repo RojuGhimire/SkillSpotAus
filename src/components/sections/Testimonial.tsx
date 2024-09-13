@@ -58,7 +58,7 @@ const TestimonialSlider: React.FC = () => {
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
           <div key={index} className="p-4 ">
-            <div className="bg-white rounded-lg px-5  justify-center  w-[305px] h-[435px] shadow-lg flex flex-col items-center">
+            <div className="bg-white   rounded-lg px-5 mx-auto   justify-center  w-[305px] h-[435px] shadow-xl  flex flex-col items-center">
              <div className='flex space-x-10 mb-12 '>
               <img
                 src={testimonial.image}
@@ -80,11 +80,11 @@ const TestimonialSlider: React.FC = () => {
                   </svg>
                 )}
 </div>
-              <h3 className="text-lg  font-semibold mb-2">{testimonial.name}</h3>
+              <h3 className="text-xl  font-bold mb-2">{testimonial.name}</h3>
               </div>
               </div>
               
-              <p className="text-gray-600 font-semibold text-center ">{testimonial.feedback}</p>
+              <p className="text-gray-600 text-lg font-bold text-center ">{testimonial.feedback}</p>
               <FaQuoteRight className="text-primary text-2xl mx-auto mt-auto sm:mt-16" />
              
               
