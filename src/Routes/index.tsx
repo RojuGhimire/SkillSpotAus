@@ -6,6 +6,7 @@ import NotFound from "@/components/notfound";
 import About from "@/Pages/About";
 import ContactUS from "@/Pages/ContactUS";
 import Login from "@/Pages/Login";
+import Blog from "@/Pages/Blog";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
           <Route path="/rpl" element={<RPL />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUS />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/error" element={<NotFound />} />
           <Route path='/login' element={<Login />} />
         </Routes>

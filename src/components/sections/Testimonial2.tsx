@@ -121,7 +121,7 @@ const Testimonial2: React.FC = () => {
         </Slider>
       </div>
 
-      <div className="flex justify-center mt-6 space-x-2">
+      <div className="flex justify-center mt-4 space-x-5">
         {testimonials.map((_, index) => (
           <button
             key={index}

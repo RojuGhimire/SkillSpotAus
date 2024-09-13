@@ -97,7 +97,7 @@ const RPL: React.FC = () => {
         </div>
 
         {/* Categories */}
-        <div className="flex justify-center flex-wrap gap-3 mb-8">
+        <div className="flex  justify-center flex-wrap gap-3 mb-8">
           {categories.map((category, index) => (
             <button
               key={index}
@@ -118,29 +118,32 @@ const RPL: React.FC = () => {
           {filteredCourses.map((course) => (
             <div
               key={course.id}
-              className="relative border rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105 pb-20"
+              className=""
             >
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-primary mb-2 text-center">
-                  {course.title}
-                </h3>
-                {course.image ? (
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="w-full h-[224px] rounded-lg object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
-                    No Image Available
-                  </div>
-                )}
-              </div>
-              <div className="absolute bottom-4 w-full flex justify-center">
-                <button className="text-secondary border border-secondary px-4 py-2 rounded hover:bg-secondary font-semibold hover:text-white transition-colors duration-300">
-                  Enroll Now
-                </button>
-              </div>
+               <div className="relative  border rounded-lg shadow-xl overflow-hidden pb-4">
+        <div className="p-4">
+          <h3 className="text-lg font-bold text-primary mb-2 text-center">
+            {course.title}
+          </h3>
+          {course.image ? (
+            <img
+              src={course.image}
+              alt={course.title}
+              className="w-full h-[264px] rounded-lg object-cover"
+            />
+          ) : (
+            <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+              No Image Available
+            </div>
+          )}
+        </div>
+      </div>
+      {/* Button outside the card */}
+      <div className="mt-4 text-center mb-4">
+        <button className="text-white border px-4 py-3 bg-primary rounded-lg w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300">
+          Enroll Now
+        </button>
+      </div>
             </div>
           ))}
         </div>
