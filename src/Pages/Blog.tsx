@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/sections/Footer";
 import { Footer2 } from "@/components/sections/Footer2";
 import { FaEye, FaHeart, FaRegBookmark, FaShare } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 interface Blogs {
   id: number;
@@ -12,6 +13,7 @@ interface Blogs {
   likes: number;
   views: number;
   date: string;
+  description: string;
 }
 
 const blog: Blogs[] = [
@@ -23,6 +25,8 @@ const blog: Blogs[] = [
     likes: 868,
     views: 201000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
   {
     id: 2,
@@ -32,6 +36,8 @@ const blog: Blogs[] = [
     likes: 500,
     views: 150000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
   {
     id: 3,
@@ -41,6 +47,8 @@ const blog: Blogs[] = [
     likes: 600,
     views: 175000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
   {
     id: 4,
@@ -50,6 +58,8 @@ const blog: Blogs[] = [
     likes: 700,
     views: 100000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
   {
     id: 5,
@@ -59,6 +69,8 @@ const blog: Blogs[] = [
     likes: 800,
     views: 120000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
   {
     id: 6,
@@ -68,6 +80,8 @@ const blog: Blogs[] = [
     likes: 900,
     views: 200000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
   {
     id: 7,
@@ -77,6 +91,8 @@ const blog: Blogs[] = [
     likes: 1000,
     views: 250000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
   {
     id: 8,
@@ -86,12 +102,14 @@ const blog: Blogs[] = [
     likes: 1100,
     views: 300000,
     date: "MAR 10 2023",
+    description:
+      " Lorem Ipsum is simply dummy text of the prin typesetting industry...",
   },
 ];
 
 const Blog = () => {
   const [activeCategory, setActiveCategory] = useState<string>("All");
-  // const router = useRouter();  // Initialize the router
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const filteredBlog =
     activeCategory === "All"
@@ -108,9 +126,9 @@ const Blog = () => {
     "Health & Childcare",
   ];
 
-  // const handleReadMore = () => {
-  //   router.push("/Blog1");  // Navigate to Blog1 component
-  // };
+  const handleReadMoreClick = () => {
+    navigate("/blogdetail"); // Navigate to the RPL page
+  };
 
   return (
     <div className="w-full">
@@ -171,12 +189,9 @@ const Blog = () => {
                             <p className="text-sm text-white underline mb-2">
                               {blog.date}
                             </p>
-                            <p className="text-white text-start mb-2">
-                              Lorem Ipsum is simply dummy text of the printing
-                              and typesetting industry...
-                            </p>
+                            <p className="text-white text-start mb-2">{blog.description}</p>
                             <button
-                              // onClick={handleReadMore}
+                              onClick={handleReadMoreClick}
                               className="text-sm text-secondary underline"
                             >
                               Read More

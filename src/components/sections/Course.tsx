@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 interface Course {
   id: number;
@@ -61,14 +62,19 @@ const courses: Course[] = [
 
 const CourseGrid: React.FC = () => {
   const [activeCategory] = useState<string>("All");
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const filteredCourses =
     activeCategory === "All"
       ? courses
       : courses.filter((course) => course.category === activeCategory);
 
+  const handleViewMoreClick = () => {
+    navigate("/RPL"); // Navigate to the RPL page
+  };
+
   return (
-    <div className="p-4 md:p-8 lg:h-[1050.81px] font-overpass lg:px-20 mb-10 ">
+    <div className="p-4 md:p-8 lg:h-[1050.81px] font-overpass lg:px-20 mb-10">
       <div className="h-[100px] items-center justify-center mb-12">
         <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
           Popular Courses
@@ -88,10 +94,12 @@ const CourseGrid: React.FC = () => {
         ))}
       </div>
       <div className="flex items-center justify-center  mt-10">
-        <button className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300">
+        <button
+          onClick={handleViewMoreClick} // Add onClick event
+          className="text-secondary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-primary font-semibold hover:text-white transition-colors duration-300"
+        >
           View More <FiArrowRight />
         </button>
-        {/* <button className="flex gap-4 border border-secondary rounded-full text-center shadow-xl "> View More <FiArrowRight className="mt-1" /> </button> */}
       </div>
     </div>
   );

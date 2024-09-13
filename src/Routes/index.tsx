@@ -7,17 +7,21 @@ import About from "@/Pages/About";
 import ContactUS from "@/Pages/ContactUS";
 import Login from "@/Pages/Login";
 import Blog from "@/Pages/Blog";
+import ScrollToTop from "@/components/ScrollToTop";
+import BlogDetail from "@/Pages/BlogDetail";
 
 const AppRoutes = () => {
   return (
     <div>
       <ActiveLinkContextProvider>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/rpl" element={<RPL />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUS />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blogdetail" element={<BlogDetail />} />
           <Route path="/error" element={<NotFound />} />
           <Route path='/login' element={<Login />} />
         </Routes>
