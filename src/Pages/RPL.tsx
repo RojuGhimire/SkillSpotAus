@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/sections/Footer";
 import { Footer2 } from "../components/sections/Footer2";
+import RPL1 from "@/components/sections/RPL1";
 
 interface Course {
   id: number;
@@ -84,6 +85,7 @@ const RPL: React.FC = () => {
       <Header />
       <img src="/RPL.png" alt="" className="w-full" />
       <div className="p-4 md:p-8 lg:h-full lg:px-20">
+        <RPL1 />
         <div className="h-[100px] items-center justify-center mb-12">
           <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
             Popular Courses
