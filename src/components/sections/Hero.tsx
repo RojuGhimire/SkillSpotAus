@@ -1,8 +1,11 @@
-import React from "react";
+import React , {useState}from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { BiLoaderCircle } from "react-icons/bi";
 
 const Hero: React.FC = () => {
+  const [isLoading] = useState(false);
+
   const { ref: textRef, inView: textInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -52,14 +55,30 @@ const Hero: React.FC = () => {
             Unlocking potential, we help you achieve formal qualifications
             effortlessly.
           </p>
-          <motion.button
+          {/* <motion.button
             className="bg-secondary hover:bg-primary font-bold text-white px-4 py-2 rounded-lg h-[50px] w-full sm:w-[300px]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 3.3 }}
           >
             Free 60 second Skill Assessment
-          </motion.button>
+          </motion.button> */}
+          <button
+              type="submit"
+              className="bg-secondary hover:bg-primary font-bold text-white  py-2 rounded-lg h-[50px] w-full sm:w-[300px] inline-flex mt-7   gap-1 animate-shimmer items-center justify-center  bg-[linear-gradient(110deg,#001B6A,45%,#f9f9f8,48%,#001B6A)] bg-[length:200%_100%] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
+            >
+              {isLoading ? (
+                <BiLoaderCircle
+                  className="animate-spin"
+                  color="#ffffff"
+                  size={25}
+                />
+              ) : (
+                <div className="flex gap-2 items-center ">
+                  <span>Free 60 second Skill Assessment</span>
+                </div>
+              )}
+            </button>
         </motion.div>
 
         {/* Right Content - Image */}
