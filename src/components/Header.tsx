@@ -9,6 +9,7 @@ import {
   FaInstagram,
   FaSearch,
   FaBars,
+  FaSignInAlt,
 } from "react-icons/fa";
 import { IoCallSharp } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
@@ -58,11 +59,15 @@ export default function Header() {
         </div>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-10">
           <FaFacebookF className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px]" />
           <FaWhatsapp className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
           <FaLinkedinIn className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
           <FaInstagram className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px] " />
+        </div>
+        <div className="flex items-center space-x-2">
+          <FaSignInAlt className="cursor-pointer" />
+          <span className="text-sm cursor-pointer">LOGIN</span>
         </div>
       </div>
 
@@ -112,23 +117,22 @@ export default function Header() {
                 </motion.li>
               ))}
             </ul>
-         
 
-          {/* Hamburger Menu Icon */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-black focus:outline-none"
-            >
-              <FaBars className="h-6 w-6" />
-            </button>
-          </div>
+            {/* Hamburger Menu Icon */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="text-black focus:outline-none"
+              >
+                <FaBars className="h-6 w-6" />
+              </button>
+            </div>
 
-          {/* Search Icon */}
-          <div className="hidden lg:flex items-center justify-end ">
-            <FaSearch className="text-white bg-primary h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
+            {/* Search Icon */}
+            <div className="hidden lg:flex items-center justify-end ">
+              <FaSearch className="text-white bg-primary h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
+            </div>
           </div>
-        </div>
         </div>
 
         {/* Mobile Menu */}
