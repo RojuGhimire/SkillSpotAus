@@ -50,7 +50,7 @@ const TestimonialSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-[645px]   font-overpass mx-auto p-4">
+    <div className="w-full h-[645px] lg:px-36  font-overpass mx-auto p-4">
       <h2 className="text-center text-3xl font-bold mb-4">What Our Client Says</h2>
       <p className="text-center text-gray-500 mb-8">
         Our pricing is tailored to your <span className="font-semibold">business size</span> and <span className="font-semibold">specific needs</span>:
