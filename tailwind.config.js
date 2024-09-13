@@ -18,6 +18,7 @@ export default {
         primary: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
         overpass: ['Overpass', 'sans-serif'], 
+        rose: ['Palanquin+Dark', 'sans-serif'], 
       },
       fontWeight: {
         regular: 400,

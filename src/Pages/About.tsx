@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ContactSection from "../components/sections/ContactSection";
 import { Footer2 } from "../components/sections/Footer2";
+import RPLSteps from "@/components/sections/RPLstep";
+import StatsSection from "@/components/sections/Stat";
 
 const About: React.FC = () => {
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
@@ -111,6 +113,8 @@ const About: React.FC = () => {
           </motion.div>
         </div>
       </section>
+      <RPLSteps />
+      <StatsSection />
 
       {/*Popular Course */}
 

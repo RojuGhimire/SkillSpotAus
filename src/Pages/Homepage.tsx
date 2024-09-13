@@ -12,6 +12,7 @@ import Testimonials from "../components/sections/Testimonial";
 import FAQ from "../components/sections/FAQ";
 import { Footer2 } from "../components/sections/Footer2";
 import BlogPostSection from "@/components/sections/BlogSection";
+import CourseStats from "@/components/sections/Coursestats";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -20,6 +21,7 @@ const Homepage: React.FC = () => {
         <Frame />
         <Hero2 />
         <CourseGrid />
+        <CourseStats />
         <Services />
         <BlogPostSection />
         <MainComponent />
