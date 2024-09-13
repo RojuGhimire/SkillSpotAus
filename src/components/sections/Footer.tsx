@@ -11,7 +11,7 @@ import { IoCall, IoMail } from "react-icons/io5";
 
 const Footer: React.FC = () => {
   return (
-    <div className=" h-[510px]   font-overpass   ">
+    <div className=" h-[510px] overflow-hidden  font-overpass   ">
       <div>
         <div className="relative  ">
           <div className="relative top-[89px] bg-primary text-white p-6 rounded-3xl h-[155px] lg:w-[1225px] items-center justify-center font-overpass shadow-2xl mx-auto max-w-7xl">
