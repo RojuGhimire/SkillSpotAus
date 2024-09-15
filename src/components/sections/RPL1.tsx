@@ -70,15 +70,15 @@ const RPL1: React.FC = () => {
 
         </div>
         {recentNews.map((newsItem, index) => (
-          <div className="flex space-x-2 border-b border-gray-300 ">
-            <div className="w-full items-center justify-center flex ">
-            <img src={newsItem.image} alt="" className="h-[85px] w-[85px]  "/>
-</div>
-          <div key={index} className="mb-2 ">
-            <h3 className="font-bold mb-2 ">{newsItem.title}</h3>
-            <p className="font-overpass   ">{newsItem.description}</p>
-            <span className="text-secondary font-semibold text-sm  ">Published date : {newsItem.date}</span>
-          </div>
+          <div className="flex space-x-2 border-b-2 hover:bg-[#F6ECED]   border-gray-300 ">
+            <div className="w-full  items-center justify-center flex ">
+              <img src={newsItem.image} alt="" className="h-[95px] w-[95px]  " />
+            </div>
+            <div key={index} className="mb-2 ">
+              <h3 className="font-bold mt-2 mb-1 ">{newsItem.title}</h3>
+              <p className="font-overpass   ">{newsItem.description}</p>
+              <span className="text-secondary font-semibold text-sm  ">Published date : {newsItem.date}</span>
+            </div>
           </div>
         ))}
       </div>

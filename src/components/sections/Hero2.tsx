@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Hero2: React.FC = () => {
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
@@ -12,6 +13,11 @@ const Hero2: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleExploreMoreClick =() =>{
+    navigate("/About")
+  }
 
   return (
     <section className="flex flex-col lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
@@ -61,16 +67,11 @@ const Hero2: React.FC = () => {
             aspirations.
           </p>
         </div>
-        {/* <div className="h flex gap-10 w-full">
-<div>
-<h3>Our Mission & Vision</h3>
-<p> Lorem ipsum dolor sit amet consectetur. Nam feugiat sagittis dignissim elit. Lorem proin enim dictum aliquet pellentesque eget tincidunt posuere. Dignissim sit sed at sit ac volutpat id ac diam. Aliquam augue vitae at augue varius tincidunt egestas vulputate. Nibh a ut volutpat cursus ultrices id purus .</p>
-</div>
-<div>
-<h3>Our Mission & Vision</h3>
-<p> Lorem ipsum dolor sit amet consectetur. Nam feugiat sagittis dignissim elit. Lorem proin enim dictum aliquet pellentesque eget tincidunt posuere. Dignissim sit sed at sit ac volutpat id ac diam. Aliquam augue vitae at augue varius tincidunt egestas vulputate. Nibh a ut volutpat cursus ultrices id purus .</p>
-</div>
-</div> */}
+        <button
+        onClick={handleExploreMoreClick}
+        className=" border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-extrabold  transition-colors duration-300">
+          Explore More
+        </button>
       </motion.div>
 
       {/* Right Content - Image and Call to Action */}
