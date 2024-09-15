@@ -142,7 +142,7 @@ const RPL: React.FC = () => {
       </div>
       {/* Button outside the card */}
       <div className="mt-4 text-center mb-4">
-        <button className="text-white border px-4 py-3 bg-primary rounded-lg w-[175px] hover:bg-secondary font-semibold hover:text-white transition-colors duration-300">
+      <button className=" border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-bold  transition-colors duration-300">
           Enroll Now
         </button>
       </div>

@@ -4,6 +4,7 @@ interface NewsItem {
   title: string;
   description: string;
   date: string;
+  image: string;
 }
 
 const recentNews: NewsItem[] = [
@@ -12,18 +13,23 @@ const recentNews: NewsItem[] = [
     description:
       "Free workshop on Java Programming and Graphic Designing. Enjoy free workshops with practical, hands-on learning and free Q&A sessions with our experienced instructors.",
     date: "MAR 10 2023",
+    image: "/vet.png"
   },
   {
     title: "Ui/UX Designing Workshop",
     description:
       "Free workshop on Java Programming and Graphic Designing. Enjoy free workshops with practical, hands-on learning and free Q&A sessions with our experienced instructors.",
     date: "MAR 10 2023",
+    image: "/vet.png"
+
   },
   {
     title: "Ui/UX Designing Workshop",
     description:
       "Free workshop on Java Programming and Graphic Designing. Enjoy free workshops with practical, hands-on learning and free Q&A sessions with our experienced instructors.",
     date: "MAR 10 2023",
+    image: "/vet.png"
+
   },
 ];
 
@@ -58,17 +64,21 @@ const RPL1: React.FC = () => {
           prospects, or facilitating visa and immigration application processes.
         </p>
       </div>
-      <div className="md:w-1/3 h-[536.36px] h p-4 rounded-lg shadow-md">
-      <div className="bg-primary items-center ">
-      <h2 className="text-lg font-bold mb-4  px-4  text-white">Recent News</h2>
+      <div className="w-[535px]  h-auto  rounded-lg shadow-md">
+        <div className="bg-primary items-center ">
+          <h2 className="text-lg font-bold mb-4  px-4  text-white">Recent News</h2>
 
-      </div>
+        </div>
         {recentNews.map((newsItem, index) => (
-          <div key={index} className="mb-4">
-            <h3 className="font-semibold">{newsItem.title}</h3>
-            <p className="text-muted-foreground">{newsItem.description}</p>
-            <span className="text-muted">Published date : {newsItem.date}</span>
-            
+          <div className="flex space-x-2 border-b border-gray-300 ">
+            <div className="w-full items-center justify-center flex ">
+            <img src={newsItem.image} alt="" className="h-[85px] w-[85px]  "/>
+</div>
+          <div key={index} className="mb-2 ">
+            <h3 className="font-bold mb-2 ">{newsItem.title}</h3>
+            <p className="font-overpass   ">{newsItem.description}</p>
+            <span className="text-secondary font-semibold text-sm  ">Published date : {newsItem.date}</span>
+          </div>
           </div>
         ))}
       </div>

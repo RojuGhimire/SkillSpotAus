@@ -69,13 +69,22 @@ const Footer: React.FC = () => {
               Quick <span className="text-black">Link</span>
             </h3>
             <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
-              <li>About Us</li>
-              <li>RPL</li>
-              <li>Courses</li>
-              <li>Blog</li>
-              <li>Contact Us</li>
-            </ul>
+          <li>
+            <a href="about">About us</a>
+          </li>
+          <li>
+            <a href="rpl">RPL</a>
+          </li>
+          <li>
+            <a href="blog">Blog</a>
+          </li>
+        
+          <li>
+            <a href="#contact">Contact Us</a>
+          </li>
+        </ul>
           </div>
+          
 
           {/* Quick Contact */}
           <div className="flex  items-start lg:ml-20   flex-col">
