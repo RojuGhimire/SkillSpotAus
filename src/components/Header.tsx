@@ -46,9 +46,12 @@ export default function Header() {
   return (
     <header className="z-50 fixed top-0 left-0 w-full">
       {/* Top Bar */}
-      <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-center lg:px-20 px-4 py-2 text-sm">
+      <div className="bg-white">
         {/* Contact Info */}
-        <div className="flex items-center space-x-4">
+        <div className="justify-end flex  text-white md:flex flex-wrap  items-center py-2 text-sm">
+      <img src="/rec.png" alt="" className="w-[1086px] absolute" />
+      <div className=" flex justify-between w-[990px] px-10 ">
+      <div className="flex items-center relative   space-x-4">
           <div className="flex items-center space-x-3 w-full font-bold ">
             <IoCallSharp className="text-secondary h-[24px] w-[24px]" />
             <span>+61 450 545 073</span>
@@ -56,24 +59,30 @@ export default function Header() {
             <IoMdMail className="text-secondary h-[24px] w-[24px]" />
             <span>Info@skillspotaustralia.edu.au</span>
           </div>
-        </div>
-
-        {/* Social Icons */}
-        <div className="flex items-center gap-10">
+      </div>
+      <div className="flex items-center relative space-x-5 ">
           <FaFacebookF className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px]" />
           <FaWhatsapp className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
           <FaLinkedinIn className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
           <FaInstagram className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px] " />
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center relative space-x-2">
           <FaSignInAlt className="cursor-pointer" />
           <span className="text-sm cursor-pointer">LOGIN</span>
         </div>
+        </div>
+       
       </div>
+
+      </div>
+        
+
+        {/* Social Icons */}
+       
 
       {/* Main Navigation */}
       <nav className="bg-white  shadow-lg lg:px-20 px-4">
-        <div className="flex justify-between  items-center h-[75px]">
+        <div className="flex justify-between  items-center h-[55px]">
           {/* Logo */}
           <a
             href="/"
@@ -85,7 +94,7 @@ export default function Header() {
             <img
               src="logo.png"
               alt="Logo"
-              className="w-[100px] h-[73px] object-contain"
+              className="w-[150px] h-[90px] object-contain -mt-10"
             />
           </a>
 
