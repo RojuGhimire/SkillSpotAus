@@ -6,6 +6,13 @@ const {
 export default {
   content: ["./index.html", "./src/**/*.{ts,js,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: '480px',  // You can change the size as per your needs
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
+
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to right, #203174 60%, #B5BBD2 30%)',

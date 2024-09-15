@@ -40,17 +40,17 @@ const RPL1: React.FC = () => {
         <h1 className="text-4xl font-bold mb-4">
           Recognition Of Prior Learning (RPL)
         </h1>
-        <p className="text-lg text-gray-500 font-bold font-overpass  mb-6">
+        <p className="text-lg text-gray-500 font-semibold  font-overpass mt-16 mb-6">
           RPL is a process that assesses and validates the skills, knowledge,
           and experience that you have acquired through non-formal and informal
           learning. This can include things like work experience, volunteer
           work, online courses, and self-study.
         </p>
-        <p className="text-lg text-gray-500 font-bold font-overpass  mb-6">
+        <p className="text-lg text-gray-500 font-semibold  font-overpass  mb-6">
           RPL can be used to get credit for courses or programs, to get a job,
           or to apply for a visa or immigration.
         </p>
-        <p className="text-lg text-gray-500 font-bold font-overpass  mb-6">
+        <p className="text-lg text-gray-500 font-semibold  font-overpass  mb-6">
           Recognition of Prior Learning (RPL) is a formalized procedure designed
           to assess and authenticate the competencies, expertise, and practical
           insights acquired through non-formal and informal learning pathways.
@@ -58,16 +58,15 @@ const RPL1: React.FC = () => {
           limited to professional work experience, volunteer engagements, online
           coursework, and self-directed study.
         </p>
-        <p className="text-lg text-gray-500 font-bold font-overpass ">
+        <p className="text-lg text-gray-500 font-semibold  font-overpass ">
           The utilization of RPL serves multifaceted purposes, such as earning
           credit for specific courses or programs, enhancing employability
           prospects, or facilitating visa and immigration application processes.
         </p>
       </div>
       <div className="w-[535px]  h-auto  rounded-lg shadow-md">
-        <div className="bg-primary items-center ">
-          <h2 className="text-lg font-bold mb-4  px-4  text-white">Recent News</h2>
-
+        <div className="bg-primary  justify-start items-center flex h-10 ">
+          <h2 className="text-lg font-bold  px-4  text-white">Recent News</h2>
         </div>
         {recentNews.map((newsItem, index) => (
           <div className="flex space-x-2 border-b-2 hover:bg-[#F6ECED]   border-gray-300 ">
