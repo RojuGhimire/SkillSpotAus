@@ -46,7 +46,6 @@ export default function Header() {
   return (
     <header className="z-50 fixed top-0 left-0 w-full">
       {/* Top Bar */}
-      <div className="absolute h top-0 left-0 w-10 h-10 bg-white transform skew-y-3 bg-[#001B6A]"></div>
       <div className="hidden bg-primary text-white md:flex flex-wrap justify-between items-center lg:px-20 px-4 py-2 text-sm">
         {/* Contact Info */}
         <div className="flex items-center space-x-4">

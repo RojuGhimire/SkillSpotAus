@@ -18,7 +18,7 @@ const ContactSection: React.FC = () => {
         alt=""
         className="hidden lg:block w-[70.12px] h-[30.85px] mt-[350px] text-white"
       />
-      <div className="bg-white shadow-lg p-8 w-full lg:w-[561.47px] lg:h-[524.5px] mt-6 lg:mt-0 lg:top-[60px] lg:left-[117.68px] rounded-lg">
+      <div className="bg-white shadow-lg p-8 w-full lg:w-[561.47px] lg:h-[474.5px] mt-6 lg:mt-0 lg:top-[60px] lg:left-[117.68px] rounded-lg">
         <h2 className="text-2xl lg:text-3xl font-semibold font-overpass mb-2">
           Get In Touch
         </h2>
@@ -41,13 +41,7 @@ const ContactSection: React.FC = () => {
           placeholder="Phone"
           className="w-full lg:w-[426px] h-[43px] border border-gray-300 p-2 rounded mb-4"
         />
-        <select className="w-full lg:w-[426px] h-[43px] border border-gray-300 p-2 rounded mb-4">
-          <option>Select course applying for*</option>
-          <option>Automobile</option>
-          <option>TAE*</option>
-          <option>RPL</option>
-          {/* Add more options here */}
-        </select>
+        
         <input
           type="text"
           placeholder="Leave your message"
@@ -102,6 +96,16 @@ const ContactSection: React.FC = () => {
           alt="Support Person"
           className=" w-full lg:w-[374px] lg:h-[281px] "
         />
+          <div
+              className=" bg-white rounded-xl shadow-lg flex items-center justify-center p-4 border-l-4 sm:w-[320px] md:w-[364px] h-[75px] sm:h-[85px] sm:top-[350px] lg:left-[35px] text-secondary hover:bg-primary hover:text-white border-secondary transition-all duration-300"
+            >
+              <div className="w-full  ">
+                <h2 className="font-overpass text-sm sm:text-lg font-bold">
+                  Are you at Right Place?
+                </h2>
+                
+              </div>
+            </div>
       </div>
     </div>
   );

@@ -16,28 +16,28 @@ const testimonials: Testimonial[] = [
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     name: "Eleana Brown",
     feedback:
-      "Our membership management software provides full automation of membership renewals and payments",
+      "Our membership management software provides full automation of membership renewals and payments Our membership management software provides full automation of membership renewals and payments",
     rating: 4.5,
   },
   {
     image: "https://randomuser.me/api/portraits/women/45.jpg",
     name: "Kristine Smith",
     feedback:
-      "Our membership management software provides full automation of membership renewals and payments",
+      "Our membership management software provides full automation of membership renewals and payments Our membership management software provides full automation of membership renewals and payments",
     rating: 4.5,
   },
   {
     image: "https://randomuser.me/api/portraits/men/43.jpg",
     name: "Harris Fallon",
     feedback:
-      "Our membership management software provides full automation of membership renewals and payments",
+      "Our membership management software provides full automation of membership renewals and payments Our membership management software provides full automation of membership renewals and payments",
     rating: 4.5,
   },
   {
     image: "https://randomuser.me/api/portraits/men/46.jpg",
     name: "Jimmy S",
     feedback:
-      "Our membership management software provides full automation of membership renewals and payments",
+      "Our membership management software provides full automation of membership renewals and payments Our membership management software provides full automation of membership renewals and payments",
     rating: 4.5,
   },
 ];
@@ -54,7 +54,7 @@ const TestimonialSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-[645px] lg:px-36  font-overpass mx-auto p-4">
+    <div className="w-full h] h-[645px] lg:px-36  font-overpass mx-auto p-4">
       <h2 className="text-center text-3xl font-bold mb-4">
         What Our Client Says
       </h2>
@@ -66,8 +66,8 @@ const TestimonialSlider: React.FC = () => {
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
           <div key={index} className="p-4 ">
-            <div className="bg-white   rounded-3xl border border-gray-200 px-5 mx-auto   justify-center  w-[305px] h-[435px] shadow-xl  flex flex-col items-center">
-              <div className="flex space-x-10 mb-12 ">
+            <div className="bg-white   rounded-3xl border border-gray-200 px-5 mx-auto     w-[305px] h-[435px] shadow-xl  flex flex-col items-center">
+              <div className="flex space-x-10 mt-6 mb-12 ">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -101,7 +101,7 @@ const TestimonialSlider: React.FC = () => {
                 </div>
               </div>
 
-              <p className="text-gray-600 text-lg font-bold text-center ">
+              <p className="text-gray-600 text-md  text-center ">
                 {testimonial.feedback}
               </p>
               <FaQuoteRight className="text-primary text-2xl mx-auto mt-auto sm:mt-10" />

@@ -38,7 +38,7 @@ const BlogPostSection: React.FC = () => {
             {posts.map((post) => (
               <div
                 key={post.id}
-                className="bg-white hover:bg-[#F6ECED] w-full max-w-[334px] mx-auto shadow-lg rounded-lg transition-transform duration-200 hover:scale-105"
+                className="bg-white hover:bg-[#F6ECED] w-full max-w-[434px] mx-auto shadow-lg rounded-lg transition-transform duration-200 hover:scale-105"
               >
                 {/* Content */}
                 <div className="p-6">
@@ -46,12 +46,12 @@ const BlogPostSection: React.FC = () => {
                   <img
                     src={post.imgSrc}
                     alt="Blog Post"
-                    className="w-full h-[200px] object-cover mb-4 rounded-lg"
+                    className="w-full h-[250px] object-cover mb-4 rounded-lg"
                   />
                   <p className="text-gray-700 font-overpass mb-4">
                     {post.description}
                   </p>
-                  <button className="text-secondary bg-white border border-secondary hover:border-white px-4 py-2 rounded-full hover:bg-primary hover:text-white font-overpass transition duration-200">
+                  <button className="text-primary transition-transform duration-200 hover:scale-105 bg-white border border-primary hover:border-white px-4 py-2 rounded-full hover:bg-secondary hover:text-white font-overpass ">
                     Read More →
                   </button>
                 </div>
