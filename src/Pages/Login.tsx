@@ -1,9 +1,10 @@
+import Header from "@/components/Header";
 
 
 const Login: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#f2e6df]  font-overpass flex items-center justify-center">
-      
+      <Header />
       <div className="flex flex-col lg:flex-row  bg-white rounded-lg shadow-xl">
         {/* Left Side: Login Form */}
         <div className="flex flex-col items-center lg:h-[521px] p-10  lg:w-[432px]">
