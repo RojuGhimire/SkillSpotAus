@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
     threshold: 0.1,
   });
 
-  const { ref: heroRef, inView: heroInView } = useInView({
+  const { ref: heroRef } = useInView({
     threshold: 0.1,
     onChange: (inView) => setIsEligibilityVisible(!inView),
   });
