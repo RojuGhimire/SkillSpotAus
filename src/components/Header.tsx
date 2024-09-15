@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAVLINKS } from "@/constants";
 import { useActiveLinkContext } from "@/context/active-link-context";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+
 import {
   FaFacebookF,
   FaWhatsapp,
@@ -18,6 +20,7 @@ export default function Header() {
   const { setActiveLink, setTimeOfLastClick, activeLink } =
     useActiveLinkContext();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const menuVariants = {
     open: {
@@ -42,6 +45,10 @@ export default function Header() {
     hidden: { y: -20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
+
+  const handlelogin =() => {
+    navigate("/login")
+  }
 
   return (
     <header className="z-50 fixed top-0 left-0 w-full">
@@ -68,7 +75,9 @@ export default function Header() {
         </div>
         <div className="flex items-center relative space-x-2">
           <FaSignInAlt className="cursor-pointer" />
-          <span className="text-sm cursor-pointer">LOGIN</span>
+          <span 
+          onClick={handlelogin}
+          className="text-sm cursor-pointer">LOGIN</span>
         </div>
         </div>
        
