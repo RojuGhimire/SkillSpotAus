@@ -51,7 +51,7 @@ const BlogPostSection: React.FC = () => {
                   <p className="text-gray-700 font-overpass mb-4">
                     {post.description}
                   </p>
-                  <button className="text-primary transition-transform duration-200 hover:scale-105 bg-white border border-primary hover:border-white px-4 py-2 rounded-full hover:bg-secondary hover:text-white font-overpass ">
+                  <button className="text-primary transition-transform duration-200 hover:scale-105 bg-white border-2 border-primary hover:border-white px-4 py-2 rounded-full hover:bg-secondary hover:text-white font-overpass ">
                     Read More →
                   </button>
                 </div>
