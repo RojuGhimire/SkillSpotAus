@@ -23,7 +23,7 @@ const BlogPostSection: React.FC = () => {
   ];
 
   return (
-    <section className="my-auto px-4 bg-white">
+    <section className="my-auto  mb-8 px-4 bg-white">
       <div className="container font-overpass mx-auto text-center px-4 md:px-0">
         {/* Section Heading */}
         <h2 className="text-3xl font-bold mb-2">Latest Blog Post</h2>

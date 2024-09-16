@@ -3,11 +3,11 @@ import { FaBookOpen, FaChalkboardTeacher, FaUniversity, FaAward } from "react-ic
 
 const CourseStats: React.FC = () => {
   return (
-    <div className="w-full bg-[#f9f3ef] py-20 font-overpass lg:mt-28 mt-10">
+    <div className="w-full lg:h-[208px] flex items-center justify-center bg-[#f9f3ef] py-20 font-overpass lg:mt-28 mt-10">
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         {/* Stat 1 */}
         <div className="flex flex-col items-center">
-          <FaBookOpen className="text-primary text-6xl mb-4" /> {/* Icon */}
+          <FaBookOpen className="text-secondary text-5xl mb-4" /> {/* Icon */}
           <h3 className="text-4xl font-rose font-extrabold leading-[45.09px]">
             8700<sup className="font-bold">+</sup>
           </h3>
@@ -16,7 +16,7 @@ const CourseStats: React.FC = () => {
 
         {/* Stat 2 */}
         <div className="flex flex-col items-center">
-          <FaChalkboardTeacher className="text-primary text-6xl mb-4" /> {/* Icon */}
+          <FaChalkboardTeacher className="text-secondary text-5xl mb-4" /> {/* Icon */}
           <h3 className="text-4xl font-rose font-extrabold leading-[45.09px]">
             110<sup>+</sup>
           </h3>
@@ -25,7 +25,7 @@ const CourseStats: React.FC = () => {
 
         {/* Stat 3 */}
         <div className="flex flex-col items-center">
-          <FaUniversity className="text-primary text-6xl mb-4" /> {/* Icon */}
+          <FaUniversity className="text-secondary text-5xl mb-4" /> {/* Icon */}
           <h3 className="text-4xl font-rose font-extrabold leading-[45.09px]">
             10<sup>+</sup>
           </h3>
@@ -34,7 +34,7 @@ const CourseStats: React.FC = () => {
 
         {/* Stat 4 */}
         <div className="flex flex-col items-center">
-          <FaAward className="text-primary text-6xl mb-4" /> {/* Icon */}
+          <FaAward className="text-secondary text-5xl mb-4" /> {/* Icon */}
           <h3 className="text-4xl font-rose font-extrabold leading-[45.09px]">
             100<sup>+</sup>
           </h3>
