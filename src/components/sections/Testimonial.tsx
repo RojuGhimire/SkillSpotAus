@@ -47,7 +47,7 @@ const TestimonialSlider: React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Default for large screens
+    slidesToShow: 3, // Default for large screens
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
