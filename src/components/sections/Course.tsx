@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 interface Course {
   id: number;
@@ -62,7 +62,7 @@ const courses: Course[] = [
 
 const CourseGrid: React.FC = () => {
   const [activeCategory] = useState<string>("All");
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const filteredCourses =
     activeCategory === "All"
@@ -70,7 +70,7 @@ const CourseGrid: React.FC = () => {
       : courses.filter((course) => course.category === activeCategory);
 
   const handleViewMoreClick = () => {
-    navigate("/RPL"); // Navigate to the RPL page
+    navigate("/RPL");
   };
 
   return (
@@ -82,7 +82,7 @@ const CourseGrid: React.FC = () => {
         <p className="text-center text-[#A4A4A4] mb-8">
           Explore our popular courses designed to elevate your skills and career
           prospects. From childcare to construction,
-          <br />
+          <br className="hidden md:inline" />
           find the path to success with us.
         </p>
       </div>
@@ -93,9 +93,9 @@ const CourseGrid: React.FC = () => {
           <CourseCard key={course.id} course={course} />
         ))}
       </div>
-      <div className="flex items-center justify-center  mt-10">
+      <div className="flex items-center justify-center mt-10">
         <button
-          onClick={handleViewMoreClick} // Add onClick event
+          onClick={handleViewMoreClick}
           className="text-white hover:scale-105 bg-primary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
         >
           View More <FiArrowRight />
@@ -107,7 +107,7 @@ const CourseGrid: React.FC = () => {
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
   return (
-    <div className="flex  flex-col items-center">
+    <div className="flex flex-col items-center">
       <div className="relative border rounded-lg shadow-xl overflow-hidden pb-4">
         <div className="p-4">
           <h3 className="text-lg font-bold text-primary mb-2 text-center">
@@ -127,8 +127,8 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
         </div>
       </div>
       {/* Button outside the card */}
-      <div className="mt-4  mb-4">
-        <button className=" border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-semibold  transition-colors duration-300">
+      <div className="mt-4 mb-4">
+        <button className="border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-semibold transition-colors duration-300">
           Enroll Now
         </button>
       </div>

@@ -31,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-center py-3 px-6 rounded-lg font-overpass transition-all hover:bg-primary">
           {label}
         </div>
-        <div className="bg-[#F6ECED] w-[90%] sm:w-[80%] lg:w-[309px] h-[169px] absolute top-[250px] sm:top-[240px] lg:top-[240px] left-1/2 transform -translate-x-1/2 pt-[15.6px] gap-[15.6px] rounded-lg px-4 font-overpass shadow-lg">
+        <div className="bg-[#F6ECED] w-[90%] sm:w-[80%] lg:w-[309px] h-[169px] absolute top-[200px] sm:top-[240px] lg:top-[240px] left-1/2 transform -translate-x-1/2 pt-[15.6px] gap-[15.6px] rounded-lg px-4 font-overpass shadow-lg">
           <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
           <p className="text-gray-600 text-sm text-center">{description}</p>
         </div>
@@ -81,7 +81,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section className="py-12 lg:mt-8 lg:h-[600px] mb-10">
+    <section className="py-12 lg:mt-8 lg:h-[600px] mb-20 md:mb-4">
       <div className="mx-auto px-4 sm:px-8 lg:px-16">
         <h2 className="text-3xl font-overpass font-bold text-center mb-4">
           Services
@@ -91,14 +91,14 @@ const Services: React.FC = () => {
           learning
         </p>
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[56px]"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  lg:gap-[56px]"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
+            <motion.div key={index} variants={itemVariants} className="mb-40 lg:mb-2">
               <ServiceCard
                 title={service.title}
                 description={service.description}

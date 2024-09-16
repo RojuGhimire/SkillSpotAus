@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAVLINKS } from "@/constants";
 import { useActiveLinkContext } from "@/context/active-link-context";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 import {
   FaFacebookF,
@@ -20,7 +20,7 @@ export default function Header() {
   const { setActiveLink, setTimeOfLastClick, activeLink } =
     useActiveLinkContext();
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const menuVariants = {
     open: {
@@ -46,52 +46,47 @@ export default function Header() {
     visible: { y: 0, opacity: 1 },
   };
 
-  const handlelogin =() => {
-    navigate("/login")
-  }
+  const handleLogin = () => {
+    navigate("/login");
+  };
 
   return (
-    <header className="z-50 fixed top-0 left-0 w-full">
+    <header className="z-50 fixed top-0 left-0 w-full bg-white">
       {/* Top Bar */}
       <div className="bg-white">
-        {/* Contact Info */}
-        <div className="justify-end flex  text-white md:flex flex-wrap  items-center py-2 text-sm">
-      <img src="/rec.png" alt="" className="w-[1086px] absolute" />
-      <div className=" flex justify-between w-[990px] px-10 ">
-      <div className="flex items-center relative   space-x-4">
-          <div className="flex items-center space-x-3 w-full font-bold ">
-            <IoCallSharp className="text-secondary h-[24px] w-[24px]" />
-            <span>+61 450 545 073</span>
-            <span>|</span>
-            <IoMdMail className="text-secondary h-[24px] w-[24px]" />
-            <span>Info@skillspotaustralia.edu.au</span>
+        <div className="justify-end hidden lg:flex  items-center py-2 text-sm">
+          <img src="/rec.png" alt="" className="w-[1086px] absolute" />
+          <div className="flex relative text-white justify-between w-[990px] px-10">
+            {/* Contact Info */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3 w-full font-bold">
+                <IoCallSharp className="text-secondary h-[24px] w-[24px]" />
+                <span>+61 450 545 073</span>
+                <span>|</span>
+                <IoMdMail className="text-secondary h-[24px] w-[24px]" />
+                <span>Info@skillspotaustralia.edu.au</span>
+              </div>
+            </div>
+            {/* Social Media & Login */}
+            <div className="flex items-center space-x-5">
+              <FaFacebookF className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px]" />
+              <FaWhatsapp className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
+              <FaLinkedinIn className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
+              <FaInstagram className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaSignInAlt className="cursor-pointer" />
+              <span onClick={handleLogin} className="text-sm cursor-pointer">
+                LOGIN
+              </span>
+            </div>
           </div>
-      </div>
-      <div className="flex items-center relative space-x-5 ">
-          <FaFacebookF className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px]" />
-          <FaWhatsapp className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
-          <FaLinkedinIn className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px]" />
-          <FaInstagram className="hover:text-gray-300 cursor-pointer transition duration-300 h-[20px] w-[24px] " />
         </div>
-        <div className="flex items-center relative space-x-2">
-          <FaSignInAlt className="cursor-pointer" />
-          <span 
-          onClick={handlelogin}
-          className="text-sm cursor-pointer">LOGIN</span>
-        </div>
-        </div>
-       
       </div>
-
-      </div>
-        
-
-        {/* Social Icons */}
-       
 
       {/* Main Navigation */}
-      <nav className="bg-white  shadow-lg lg:px-20 px-4">
-        <div className="flex justify-between  items-center h-[55px]">
+      <nav className="bg-white shadow-lg lg:px-20 px-4">
+        <div className="flex justify-between items-center h-[55px]">
           {/* Logo */}
           <a
             href="/"
@@ -103,12 +98,12 @@ export default function Header() {
             <img
               src="logo.png"
               alt="Logo"
-              className="w-[150px] h-[90px] object-contain -mt-10"
+              className=" w-20  h-12 lg:w-[150px] lg:h-[90px] object-contain lg:-mt-10"
             />
           </a>
 
-          {/* Navigation Links */}
-          <div className="hidden  flex-1  lg:flex justify-end  gap-20 ">
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex flex-1 justify-end gap-20">
             <ul className="flex gap-28 items-center">
               {NAVLINKS.map((link) => (
                 <motion.li
@@ -127,7 +122,6 @@ export default function Header() {
                     onClick={() => {
                       setActiveLink(link.name);
                       setTimeOfLastClick(Date.now());
-                      setMenuOpen(false);
                     }}
                   >
                     {link.name}
@@ -136,20 +130,20 @@ export default function Header() {
               ))}
             </ul>
 
-            {/* Hamburger Menu Icon */}
-            <div className="lg:hidden">
-              <button
-                onClick={() => setMenuOpen(!menuOpen)}
-                className="text-black focus:outline-none"
-              >
-                <FaBars className="h-6 w-6" />
-              </button>
-            </div>
-
             {/* Search Icon */}
-            <div className="hidden lg:flex items-center justify-end ">
+            <div className="hidden lg:flex items-center justify-end">
               <FaSearch className="text-white bg-primary h-8 w-8 p-2 rounded-full cursor-pointer hover:bg-gray-200 hover:text-primary transition duration-300 shadow-md" />
             </div>
+          </div>
+
+          {/* Hamburger Menu Icon */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-black focus:outline-none"
+            >
+              <FaBars className="h-6 w-6" />
+            </button>
           </div>
         </div>
 
@@ -179,7 +173,7 @@ export default function Header() {
                       onClick={() => {
                         setActiveLink(link.name);
                         setTimeOfLastClick(Date.now());
-                        setMenuOpen(false); // Close menu on link click
+                        setMenuOpen(false);
                       }}
                     >
                       {link.name}
