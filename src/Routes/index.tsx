@@ -10,6 +10,9 @@ import Blog from "@/Pages/Blog";
 import ScrollToTop from "@/components/ScrollToTop";
 import BlogDetail from "@/Pages/BlogDetail";
 import { Dashboard } from "@/components/Dashboard/Dashboard";
+import { AddTestimonial } from "@/components/Dashboard/AddTestimonial";
+import { EditTestimonial } from "@/components/Dashboard/EditTestimonial";
+import { ViewTestimonial } from "@/components/Dashboard/ViewTestimonial";
 
 const AppRoutes = () => {
   return (
@@ -26,6 +29,10 @@ const AppRoutes = () => {
           <Route path="/error" element={<NotFound />} />
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/viewTestimonial' element={<ViewTestimonial />} />
+          <Route path='/editTestimonial' element={<EditTestimonial />} />
+          <Route path='/addTestimonial' element={<AddTestimonial />} />
+
         </Routes>
       </ActiveLinkContextProvider>
     </div>
