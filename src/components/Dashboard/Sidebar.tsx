@@ -8,9 +8,7 @@ const linkClasses =
 export const Sidebar = () => {
   return (
     <div className='flex flex-col h-screen p-3 w-60 text-black shadow-sm bg-gray-800 opacity-100'>
-      <div className='flex items-center px-1 py-10 text-white text-xl font-bold'>
-        Skill Spot Australia
-      </div>
+      <div className='flex items-center px-1 py-10 text-white text-xl font-bold '>Skill Spot Australia</div>
       <div className='flex-1 mt-4 overflow-y-scroll py-2 flex-col gap-2 custom-scrollbar'>
         {Dashboard_sidebar_links.map((item) => (
           <SidebarLink key={item.key} item={item} />
@@ -36,7 +34,7 @@ function SidebarLink({ item }: SidebarLinkProps) {
     <Link
       to={item.path}
       className={classNames(
-        pathname === item.path ? 'text-blue-400 bg-blue-500' : 'text-white',
+        pathname === item.path ? 'text-white' : 'text-white',
         linkClasses
       )}
     >
@@ -45,3 +43,5 @@ function SidebarLink({ item }: SidebarLinkProps) {
     </Link>
   );
 }
+
+// Custom scrollbar styles (CSS)

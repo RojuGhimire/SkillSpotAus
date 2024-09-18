@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Dashboard/Sidebar';
 
+
 export const Dashboard_Layout: React.FC = () => {
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen  overflow-hidden">
       {/* Sidebar */}
       <Sidebar />
 

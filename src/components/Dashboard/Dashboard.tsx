@@ -1,9 +1,9 @@
-import { Sidebar } from "./Sidebar"
+import Dashboard_Layout from "../Dashboard_Layout"
 
 export const Dashboard = () => {
   return (
     <div>
-        <Sidebar />
+        <Dashboard_Layout />
     </div>
   )
 }

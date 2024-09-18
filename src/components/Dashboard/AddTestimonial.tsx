@@ -34,9 +34,9 @@ export const AddTestimonial = () => {
 
   return (
     <main className="mt-20 ml-20">
-      <h1 className="w-fit mx-auto text-blue-700">Add Testimonial</h1>
+      <h1 className="w-fit mx-auto text-lg text-primary">Add Testimonial</h1>
       <span className="flex w-[120px] h-[2px] bg-[#e1e1e1] mx-auto mb-4">
-        <em className="w-[60px] h-[2px] bg-blue-700 mx-auto" />
+        <em className="w-[60px] h-[2px] bg-primary mx-auto" />
       </span>
       <form className="w-[60%] h-auto p-10 bg-slate-50 shadow-lg mx-auto" onSubmit={handleSubmit}>
         <div className="flex flex-wrap justify-between gap-4">
