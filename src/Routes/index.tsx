@@ -9,6 +9,7 @@ import Login from "@/Pages/Login";
 import Blog from "@/Pages/Blog";
 import ScrollToTop from "@/components/ScrollToTop";
 import BlogDetail from "@/Pages/BlogDetail";
+import { Dashboard } from "@/components/Dashboard/Dashboard";
 
 const AppRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const AppRoutes = () => {
           <Route path="/blogdetail" element={<BlogDetail />} />
           <Route path="/error" element={<NotFound />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
       </ActiveLinkContextProvider>
     </div>
