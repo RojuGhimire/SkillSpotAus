@@ -1,55 +1,31 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { BiLoaderCircle } from "react-icons/bi";
-
-// Eligibility Component
-const Eligibility: React.FC = () => {
-  const [isLoading] = useState(false);
-
-  return (
-    <div className="fixed  bottom-16 lg:bottom-24  left-1/2  w-full items-center justify-center flex  transform -translate-x-1/2 z-50  mx-auto">
-      <button
-        type="submit"
-        className="font-bold w-[300px] text-white py-2 rounded-full h-[60px]  sm:w-[500px] inline-flex mt-7 gap-1 animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#CB2026,45%,#f9f9f8,48%,#CB2026)] bg-[length:200%_100%] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
-      >
-        {isLoading ? (
-          <BiLoaderCircle className="animate-spin" color="#ffffff" size={25} />
-        ) : (
-          <div className="flex gap-2 items-center ">
-            <span>CHECK HERE FOR YOUR FREE 60 SECOND SKILL CHECK</span>
-          </div>
-        )}
-      </button>
-    </div>
-  );
-};
+import Eligibility from "../Eligibility";
 
 const Hero: React.FC = () => {
   const [isEligibilityVisible, setIsEligibilityVisible] = useState(false);
-
-  const { ref: textRef, inView: textInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
   const { ref: heroRef } = useInView({
     threshold: 0.1,
     onChange: (inView) => setIsEligibilityVisible(!inView),
   });
 
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const { ref: imageRef, inView: imageInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  const [isLoading] = useState(false);
-
 
   return (
     <>
       <div
         ref={heroRef}
-        className="relative h-[800px]  lg:h-[650px] px-5 lg:px-20 mt-10 md:mt-20 lg:mt-24 w-full text-white font-overpass flex items-center justify-center"
+        className="relative h-[800px] lg:h-[650px] px-5 lg:px-20 mt-10 md:mt-20 lg:mt-24 w-full text-white font-overpass flex items-center justify-center"
       >
         {/* Background Image and Gradient */}
         <div className="absolute inset-0 z-0">
@@ -77,7 +53,7 @@ const Hero: React.FC = () => {
             <h1 className="text-2xl sm:text-3xl items-center justify-center font-poppins lg:text-4xl leading-snug lg:leading-[53.17px] font-extrabold">
               Welcome to Skill Spot
               <br />
-              <span className="  lg:ml-32 ">Australia</span>
+              <span className="lg:ml-32">Australia</span>
             </h1>
 
             <p className="text-sm sm:text-base lg:text-xl font-bold leading-normal lg:leading-[30px]">
@@ -93,19 +69,9 @@ const Hero: React.FC = () => {
 
             <button
               type="submit"
-              className="font-bold text-white  py-2 rounded-full h-[60px] w-full sm:w-[500px] inline-flex mt-7   gap-1 animate-shimmer items-center justify-center  bg-[linear-gradient(110deg,#CB2026,45%,#f9f9f8,48%,#CB2026)] bg-[length:200%_100%] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
+              className="font-bold text-white py-2 rounded-full h-[60px] w-full sm:w-[500px] inline-flex mt-7 gap-1 animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#CB2026,45%,#f9f9f8,48%,#CB2026)] bg-[length:200%_100%] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
             >
-              {isLoading ? (
-                <BiLoaderCircle
-                  className="animate-spin"
-                  color="#ffffff"
-                  size={25}
-                />
-              ) : (
-                <div className="flex gap-2 items-center ">
-                  <span>Free 60 second Skill Assessment</span>
-                </div>
-              )}
+              Free 60 second Skill Assessment
             </button>
           </motion.div>
 
@@ -142,7 +108,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Eligibility component shown after scrolling past hero section */}
       {isEligibilityVisible && <Eligibility />}
     </>
   );

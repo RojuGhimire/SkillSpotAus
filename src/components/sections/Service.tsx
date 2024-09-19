@@ -16,7 +16,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="flex flex-col w-full lg:max-w-[500px]"
+      className="flex flex-col w-full lg:max-w-[500px] group"
       initial={{ opacity: 1, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -28,9 +28,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           alt={title}
           className="h-64 w-full rounded-xl lg:h-[320px] object-cover"
         />
+
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center rounded-xl">
+        </div>
+
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-center py-3 px-6 rounded-lg font-overpass transition-all hover:bg-primary">
           {label}
         </div>
+
         <div className="bg-[#F6ECED] w-[90%] sm:w-[80%] lg:w-[309px] h-[169px] absolute top-[200px] sm:top-[240px] lg:top-[240px] left-1/2 transform -translate-x-1/2 pt-[15.6px] gap-[15.6px] rounded-lg px-4 font-overpass shadow-lg">
           <h3 className="text-lg font-semibold mb-2 text-center">{title}</h3>
           <p className="text-gray-600 text-sm text-center">{description}</p>
@@ -86,7 +92,7 @@ const Services: React.FC = () => {
         <h2 className="text-3xl font-overpass font-bold text-center mb-4">
           Services
         </h2>
-        <p className="text-center text-[#A4A4A4]  font-overpass mb-12">
+        <p className="text-center text-[#A4A4A4] font-overpass mb-12">
           At Skill Spot Australia, we provide top-notch facilities for effective
           learning
         </p>

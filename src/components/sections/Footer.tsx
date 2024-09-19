@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer Links */}
-      <div className="bg-[#F4ECE6]   mt-10 lg:mt-0 px-6 lg:px-20 py-10">
+      <div className="bg-[#F4ECE6]   mt-10 lg:mt-0 px-6 lg:px-20 py-20 md:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4  gap-8">
           {/* Logo and Description */}
           <div className="flex flex-col items-center ">
