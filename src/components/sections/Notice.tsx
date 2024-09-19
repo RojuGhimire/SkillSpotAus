@@ -62,9 +62,9 @@ const MainComponent: React.FC = () => {
         {/* Image Section */}
         <div className="hidden lg:flex lg:w-[550px] md:h-[554px] justify-center items-center">
           <img
-            src="/News.png" 
+            src="/notice3.png" 
             alt="Person with clipboard"
-            className="object-contain w-full h-auto"
+            className="object-contain  w-full h-auto"
           />
         </div>
       </div>
