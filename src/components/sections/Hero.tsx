@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Eligibility from "../Eligibility";
-// import first from "./Form/First";
+import First from "./Form/Form1";
+import Second from "./Form/Form2";
 
 const Hero: React.FC = () => {
-  const [isEligibilityVisible, setIsEligibilityVisible] = useState(false);
+  const [isFirstVisible, setIsFirstVisible] = useState(false);
+  const [showSecond, setShowSecond] = useState(false); // State to handle Second.tsx visibility
 
   const { ref: heroRef } = useInView({
     threshold: 0.1,
-    onChange: (inView) => setIsEligibilityVisible(!inView),
+    onChange: (inView) => setIsFirstVisible(!inView),
   });
 
   const { ref: textRef, inView: textInView } = useInView({
@@ -22,9 +23,18 @@ const Hero: React.FC = () => {
     threshold: 0.1,
   });
 
-  // const handleApplyNowClick = () => {
-  //   first(true);
-  // };
+  const handleApplyNowClick = () => {
+    setIsFirstVisible(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsFirstVisible(false);
+    setShowSecond(false); // Reset second form on close
+  };
+
+  const handleNextClick = () => {
+    setShowSecond(true); // Show the second form when "Next" is clicked
+  };
 
   return (
     <>
@@ -75,6 +85,7 @@ const Hero: React.FC = () => {
             <button
               type="button"
               className="font-bold text-white py-2 rounded-full h-[60px] w-full sm:w-[500px] inline-flex mt-7 gap-1 animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#CB2026,45%,#f9f9f8,48%,#CB2026)] bg-[length:200%_100%] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
+              onClick={handleApplyNowClick}
             >
               Free 60 second Skill Assessment
             </button>
@@ -108,7 +119,7 @@ const Hero: React.FC = () => {
 
             <button
               className="hidden lg:block absolute -top-2 -right-2 sm:-top-8 sm:right-36 lg:-top-10 lg:-right-10 text-md w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[85px] lg:h-[85px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold"
-              // onClick={handleApplyNowClick}
+              onClick={handleApplyNowClick}
             >
               Apply <br /> Now!
             </button>
@@ -116,7 +127,24 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {isEligibilityVisible && <Eligibility />}
+      {/* Render First.tsx and Second.tsx based on state */}
+      {isFirstVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="inset-0 bg-black bg-opacity-50  rounded-lg p-8 shadow-lg relative w-full h-full">
+            <button
+              className="absolute top-[150px] right-[450px] text-black font-bold"
+              onClick={handleClosePopup}
+            >
+              ✖
+            </button>
+            {!showSecond ? (
+              <First onNext={handleNextClick} />
+            ) : (
+              <Second />
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 };
