@@ -163,7 +163,7 @@ const Hero: React.FC = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="inset-0 bg-black bg-opacity-50 rounded-lg p-8 shadow-lg relative w-full h-full">
             <button
-              className="absolute  top-[150px] right-[450px]  text-black font-bold"
+              className="absolute  top-[150px] right-[500px]  text-black font-bold"
               onClick={handleClosePopup}
             >
               ✖
