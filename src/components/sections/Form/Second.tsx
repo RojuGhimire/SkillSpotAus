@@ -1,25 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-interface SecondProps { }
+interface SecondProps {
+    onNext: () => void;
+    onPrevious: () => void;
+}
 
-const Second: React.FC<SecondProps> = () => {
-    const [industry, setIndustry] = useState<string>('');
-    const [qualification, setQualification] = useState<string>('');
-
-    const handleChange = (setter: React.Dispatch<React.SetStateAction<string>>) => (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setter(e.target.value);
-    };
-
-    return (
+const Second: React.FC<SecondProps> = ({ onNext, onPrevious }) => {
+  
+     return (
         <div className="bg-[#F6ECED] p-6 px-10 rounded-t-3xl shadow-lg w-[900px] mt-20 mx-auto">
-
-
             <img
                 src="/logo2.png"
                 alt="Skill Spot Australia Logo"
                 className="mx-auto mb-4"
             />
-
             <div className='flex w-full items-center justify-center flex-col '>
                 <h2 className="text-xl  font-semibold text-center mb-4">
                     Convert your Experience into a Nationally Recognised Qualification
@@ -48,31 +42,31 @@ const Second: React.FC<SecondProps> = () => {
             </div>
             <div className='flex flex-col items-center justify-center '>
                 <a className="block mb-2 text-lg text-zinc-700" >
-                how many years of relevant work experience do you have?
+                    how many years of relevant work experience do you have?
                 </a>
                 <div className='space-x-5 mt-5 mb-5'>
                     <button className='w-[177px] h-[54px] bg-white text-black rounded-full font-bold text-md font-overpass border border-primary hover:text-white hover:bg-primary'>
-                        1-2 <br/> Years
+                        1-2 <br /> Years
                     </button>
                     <button className='w-[177px] h-[54px] bg-white text-black rounded-full font-bold text-md font-overpass border border-primary hover:text-white hover:bg-primary'>
-                        1-2 <br/> Years
+                        1-2 <br /> Years
                     </button>
                     <button className='w-[177px] h-[54px] bg-white text-black rounded-full font-bold text-md font-overpass border border-primary hover:text-white hover:bg-primary'>
-                        1-2 <br/> Years
+                        1-2 <br /> Years
                     </button>
                     <button className='w-[177px] h-[54px] bg-white text-black rounded-full font-bold text-md font-overpass border border-primary hover:text-white hover:bg-primary'>
-                        1-2 <br/> Years
+                        1-2 <br /> Years
                     </button>
-                    </div>
-                
-                   
+                </div>
+
+
 
                 <a className="block mb-2 text-lg text-zinc-700" >
-                Where is your work experience?
+                    Where is your work experience?
                 </a>
                 <div className='space-x-5 mt-5 mb-5'>
                     <button className='w-[177px] h-[54px] bg-white text-black rounded-full font-bold text-md font-overpass border border-primary hover:text-white hover:bg-primary'>
-                    Australia
+                        Australia
                     </button>
                     <button className='w-[177px] h-[54px] bg-white text-black rounded-full font-bold text-md font-overpass border border-primary hover:text-white hover:bg-primary'>
                         OverSeas
@@ -80,19 +74,23 @@ const Second: React.FC<SecondProps> = () => {
                     <button className='w-[177px] h-[54px] bg-white text-black rounded-full font-bold text-md font-overpass border border-primary hover:text-white hover:bg-primary'>
                         Both
                     </button>
-                   
-                    </div>
-                
-                
-                <div className='space-x-6 mt-5'>
-                <button className="font-bold bg-white text-md font-overpass border border-primary hover:text-white hover:bg-primary text-black w-[175px]  p-2 rounded-full">
-                    Previous
-                </button>
-                <button className="bg-primary text-white w-[175px] font-bold p-2 rounded-full">
-                    Next
-                </button>
+
                 </div>
-                
+
+
+                <div className='space-x-6 mt-5'>
+                    <button
+                        onClick={onPrevious}
+                        className="font-bold bg-white text-md font-overpass border border-primary hover:text-white hover:bg-primary text-black w-[175px]  p-2 rounded-full">
+                        Previous
+                    </button>
+                    <button 
+                      onClick={onNext}
+                    className="bg-primary text-white w-[175px] font-bold p-2 rounded-full">
+                        Next
+                    </button>
+                </div>
+
             </div>
         </div>
 

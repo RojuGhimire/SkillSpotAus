@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import First from "./Form/Form1";
-import Second from "./Form/Form2";
+import First from "./Form/First";
+import Second from "./Form/Second";
+import Third from "./Form/Third";
+import Fourth from "./Form/Fourth";
+import Fifth from "./Form/Fifth";
+import Sixth from "./Form/Sixth";
+import Eligibility from "../Eligibility";
 
 const Hero: React.FC = () => {
-  const [isFirstVisible, setIsFirstVisible] = useState(false);
-  const [showSecond, setShowSecond] = useState(false); // State to handle Second.tsx visibility
+  const [isEligibilityVisible, setIsEligibilityVisible] = useState(false);
+  const [isFirstVisible, setIsFirstVisible] = useState(false); // Control popup visibility
+  const [currentStep, setCurrentStep] = useState(1); // State to manage which form is shown
 
   const { ref: heroRef } = useInView({
     threshold: 0.1,
-    onChange: (inView) => setIsFirstVisible(!inView),
+    onChange: (inView) => setIsEligibilityVisible(!inView),
   });
 
   const { ref: textRef, inView: textInView } = useInView({
@@ -24,16 +30,42 @@ const Hero: React.FC = () => {
   });
 
   const handleApplyNowClick = () => {
-    setIsFirstVisible(true);
+    setIsFirstVisible(true); // Show popup when clicked
   };
 
   const handleClosePopup = () => {
-    setIsFirstVisible(false);
-    setShowSecond(false); // Reset second form on close
+    setIsFirstVisible(false); // Close popup
+    setCurrentStep(1); // Reset to the first form on close
   };
 
   const handleNextClick = () => {
-    setShowSecond(true); // Show the second form when "Next" is clicked
+    setCurrentStep((prevStep) => Math.min(prevStep + 1, 6)); // Move to the next form, max 6
+  };
+
+  const handlePreviousClick = () => {
+    setCurrentStep((prevStep) => Math.max(prevStep - 1, 1)); // Move to the previous form, min 1
+  };
+
+  // Render the appropriate component based on the currentStep state
+  const renderCurrentStep = () => {
+    switch (currentStep) {
+      case 1:
+        return <First onNext={handleNextClick} />;
+      case 2:
+        return <Second onNext={handleNextClick} onPrevious={handlePreviousClick} />;
+      case 3:
+        return <Third onNext={handleNextClick} onPrevious={handlePreviousClick} />;
+      case 4:
+        return <Fourth onNext={handleNextClick} onPrevious={handlePreviousClick} />;
+      case 5:
+        return <Fifth onNext={handleNextClick} onPrevious={handlePreviousClick} />;
+      case 6:
+        return <Sixth onPrevious={handlePreviousClick} onNext={function (): void {
+          throw new Error("Function not implemented.");
+        } } />;
+      default:
+        return <First onNext={handleNextClick} />;
+    }
   };
 
   return (
@@ -127,24 +159,22 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Render First.tsx and Second.tsx based on state */}
       {isFirstVisible && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="inset-0 bg-black bg-opacity-50  rounded-lg p-8 shadow-lg relative w-full h-full">
+          <div className="inset-0 bg-black bg-opacity-50 rounded-lg p-8 shadow-lg relative w-full h-full">
             <button
-              className="absolute top-[150px] right-[450px] text-black font-bold"
+              className="absolute  top-[150px] right-[450px]  text-black font-bold"
               onClick={handleClosePopup}
             >
               ✖
             </button>
-            {!showSecond ? (
-              <First onNext={handleNextClick} />
-            ) : (
-              <Second />
-            )}
+
+            {/* Render the form based on currentStep */}
+            {renderCurrentStep()}
           </div>
         </div>
       )}
+      {isEligibilityVisible && <Eligibility />}
     </>
   );
 };

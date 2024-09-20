@@ -13,7 +13,6 @@ import { Dashboard } from "@/components/Dashboard/Dashboard";
 import { AddTestimonial } from "@/components/Dashboard/AddTestimonial";
 import { EditTestimonial } from "@/components/Dashboard/EditTestimonial";
 import { ViewTestimonial } from "@/components/Dashboard/ViewTestimonial";
-import Second from "@/components/sections/Form/Form2";
 
 const AppRoutes = () => {
   return (
@@ -33,7 +32,6 @@ const AppRoutes = () => {
           <Route path='/viewTestimonial' element={<ViewTestimonial />} />
           <Route path='/editTestimonial' element={<EditTestimonial />} />
           <Route path='/addTestimonial' element={<AddTestimonial />} />
-          <Route path='/second' element={<Second />} />
 
         </Routes>
       </ActiveLinkContextProvider>
