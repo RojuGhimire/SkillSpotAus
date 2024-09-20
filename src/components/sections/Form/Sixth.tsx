@@ -14,32 +14,9 @@ const Sixth: React.FC<SixthProps> = ( ) => {
                 alt="Skill Spot Australia Logo"
                 className="mx-auto mb-4"
             />
-            <div className='flex w-full items-center justify-center flex-col '>
-                <h2 className="text-xl  font-semibold text-center mb-4">
-                    Convert your Experience into a Nationally Recognised Qualification
-                </h2>
+           
 
-            </div>
-            <div className="flex space-y-2 mb-4 items-center  justify-between ">
-                <span>✔ Increased career opportunities</span>
-                <span>✔ Avoid repeated training</span>
-                <span>✔ Save Time and Money</span>
-            </div>
-
-            <div className="mb-6">
-                <div className="flex  items-center justify-center mb-2 ">
-                    <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full">1</span>
-                    <div className="w-32 h-1 bg-primary mx-1"></div>
-                    <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full"> 2</span>
-                    <div className="w-32 h-1 bg-primary mx-1"></div>
-                    <span className=" bg-primary   text-white w-8 h-8 flex items-center justify-center rounded-full"> 3</span>
-                    <div className="w-32 h-1 bg-primary mx-1"></div>
-                    <span className=" bg-primary   text-white w-8 h-8 flex items-center justify-center rounded-full"> 4</span>
-                    <div className="w-32 h-1 bg-primary mx-1"></div>
-                    <span className=" bg-primary   text-white w-8 h-8 flex items-center justify-center rounded-full"> 5</span>
-
-                </div>
-            </div>
+          
             <div className='flex flex-col items-center justify-center'>
             <div className="bg-white p-8 rounded-3xl w-[559px] mb-5 shadow-lg">
               <h1 className="text-2xl font-bold text-primary text-center mb-4">Thank you for taking the next step to achieving a nationally recognized qualification.</h1>
