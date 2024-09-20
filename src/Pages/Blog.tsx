@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Header from "@/components/Header";
-import Footer from "@/components/sections/Footer";
 import { Footer2 } from "@/components/sections/Footer2";
 import { FaEye, FaHeart, FaRegBookmark, FaShare } from "react-icons/fa";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
+import Footer3 from "@/components/sections/Footer3";
 
 interface Blogs {
   id: number;
@@ -230,7 +230,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer3 />
         <Footer2 />
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { Footer2 } from '@/components/sections/Footer2'
 import Header from '../components/Header'
 import ContactSection from '../components/sections/ContactSection'
-import Footer from '../components/sections/Footer'
+import Footer3 from '@/components/sections/Footer3'
 
 const ContactUS = () => {
   return (
@@ -10,7 +10,7 @@ const ContactUS = () => {
         <Header />
         <img src="/cont.png" alt="" className="w-full" />
         <ContactSection />
-        <Footer />
+        <Footer3 />
         <Footer2 />
     </div>
   )

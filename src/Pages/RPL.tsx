@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import Footer from "../components/sections/Footer";
 import { Footer2 } from "../components/sections/Footer2";
 import RPL1 from "@/components/sections/RPL1";
+import Footer3 from "@/components/sections/Footer3";
+import FAQ from "@/components/sections/FAQ";
+import Banner3 from "@/components/sections/Banner3";
 
 interface Course {
   id: number;
@@ -150,7 +152,9 @@ const RPL: React.FC = () => {
           ))}
         </div>
       </div>
-      <Footer />
+      <Banner3 />
+      <FAQ />
+      <Footer3 />
       <Footer2 />
     </div>
   );
