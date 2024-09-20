@@ -10,7 +10,7 @@ const Banner: React.FC = () => {
       const reader = new FileReader();
       reader.onload = (event: ProgressEvent<FileReader>) => {
         setBannerImage(event.target?.result as string);
-        setEditing(false); // Automatically exit edit mode when a new image is uploaded
+        setEditing(false); 
       };
       reader.readAsDataURL(e.target.files[0]);
     }

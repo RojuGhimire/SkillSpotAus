@@ -13,10 +13,10 @@ const Banner3: React.FC = () => {
           Skill Spot Australia can help you get your experience recognised!
         </h2>
         <div className="mt-6 lg:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start">
-          <button className="bg-primary text-white px-6 py-4 rounded-full mb-4 sm:mb-0 sm:mr-2 hover:bg-secondary">
+          <button className="bg-primary text-white px-6 py-4 rounded-full  font-bold mb-4 sm:mb-0 sm:mr-2">
             View Qualifications
           </button>
-          <button className="bg-secondary text-white px-6 py-4 rounded-full hover:bg-primary">
+          <button className="bg-secondary text-white px-6 py-4 rounded-full font-bold  ">
             Check Your Eligibility
           </button>
         </div>

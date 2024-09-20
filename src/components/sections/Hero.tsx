@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Eligibility from "../Eligibility";
+// import first from "./Form/First";
 
 const Hero: React.FC = () => {
   const [isEligibilityVisible, setIsEligibilityVisible] = useState(false);
@@ -20,6 +21,10 @@ const Hero: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  // const handleApplyNowClick = () => {
+  //   first(true);
+  // };
 
   return (
     <>
@@ -68,7 +73,7 @@ const Hero: React.FC = () => {
             </p>
 
             <button
-              type="submit"
+              type="button"
               className="font-bold text-white py-2 rounded-full h-[60px] w-full sm:w-[500px] inline-flex mt-7 gap-1 animate-shimmer items-center justify-center bg-[linear-gradient(110deg,#CB2026,45%,#f9f9f8,48%,#CB2026)] bg-[length:200%_100%] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-lg"
             >
               Free 60 second Skill Assessment
@@ -101,7 +106,10 @@ const Hero: React.FC = () => {
               transition={{ duration: 1.5 }}
             />
 
-            <button className="hidden lg:block absolute -top-2 -right-2 sm:-top-8 sm:right-36 lg:-top-10 lg:-right-10 text-md w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[85px] lg:h-[85px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold">
+            <button
+              className="hidden lg:block absolute -top-2 -right-2 sm:-top-8 sm:right-36 lg:-top-10 lg:-right-10 text-md w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[85px] lg:h-[85px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold"
+              // onClick={handleApplyNowClick}
+            >
               Apply <br /> Now!
             </button>
           </motion.div>

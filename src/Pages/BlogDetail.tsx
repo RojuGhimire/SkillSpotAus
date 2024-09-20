@@ -117,11 +117,12 @@ const BlogDetail = () => {
         {/* Related Blog Section */}
         <div className="mt-10">
           <p className="mb-6 text-2xl text-gray-600 font-bold">Related Blog</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-10">
-            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-full h-auto" />
-            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-full h-auto" />
-            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-full h-auto" />
-            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-full h-auto" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-[44px]">
+            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-[245px] h-auto" />
+            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-[245px] h-auto" />
+            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-[245px] h-auto" />
+            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-[245px] h-auto" />
+            <img src="/hos.png" alt="Related Blog" className="rounded-3xl w-[245px] h-auto" />
           </div>
         </div>
       </div>

@@ -119,7 +119,7 @@ const About: React.FC = () => {
       {/*Popular Course */}
 
       <div className="  font-overpass lg:px-20 p-8">
-        <div className="flex flex-col  gap-[200px]  md:flex-row">
+        <div className="flex flex-col items-center justify-center gap-[100px]  md:flex-row">
           {/* Left section */}
           <div className="md:w-[480px] md:h-[700px] flex flex-col   justify-center mb-8 md:mb-0">
             <h1 className="text-3xl md:text-4xl font-bold text-start mb-4">
@@ -151,30 +151,16 @@ const About: React.FC = () => {
             </div>
           </div>
           {/* middle Section */}
-          <div className="flex flex-col h-[540] justify-center">
-            {/* Step 1 */}
-            <div className="flex flex-col  items-center">
-              <div className="bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full mb-2">
-                1
-              </div>
-              <div className="h-[200px] border-l-4 border-primary"></div>
-            </div>
+          <div className="mb-6">
+        <div className="flex  flex-col items-center mb-2 ">
+          <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full">1</span>
+          <div className="w-2 h-[250px] bg-zinc-300 mx-1"></div>
+          <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full"> 2</span>
+          <div className="w-2 h-[250px] bg-zinc-300 mx-1"></div>
+          <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full"> 3</span>
 
-            {/* Step 2 */}
-            <div className="flex flex-col items-center">
-              <div className="bg-gray-600 text-white w-8 h-8 flex items-center justify-center rounded-full mb-2">
-                2
-              </div>
-              <div className="h-[200px] border-l-4 border-gray-600"></div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="flex flex-col items-center">
-              <div className="bg-gray-600 text-white w-8 h-8 flex items-center justify-center rounded-full">
-                3
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
           {/* Right section */}
           <div className="md:w-1/2 flex flex-col justify-between">
             <div className="flex items-center  mb-8">
