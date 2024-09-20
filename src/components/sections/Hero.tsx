@@ -151,7 +151,6 @@ const Hero: React.FC = () => {
 
             <button
               className="hidden lg:block absolute -top-2 -right-2 sm:-top-8 sm:right-36 lg:-top-10 lg:-right-10 text-md w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] lg:w-[85px] lg:h-[85px] bg-[linear-gradient(270deg,_#C2114C_31.5%,_#001B6A_78.5%)] rounded-full flex-col justify-center items-center text-white font-extrabold"
-              onClick={handleApplyNowClick}
             >
               Apply <br /> Now!
             </button>
