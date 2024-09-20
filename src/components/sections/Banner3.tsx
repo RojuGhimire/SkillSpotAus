@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner3: React.FC = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center mt-10 p-6 bg-[#F4ECE6] rounded-lg shadow-lg h-auto lg:h-[377px]">
+    <div className="flex flex-col lg:flex-row items-center mt-20 mb-20 p-6 bg-[#F4ECE6] rounded-lg shadow-lg h-auto lg:h-[377px]">
       <img
         src="/check.png"
         alt="Craftsman working"

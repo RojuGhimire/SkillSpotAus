@@ -36,7 +36,7 @@ const Affiliates: React.FC = () => {
   };
 
   return (
-    <section className="mt-10 w-full   flex flex-col items-center lg:px-20 lg:justify-center text-center">
+    <section className="mt-10 w-full  overflow-hidden flex flex-col items-center lg:px-20 lg:justify-center text-center">
       {/* Heading and Subtitle */}
       <h2 className="text-3xl font-overpass font-semibold">Our Affiliates</h2>
       <p className="text-gray-400 font-overpass mt-2 lg:w-[800px] mb-12">
