@@ -13,6 +13,7 @@ import FAQ from "../components/sections/FAQ";
 import { Footer2 } from "../components/sections/Footer2";
 import BlogPostSection from "@/components/sections/BlogSection";
 import CourseStats from "@/components/sections/Coursestats";
+import Chatbot from "@/components/Chatbot/Chatbot";
 const Homepage: React.FC = () => {
   return (
     <RootLayout>
@@ -29,6 +30,7 @@ const Homepage: React.FC = () => {
         <ContactSection />
         <FAQ />
         <Affiliates />
+        <Chatbot />
         <Footer />
         <Footer2 />
       </div>
