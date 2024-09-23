@@ -106,6 +106,12 @@ const CourseGrid: React.FC = () => {
 };
 
 const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
+  const navigate = useNavigate();
+
+  const handleEnrollnow = () => {
+    navigate("/enroll");
+  };
+
   return (
     <div className="flex flex-col items-center">
       <div className="relative border rounded-lg shadow-xl overflow-hidden pb-4">
@@ -126,9 +132,11 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
           )}
         </div>
       </div>
-      {/* Button outside the card */}
       <div className="mt-4 mb-4">
-        <button className="border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-semibold transition-colors duration-300">
+        <button
+          className="border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-semibold transition-colors duration-300"
+          onClick={handleEnrollnow}
+        >
           Enroll Now
         </button>
       </div>

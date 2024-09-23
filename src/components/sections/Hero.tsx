@@ -32,20 +32,20 @@ const Hero: React.FC = () => {
   });
 
   const handleApplyNowClick = () => {
-    setIsFirstVisible(true); // Show popup when clicked
+    setIsFirstVisible(true); 
   };
 
   const handleClosePopup = () => {
-    setIsFirstVisible(false); // Close popup
-    setCurrentStep(1); // Reset to the first form on close
+    setIsFirstVisible(false); 
+    setCurrentStep(1); 
   };
 
   const handleNextClick = () => {
-    setCurrentStep((prevStep) => Math.min(prevStep + 1, 6)); // Move to the next form, max 6
+    setCurrentStep((prevStep) => Math.min(prevStep + 1, 6)); 
   };
 
   const handlePreviousClick = () => {
-    setCurrentStep((prevStep) => Math.max(prevStep - 1, 1)); // Move to the previous form, min 1
+    setCurrentStep((prevStep) => Math.max(prevStep - 1, 1)); 
   };
   const navigate = useNavigate();
 
