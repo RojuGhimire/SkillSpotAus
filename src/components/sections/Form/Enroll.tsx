@@ -54,9 +54,9 @@ const ApplicationForm2: React.FC = () => {
                             alt="Interview Image"
                             className="h-48 w-full lg:h-full object-cover rounded-t-lg lg:rounded-l-lg"
                         />
-                        
+
                     </div>
-                   
+
 
                     {/* Form on the Right */}
                     <form onSubmit={handleSubmit} className="w-full lg:w-[65%] p-6 lg:p-8">
@@ -188,10 +188,10 @@ const ApplicationForm2: React.FC = () => {
                     </form>
                 </div>
             </div>
-            
+
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center px-6 font-overpass lg:px-24 py-12 lg:py-16">
                 {/* Left Section (Text) */}
-                <div className="w-full lg:w-3/5">
+                <div className="w-full lg:w-5/5">
                     <h2 className="text-4xl font-bold text-primary mb-4">Course Introduction</h2>
                     <p className="text-xl font-semibold text-secondary mb-5">
                         CERTIFICATE III IN AUTOMOTIVE BODY REPAIR TECHNOLOGY - AUR32120
@@ -218,33 +218,35 @@ const ApplicationForm2: React.FC = () => {
                     <img
                         src="/cou.png"
                         alt="Course Introduction"
-                        className="w-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+                        className="w-[350px]  h-[350px] object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
                     />
                 </div>
             </div>
 
             {/* Careers Section */}
-            <div className="mt-8 px-6 lg:px-24 font-overpass">
+            <div className=" px-6 lg:px-24 font-overpass">
+                <div className='flex '>
+                    
+                <div className=' flex flex-col  w-full '>
+                    
                 <h2 className="text-4xl font-bold  text-primary mb-4">Careers You Can Choose After the Course:</h2>
-             <div className=' flex  '>
 
-<ul className="list-disc  list-inside text-gray-700 text-lg">
-    {careerList.map((career, index) => (
-        <li key={index}>{career}</li>
-    ))}
+                    <ul className="list-disc  list-inside text-gray-700 text-lg">
+                        {careerList.map((career, index) => (
+                            <li key={index}>{career}</li>
+                        ))}
 
-</ul>
-<div className='flex items-center justify-end w-3/5'>
-<img src="/care.png" alt="" className='h-[200px] w-[281px]'  />
-
-</div>
-
-             </div>
+                    </ul>
+                    
+                </div>
+                <div className='flex items-center justify-center w-3/5'>
+                        <img src="/care.png" alt="" className='h-[280px] w-[281px]' />
+                    </div>
+                </div>
                 
-
             </div>
 
-            <div className='px-6 lg:px-24 font-overpass py-12'>
+            <div className='px-6 lg:px-24 font-overpass mt-8'>
                 <h2 className="text-4xl font-bold text-primary mb-4">Qualification Overview</h2>
                 <p className="text-gray-600 mb-8">Let's get started with Qualification overview</p>
 
