@@ -48,7 +48,7 @@ const courses: Course[] = [
   },
   {
     id: 7,
-    title: "Automotive Body Repair Technology ",
+    title: "Automotive Body Repair Technology kathmandu college",
     image: "/hos.png",
     category: "Trade",
   },
@@ -114,33 +114,33 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative border rounded-lg shadow-xl overflow-hidden pb-4">
-        <div className="p-4">
-          <h3 className="text-lg font-bold text-primary mb-2 text-center">
-            {course.title}
-          </h3>
-          {course.image ? (
-            <img
-              src={course.image}
-              alt={course.title}
-              className="w-full h-[264px] rounded-lg object-cover"
-            />
-          ) : (
-            <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
-              No Image Available
-            </div>
-          )}
-        </div>
-      </div>
-      <div className="mt-4 mb-4">
-        <button
-          className="border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-semibold transition-colors duration-300"
-          onClick={handleEnrollnow}
-        >
-          Enroll Now
-        </button>
+    <div className="relative border rounded-lg shadow-xl overflow-hidden pb-4 w-full">
+      <div className="p-4">
+        <h3 className="text-lg h-12 font-bold text-primary mb-2 text-center">
+          {course.title}
+        </h3>
+        {course.image ? (
+          <img
+            src={course.image}
+            alt={course.title}
+            className="w-full h-[200px] rounded-lg object-cover" // Ensure uniform size
+          />
+        ) : (
+          <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+            No Image Available
+          </div>
+        )}
       </div>
     </div>
+    <div className="mt-4 mb-4">
+      <button
+        className="border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-semibold transition-colors duration-300"
+        onClick={handleEnrollnow}
+      >
+        Enroll Now
+      </button>
+    </div>
+  </div>
   );
 };
 

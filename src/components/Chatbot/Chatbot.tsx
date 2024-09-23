@@ -37,7 +37,7 @@ const Chatbot: React.FC = () => {
     <div className="fixed bottom-5 z-50 right-5">
       {!isOpen && (
         <button 
-          className="bg-primary text-white p-4 rounded-full shadow-lg"
+          className="bg-secondary text-white p-4 rounded-full shadow-lg"
           onClick={() => setIsOpen(true)}
         >
           <img src="/cou.png" alt="Chat" className="w-8 h-8"/>
@@ -45,7 +45,7 @@ const Chatbot: React.FC = () => {
       )}
 
       {isOpen && (
-        <div className="w-80 sm:w-96 bg-white shadow-lg rounded-lg border border-gray-300">
+        <div className="w-80 sm:w-96 bg-[#efedec] shadow-2xl  rounded-lg border border-gray-400">
           <div className="bg-primary text-white p-4 flex justify-between items-center">
             <h3 className="text-lg font-bold">Chat with us</h3>
             <button 
@@ -55,7 +55,7 @@ const Chatbot: React.FC = () => {
               <CgClose className='h-8 w-8' />
             </button>
           </div>
-          <div className="bg-gray-50 p-4 h-80 overflow-y-auto">
+          <div className="bg-[#F4ECE6] p-4 h-80 overflow-y-auto">
             <ChatMessages messages={messages} />
           </div>
           <ChatInput addMessage={addMessage} />
