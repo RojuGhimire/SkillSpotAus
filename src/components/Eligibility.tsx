@@ -8,7 +8,7 @@ import Fifth from "./sections/Form/Fifth";
 import Sixth from "./sections/Form/Sixth";
 
 const Eligibility: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
   const [isFirstVisible, setIsFirstVisible] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
 

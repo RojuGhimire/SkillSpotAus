@@ -39,19 +39,16 @@ const ContactSection: React.FC = () => {
           className="w-full lg:w-[426px] h-[43px] border border-gray-300 p-2 rounded mb-4"
         />
 
-        <div className="w-[426px] mb-6">
-
+        <div className="w-full max-w-[426px] mb-6"> {/* Make it full-width and constrain max width */}
           <div className="relative">
             <textarea
-
               required
-              className="w-full p-3 border border-gray-300 rounded-lg shadow-sm  outline-none resize-none"
+              className="w-full p-3 border border-gray-300 rounded-lg shadow-sm outline-none resize-none"
               placeholder="Message"
               name="description"
             ></textarea>
           </div>
         </div>
-
         {/* Enroll Button */}
         <button className="w-full lg:w-[110px] h-[45px] text-lg font-overpass flex items-center justify-center hover:bg-secondary bg-primary text-white rounded transition duration-500 ease-in-out transform hover:bg-secondary-dark hover:scale-105">
           Enroll Now
@@ -59,7 +56,7 @@ const ContactSection: React.FC = () => {
       </div>
 
       {/* Office Information Box */}
-      <div className="bg-primary text-white p-8 w-full lg:w-[365.69px] lg:h-[434.27px] mt-6 lg:mt-0 lg:top-[90.65px] lg:right-[100.31px] rounded-2xl ml-0 lg:ml-10 relative"> 
+      <div className="bg-primary text-white p-8 w-full lg:w-[365.69px] lg:h-[434.27px] mt-6 lg:mt-0 lg:top-[90.65px] lg:right-[100.31px] rounded-2xl ml-0 lg:ml-10 relative">
         <h3 className="text-2xl lg:text-3xl font-bold mb-4">
           LET'S HAVE A<br /> TALK
         </h3>

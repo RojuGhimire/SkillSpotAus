@@ -5,8 +5,10 @@ import { useInView } from "react-intersection-observer";
 import ContactSection from "../components/sections/ContactSection";
 import { Footer2 } from "../components/sections/Footer2";
 // import RPLSteps from "@/components/sections/RPLstep";
-import StatsSection from "@/components/sections/Stat";
 import Footer3 from "@/components/sections/Footer3";
+import FAQ from "@/components/sections/FAQ";
+import Affiliates from "@/components/sections/Our";
+import CourseStats from "@/components/sections/Coursestats";
 
 const About: React.FC = () => {
   const { ref: leftContentRef, inView: leftContentInView } = useInView({
@@ -22,7 +24,7 @@ const About: React.FC = () => {
     <div className="w-full">
       <Header />
       <img src="/About.png" alt="" className="w-full" />
-      <section className="flex flex-col lg:flex-row items-center lg:items-start p-6  sm:p-8 lg:px-20 lg:h-auto lg:p-16">
+      <section className="flex flex-col lg:flex-row items-center lg:items-start p-6 sm:p-8 lg:px-20 lg:h-auto ">
         <div className="flex flex-col lg:flex-row lg:-mt-8">
           {/* Left Content */}
           <motion.div
@@ -114,14 +116,13 @@ const About: React.FC = () => {
         </div>
       </section>
       {/* <RPLSteps /> */}
-      <StatsSection />
-
+<CourseStats />
       {/*Popular Course */}
 
       <div className="  font-overpass lg:px-20 p-8">
         <div className="flex flex-col items-center justify-center gap-[100px]  md:flex-row">
           {/* Left section */}
-          <div className="md:w-[480px] md:h-[700px] flex flex-col   justify-center mb-8 md:mb-0">
+          <div className="md:w-[480px] md:h-[700px] flex flex-col mt-10  justify-center mb-8 md:mb-0">
             <h1 className="text-3xl md:text-4xl font-bold text-start mb-4">
               Achieve Your Dream With Skill Spot Australia
             </h1>
@@ -130,13 +131,13 @@ const About: React.FC = () => {
               interested in various RPL certificates. Empowering your journey
               with tailored support and guidance every step of the way.
             </p>
-            <div className="bg-[#F6ECED]  p-8 rounded-lg shadow-md w-[445px] h-[490px] items-center justify-center ">
+            <div className="bg-[#F6ECED]  p-8 rounded-lg shadow-md w-[405px] mb-7  h-[490px] items-center justify-center ">
               <h2 className="text-3xl  font-extrabold font-poppins text-center text-primary mb-6">
                 You're Just 60 <br /> Seconds Away <br />
                 From Transforming <br />
                 Your Life
               </h2>
-              <p className="text-center text-gray-700 mb-6">
+              <p className="text-center text-gray-700 px-10 mb-6">
                 Don’t wait, take the first step towards a brighter future today.
                 Join thousands of successful candidates who used our FREE 60
                 second skills check to kickstart their RPL journey. Discover how
@@ -207,6 +208,8 @@ const About: React.FC = () => {
         </div>
       </div>
       <ContactSection />
+      <FAQ />
+      <Affiliates />
       <Footer3 />
       <Footer2 />
     </div>
