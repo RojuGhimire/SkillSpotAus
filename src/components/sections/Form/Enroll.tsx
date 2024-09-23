@@ -193,11 +193,9 @@ const ApplicationForm2: React.FC = () => {
                 {/* Left Section (Text) */}
                 <div className="w-full lg:w-5/5">
                     <h2 className="text-4xl font-bold text-primary mb-4">Course Introduction</h2>
-                    <p className="text-xl font-semibold text-secondary mb-5">
-                        CERTIFICATE III IN AUTOMOTIVE BODY REPAIR TECHNOLOGY - AUR32120
-                    </p>
+                  
                     <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                        CERTIFICATE III IN AUTOMOTIVE BODY REPAIR TECHNOLOGY is a unique program
+                        <span className='text-xl font-semibold text-secondary '>CERTIFICATE III IN AUTOMOTIVE BODY REPAIR TECHNOLOGY  - AUR32120</span> is a unique program
                         designed to integrate knowledge and skills in analyzing, designing,
                         developing, and maintaining systems for business houses. This course covers
                         124 credit hours.
