@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     <div className="font-overpass">
       {/* Subscribe Section */}
       <div className="relative mb-5  ">
-        <div className="relative top-[100px]  bg-primary text-white p-6 rounded-3xl lg:h-[155px] h-auto lg:w-[1005px] lg:mb-16 mx-auto max-w-7xl shadow-2xl">
+        <div className="relative top-[100px]   bg-primary text-white p-6 rounded-3xl lg:h-[155px] h-auto lg:w-[1005px] lg:mb-16 mx-auto max-w-7xl shadow-2xl">
           <div className="flex flex-col lg:flex-row justify-between lg:px-10 items-center space-y-4 lg:space-y-0">
             <div className="text-center lg:text-left">
               <h2 className="text-2xl font-bold">

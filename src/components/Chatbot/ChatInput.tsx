@@ -11,20 +11,20 @@ const ChatInput: React.FC<ChatInputProps> = ({ addMessage }) => {
     e.preventDefault();
     if (input.trim()) {
       addMessage(input);
-      setInput(''); // Clear input after sending the message
+      setInput('');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center p-2 border-t border-gray-300">
+    <form onSubmit={handleSubmit} className="flex p-2">
       <input
         type="text"
-        className="w-full p-2 rounded-md border border-gray-300 focus:outline-none"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Type your message..."
+        className="flex-grow border rounded-l-lg p-2"
       />
-      <button type="submit" className="ml-2 bg-primary text-white px-4 py-2 rounded-md">
+      <button type="submit" className="bg-primary text-white rounded-r-lg p-2">
         Send
       </button>
     </form>

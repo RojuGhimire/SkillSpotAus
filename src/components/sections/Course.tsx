@@ -48,7 +48,7 @@ const courses: Course[] = [
   },
   {
     id: 7,
-    title: "Automotive Body Repair Technology",
+    title: "Automotive Body Repair Technology ",
     image: "/hos.png",
     category: "Trade",
   },
