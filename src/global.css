@@ -70,5 +70,5 @@ body::-webkit-scrollbar {
   color: #001b6a;
 }
 .slick-dots li.slick-active button:before {
-  color: #000;
+  color: #001b6a;
 }
