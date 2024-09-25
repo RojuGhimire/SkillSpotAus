@@ -16,7 +16,7 @@ const rplQA = [
 
 const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]); // Use Message type
+  const [messages, setMessages] = useState<Message[]>([]); 
 
   const addMessage = (message: string) => {
     const userMessage: Message = { user: 'user', text: message };

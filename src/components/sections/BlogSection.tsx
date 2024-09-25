@@ -38,8 +38,7 @@ const BlogPostSection: React.FC = () => {
             {posts.map((post) => (
               <div
                 key={post.id}
-                className="bg-white hover:bg-[#F6ECED] w-full max-w-[434px] mx-auto shadow-lg rounded-lg transition-transform duration-200 hover:scale-105"
-              >
+                className="bg-white hover:bg-[#F6ECED] w-full max-w-[434px] mx-auto shadow-lg rounded-lg transition-transform duration-200 hover:scale-105">
                 {/* Content */}
                 <div className="p-6">
                   {/* Image */}
