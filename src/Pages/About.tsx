@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ContactSection from "../components/sections/ContactSection";
 import { Footer2 } from "../components/sections/Footer2";
-// import RPLSteps from "@/components/sections/RPLstep";
+import RPLSteps from "@/components/sections/RPLstep";
 import Footer3 from "@/components/sections/Footer3";
 import FAQ from "@/components/sections/FAQ";
 import Affiliates from "@/components/sections/Our";
@@ -115,7 +115,7 @@ const About: React.FC = () => {
           </motion.div>
         </div>
       </section>
-      {/* <RPLSteps /> */}
+      <RPLSteps />
 <CourseStats />
       {/*Popular Course */}
 
