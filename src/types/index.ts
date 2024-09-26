@@ -9,11 +9,6 @@ export type ActiveLinkContextType = {
     setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export interface ServiceCardProps {
-    title: string;
-    description: string;
-    image: string;
-}
 
 export interface ViewportContextType {
     width: number;
