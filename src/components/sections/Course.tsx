@@ -74,7 +74,7 @@ const CourseGrid: React.FC = () => {
   };
 
   return (
-    <div className="p-4 md:p-8 lg:h-[1050.81px] font-overpass lg:px-20 mb-10">
+    <div className="p-4 md:p-8 lg:h-[1080.81px] font-overpass lg:px-20 mb-10">
       <div className="h-[100px] items-center justify-center mb-12">
         <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
           Popular Courses
@@ -96,7 +96,7 @@ const CourseGrid: React.FC = () => {
       <div className="flex items-center justify-center mt-10">
         <button
           onClick={handleViewMoreClick}
-          className="text-white hover:scale-105 bg-primary text-center gap-4 flex shadow-2xl w-[183px] items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
+          className="text-white hover:scale-105 bg-primary text-center gap-4 flex shadow-2xl w-[183px] h-16 items-center justify-center border border-gray-300 px-4 py-2 rounded-full hover:bg-secondary font-semibold hover:text-white transition-colors duration-300"
         >
           View More <FiArrowRight />
         </button>
@@ -123,7 +123,7 @@ const CourseCard: React.FC<{ course: Course }> = ({ course }) => {
           <img
             src={course.image}
             alt={course.title}
-            className="w-full h-[200px] rounded-lg object-cover" // Ensure uniform size
+            className="w-full h-[260px] rounded-lg object-cover" // Ensure uniform size
           />
         ) : (
           <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
