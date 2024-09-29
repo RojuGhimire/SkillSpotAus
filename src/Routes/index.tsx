@@ -11,6 +11,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import BlogDetail from "@/Pages/BlogDetail";
 import ApplicationForm from "@/components/sections/Form/Applynow";
 import ApplicationForm2 from "@/components/sections/Form/Enroll";
+import { DashboardLayout } from "@/Dashboard/DashboardLayout";
 
 const AppRoutes = () => {
   return (
@@ -28,6 +29,8 @@ const AppRoutes = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/applynow' element={<ApplicationForm />} />
           <Route path='/enroll' element={<ApplicationForm2 />} />
+          <Route path='/dashboard' element={<DashboardLayout children={undefined} />} />
+
 
         </Routes>
       </ActiveLinkContextProvider>
