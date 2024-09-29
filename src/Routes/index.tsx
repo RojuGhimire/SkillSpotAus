@@ -12,6 +12,8 @@ import BlogDetail from "@/Pages/BlogDetail";
 import ApplicationForm from "@/components/sections/Form/Applynow";
 import ApplicationForm2 from "@/components/sections/Form/Enroll";
 import { DashboardLayout } from "@/Dashboard/DashboardLayout";
+import { BlogPost } from "@/Dashboard/Blog/Blogpost";
+import CreateBlog from "@/Dashboard/Blog/CreateBlog";
 
 const AppRoutes = () => {
   return (
@@ -29,7 +31,10 @@ const AppRoutes = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/applynow' element={<ApplicationForm />} />
           <Route path='/enroll' element={<ApplicationForm2 />} />
+          <Route path='/blogpost' element={<BlogPost />} />
+          <Route path='/Createblogpost' element={<CreateBlog />} />
           <Route path='/dashboard' element={<DashboardLayout children={undefined} />} />
+          
 
 
         </Routes>
