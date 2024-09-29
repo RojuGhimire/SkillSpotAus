@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaBlog, FaCogs, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaBlog, FaCogs, FaSignOutAlt, FaBars } from 'react-icons/fa';
 
 // Sidebar Component
-const Sidebar = () => {
+const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <div className="bg-[#F6ECED] w-64  mt-0 p-5 rounded-t-3xl">
+    <div className={`bg-[#F6ECED] w-64 p-5 mt-0 rounded-t-3xl transition-transform duration-300 ease-in-out
+      ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:relative z-20 h-full`}>
       <div className="flex flex-col justify-center items-center mb-8">
         <img src="/cou.png" alt="Admin" className="w-16 h-16 rounded-full" />
         <div className="mt-4">
@@ -20,11 +21,11 @@ const Sidebar = () => {
         </li>
         <li>
           <Link to="/blogpost" className="flex items-center">
-            <FaBlog className="mr-2" />Refferal 
+            <FaBlog className="mr-2" />Refferal
           </Link>
         </li>
         <li>
-          <Link to="/settings" className="flex items-center">
+          <Link to="/personalInfo" className="flex items-center">
             <FaCogs className="mr-2" />Settings
           </Link>
         </li>
@@ -39,16 +40,22 @@ const Sidebar = () => {
 };
 
 // Navbar Component
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   return (
-    <div className="flex justify-between items-center  bg-[#F6ECED] h-20 w-full rounded-t-3xl px-6 py-4">
-       <img
-              src="logo2.png"
-              alt="Logo"
-              className=" w-20  h-16  object-contain"
-            />
-      <h1 className="text-primary font-bold text-2xl">Skill Spot Australia</h1>
-      <input type="text" placeholder="Search..." className="border p-2 text-primary border-gray-200 shadow-lg bg-white rounded" />
+    <div className="flex justify-between items-center bg-[#F6ECED] h-20 w-full rounded-t-3xl px-6 py-4">
+      <button
+        className="md:hidden text-primary text-2xl focus:outline-none"
+        onClick={toggleSidebar}
+      >
+        <FaBars />
+      </button>
+      <img src="logo2.png" alt="Logo" className="w-20 h-16 object-contain" />
+      <h1 className="text-primary font-bold text-lg md:text-2xl">Skill Spot Australia</h1>
+      <input
+        type="text"
+        placeholder="Search..."
+        className="hidden md:block border p-2 text-primary border-gray-200 shadow-lg bg-white rounded"
+      />
       <div className="flex items-center space-x-4">
         <span>Client</span>
         <img src="/cou.png" alt="Admin" className="w-10 h-10 rounded-full" />
@@ -57,16 +64,24 @@ const Navbar = () => {
   );
 };
 
+// ClientLayout Component (with responsiveness)
 export const ClientLayout = ({ children }: { children: React.ReactNode }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
-    <div className="h-screen flex flex-col ">
-      {/* Navbar is placed on top */}
-      <Navbar />
-      
-      {/* Sidebar and content are below the navbar */}
-      <div className="flex mt-3 ml-2 flex-1">
-        <Sidebar />
-        <div className="flex-1 p-5 overflow-auto">{children}</div>
+    <div className="h-screen flex flex-col">
+      <Navbar toggleSidebar={toggleSidebar} />
+
+      <div className="flex flex-1">
+        <Sidebar isOpen={sidebarOpen} />
+
+        <div className="flex-1 p-5 mt-20 md:mt-3 ml-0 md:ml-64 overflow-auto transition-all duration-300">
+          {children}
+        </div>
       </div>
     </div>
   );

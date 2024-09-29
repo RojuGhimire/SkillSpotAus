@@ -15,6 +15,7 @@ import { DashboardLayout } from "@/Dashboard/DashboardLayout";
 import { BlogPost } from "@/Dashboard/Blog/Blogpost";
 import CreateBlog from "@/Dashboard/Blog/CreateBlog";
 import { ClientLayout } from "@/ClientPortal/ClientLayout";
+import PersonalInfoForm from "@/ClientPortal/PersonalInfo";
 
 const AppRoutes = () => {
   return (
@@ -34,6 +35,7 @@ const AppRoutes = () => {
           <Route path='/enroll' element={<ApplicationForm2 />} />
           <Route path='/blogpost' element={<BlogPost />} />
           <Route path='/Createblogpost' element={<CreateBlog />} />
+          <Route path='/PersonalInfo' element={<PersonalInfoForm />} />
           <Route path='/dashboard' element={<DashboardLayout children={undefined} />} />
           <Route path="/client" element={<ClientLayout children={undefined}/>} />
 
