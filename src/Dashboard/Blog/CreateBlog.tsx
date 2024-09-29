@@ -20,7 +20,7 @@ const CreateBlog = () => {
 
     // Clear form fields after submission
     setTitle('');
-    setContent('');
+     setContent('');
   };
 
   return (
