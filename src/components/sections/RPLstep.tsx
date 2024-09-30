@@ -3,7 +3,7 @@ import React from 'react';
 const RPLSteps: React.FC = () => {
   return (
     <>
-      <div className='ml-20 h-[95px] border-secondary border-l-4'>
+      <div className='ml-20 h-[95px] overflow-hidden border-secondary border-l-4'>
         <div className='p-4 font-overpass  mb-10 ml-1 border-primary border-l-4 '>
           <h1 className='text-4xl mb-2'> How RPL Works</h1>
           <h2 className='text-lg text-gray-500'>Four Step to success</h2>

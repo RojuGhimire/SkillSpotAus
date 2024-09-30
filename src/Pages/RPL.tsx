@@ -5,6 +5,7 @@ import RPL1 from "@/components/sections/RPL1";
 import Footer3 from "@/components/sections/Footer3";
 import FAQ from "@/components/sections/FAQ";
 import Banner3 from "@/components/sections/Banner3";
+import RPLSteps from "@/components/sections/RPLstep";
 
 interface Course {
   id: number;
@@ -83,12 +84,13 @@ const RPL: React.FC = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <Header />
       <img src="/RPL.png" alt="" className="w-full" />
-      <div className="p-4 md:p-8 lg:h-full lg:px-20">
+      <div className="p-4 md:p-8 lg:h-full">
         <RPL1 />
-        <div className="h-[100px] items-center justify-center mb-12">
+        <RPLSteps  />
+        <div className="h-[100px] mt-10 items-center justify-center mb-12">
           <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
             Popular Courses
           </h2>
