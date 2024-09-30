@@ -5,8 +5,10 @@ import { FaHome, FaBlog, FaCogs, FaSignOutAlt, FaBars } from 'react-icons/fa';
 // Sidebar Component
 const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <div className={`bg-[#F6ECED] w-64 p-5 mt-0 rounded-t-3xl transition-transform duration-300 ease-in-out
-      ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:relative z-20 h-full`}>
+    <div
+      className={`bg-[#F6ECED] w-64 p-5 mt-0 rounded-t-3xl transition-transform duration-300 ease-in-out
+      ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 fixed lg:relative z-20 h-full`}
+    >
       <div className="flex flex-col justify-center items-center mb-8">
         <img src="/cou.png" alt="Admin" className="w-16 h-16 rounded-full" />
         <div className="mt-4">
@@ -16,22 +18,26 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
       <ul className="space-y-6 text-primary font-overpass text-lg font-bold">
         <li>
           <Link to="/Client" className="flex items-center">
-            <FaHome className="mr-2" />Home
+            <FaHome className="mr-2" />
+            Home
           </Link>
         </li>
         <li>
-          <Link to="/blogpost" className="flex items-center">
-            <FaBlog className="mr-2" />Refferal
+          <Link to="/reffer" className="flex items-center">
+            <FaBlog className="mr-2" />
+            Refferal
           </Link>
         </li>
         <li>
           <Link to="/personalInfo" className="flex items-center">
-            <FaCogs className="mr-2" />Settings
+            <FaCogs className="mr-2" />
+            Settings
           </Link>
         </li>
         <li>
           <Link to="/logout" className="flex items-center">
-            <FaSignOutAlt className="mr-2" />Logout
+            <FaSignOutAlt className="mr-2" />
+            Logout
           </Link>
         </li>
       </ul>
@@ -44,7 +50,7 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   return (
     <div className="flex justify-between items-center bg-[#F6ECED] h-20 w-full rounded-t-3xl px-6 py-4">
       <button
-        className="md:hidden text-primary text-2xl focus:outline-none"
+        className="lg:hidden text-primary text-2xl focus:outline-none"
         onClick={toggleSidebar}
       >
         <FaBars />
@@ -77,9 +83,11 @@ export const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <Navbar toggleSidebar={toggleSidebar} />
 
       <div className="flex flex-1">
+        {/* Sidebar */}
         <Sidebar isOpen={sidebarOpen} />
 
-        <div className="flex-1 p-5 mt-20 md:mt-3 ml-0 md:ml-64 overflow-auto transition-all duration-300">
+        {/* Main Content */}
+        <div className="flex-1 p-5 mt-20 lg:mt-0 ml-0 lg:ml-64 overflow-auto transition-all duration-300">
           {children}
         </div>
       </div>

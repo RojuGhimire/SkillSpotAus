@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaBlog, FaCogs, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaCogs, FaSignOutAlt, FaBloggerB } from 'react-icons/fa';
+import { TiMessages } from 'react-icons/ti';
 
 // Sidebar Component
 const Sidebar = () => {
   return (
-    <div className="bg-[#F6ECED] w-64  mt-0 p-5 rounded-t-3xl">
+    <div className="bg-[#b6aeaf] w-64  mt-0 p-5 rounded-t-3xl">
       <div className="flex flex-col justify-center items-center mb-8">
         <img src="/cou.png" alt="Admin" className="w-16 h-16 rounded-full" />
         <div className="ml-4">
@@ -20,7 +21,12 @@ const Sidebar = () => {
         </li>
         <li>
           <Link to="/blogpost" className="flex items-center">
-            <FaBlog className="mr-2" />Blog
+            <FaBloggerB className="mr-2" />Blog
+          </Link>
+        </li>
+        <li>
+          <Link to="/blogpost" className="flex items-center">
+            <TiMessages className="mr-2" />Testimonial
           </Link>
         </li>
         <li>
@@ -41,7 +47,7 @@ const Sidebar = () => {
 // Navbar Component
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center  bg-[#F6ECED] h-20 w-full rounded-t-3xl px-6 py-4">
+    <div className="flex justify-between items-center  bg-[#b6aeaf] h-20 w-full rounded-t-3xl px-6 py-4">
        <img
               src="logo2.png"
               alt="Logo"
