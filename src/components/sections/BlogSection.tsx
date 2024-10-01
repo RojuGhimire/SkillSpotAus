@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const BlogPostSection: React.FC = () => {
   const posts = [
@@ -21,7 +22,11 @@ const BlogPostSection: React.FC = () => {
         "Connect with our skilled counselors at Skill Spot Australia. Receive personalized guidance and support tailored to your career goals and aspirations. Start your journey to success today.",
     },
   ];
-
+  const navigate = useNavigate();
+   
+  const handleReadMore = () => {
+    navigate("/blog")
+  }
   return (
     <section className="my-auto lg:mt-10  mb-10 px-4 bg-white">
       <div className="container font-overpass mx-auto text-center px-4 md:px-0">
@@ -50,7 +55,9 @@ const BlogPostSection: React.FC = () => {
                   <p className="text-gray-700 font-overpass mb-4">
                     {post.description}
                   </p>
-                  <button className="text-primary transition-transform duration-200 hover:scale-105 bg-white border-2 border-primary hover:border-white px-4 py-2 rounded-full hover:bg-secondary hover:text-white font-overpass ">
+                  <button
+                  onClick={handleReadMore}
+                  className="text-primary transition-transform duration-200 hover:scale-105 bg-white border-2 border-primary hover:border-white px-4 py-2 rounded-full hover:bg-secondary hover:text-white font-overpass ">
                     Read More →
                   </button>
                 </div>
