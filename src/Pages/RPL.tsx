@@ -89,7 +89,7 @@ const RPL: React.FC = () => {
       <img src="/RPL.png" alt="" className="w-full" />
       <div className="p-4 md:p-8 lg:h-full">
         <RPL1 />
-        <RPLSteps  />
+        <RPLSteps />
         <div className="h-[100px] mt-10 items-center justify-center mb-12">
           <h2 className="text-3xl font-bold text-center mb-4 font-overpass">
             Popular Courses
@@ -108,11 +108,10 @@ const RPL: React.FC = () => {
             <button
               key={index}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded ${
-                activeCategory === category
+              className={`px-4 py-2 rounded ${activeCategory === category
                   ? "bg-primary text-white"
                   : "bg-white text-primary font-bold border border-gray-300"
-              } transition-colors duration-300`}
+                } transition-colors duration-300`}
             >
               {category}
             </button>
@@ -126,30 +125,30 @@ const RPL: React.FC = () => {
               key={course.id}
               className=""
             >
-               <div className="relative  border rounded-lg shadow-xl overflow-hidden pb-4">
-        <div className="p-4">
-          <h3 className="text-lg font-bold text-primary mb-2 text-center">
-            {course.title}
-          </h3>
-          {course.image ? (
-            <img
-              src={course.image}
-              alt={course.title}
-              className="w-full h-[264px] rounded-lg object-cover"
-            />
-          ) : (
-            <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
-              No Image Available
-            </div>
-          )}
-        </div>
-      </div>
-      {/* Button outside the card */}
-      <div className="mt-4 text-center mb-4">
-      <button className=" border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-bold  transition-colors duration-300">
-          Enroll Now
-        </button>
-      </div>
+              <div className="relative  border rounded-lg shadow-xl overflow-hidden pb-4">
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-primary mb-2 text-center">
+                    {course.title}
+                  </h3>
+                  {course.image ? (
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-full h-[264px] rounded-lg object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-[200px] bg-gray-200 flex items-center justify-center text-gray-500">
+                      No Image Available
+                    </div>
+                  )}
+                </div>
+              </div>
+              {/* Button outside the card */}
+              <div className="mt-4 text-center mb-4">
+                <button className=" border-2 border-primary px-4 py-3 text-primary hover:text-white rounded-lg w-[175px] hover:border-white hover:bg-secondary font-bold  transition-colors duration-300">
+                  Enroll Now
+                </button>
+              </div>
             </div>
           ))}
         </div>

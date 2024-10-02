@@ -116,7 +116,7 @@ const About: React.FC = () => {
         </div>
       </section>
       <RPLSteps />
-<CourseStats />
+      <CourseStats />
       {/*Popular Course */}
 
       <div className="  font-overpass lg:px-20 p-8">
@@ -145,23 +145,23 @@ const About: React.FC = () => {
                 qualification, propelling your career to new heights.
               </p>
               <div className="items-center justify-center flex">
-              <button className="w-[115px] bg-primary hover:bg-secondary text-white py-2 rounded-full">
-                Lets Go →
-              </button>
+                <button className="w-[115px] bg-primary hover:bg-secondary text-white py-2 rounded-full">
+                  Lets Go →
+                </button>
               </div>
             </div>
           </div>
           {/* middle Section */}
           <div className="mb-6">
-        <div className="flex  flex-col items-center mb-2 ">
-          <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full">1</span>
-          <div className="w-2 h-[250px] bg-zinc-300 mx-1"></div>
-          <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full"> 2</span>
-          <div className="w-2 h-[250px] bg-zinc-300 mx-1"></div>
-          <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full"> 3</span>
+            <div className="flex  flex-col items-center mb-2 ">
+              <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full">1</span>
+              <div className="w-2 h-[250px] bg-zinc-300 mx-1"></div>
+              <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full"> 2</span>
+              <div className="w-2 h-[250px] bg-zinc-300 mx-1"></div>
+              <span className=" bg-primary  text-white w-8 h-8 flex items-center justify-center rounded-full"> 3</span>
 
-        </div>
-      </div>
+            </div>
+          </div>
           {/* Right section */}
           <div className="md:w-1/2 flex flex-col justify-between">
             <div className="flex items-center  mb-8">

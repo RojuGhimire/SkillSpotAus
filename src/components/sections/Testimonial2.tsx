@@ -125,9 +125,8 @@ const Testimonial2: React.FC = () => {
         {testimonials.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
-              index === 0 ? "bg-primary" : "bg-gray-300"
-            }`}
+            className={`w-3 h-3 rounded-full ${index === 0 ? "bg-primary" : "bg-gray-300"
+              }`}
           ></button>
         ))}
       </div>
