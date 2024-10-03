@@ -53,7 +53,7 @@ const Footer3: React.FC = () => {
           {/* Logo and Description */}
           <div className="flex flex-col items-center md:mt-7 lg:mt-0 justify-center ">
             <img
-              src="/logo2.png"
+              src="/logobg.png"
               alt="Skill Spot Australia"
               className="w-[112px] h-[105px] mb-4"
             />

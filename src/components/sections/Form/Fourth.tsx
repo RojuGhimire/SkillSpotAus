@@ -26,7 +26,7 @@ const Fourth: React.FC<FourthProps> = ({ onNext, onPrevious }) => {
     return (
         <div className="bg-[#F6ECED] p-6 px-10 rounded-t-3xl shadow-lg w-full max-w-[900px] mt-20 mx-auto">
             <img
-                src="/logo2.png"
+                src="/logobg.png"
                 alt="Skill Spot Australia Logo"
                 className="mx-auto mb-4"
             />

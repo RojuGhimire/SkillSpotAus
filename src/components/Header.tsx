@@ -96,9 +96,9 @@ export default function Header() {
             }}
           >
             <img
-              src="logo.png"
+              src="logo3.jpg"
               alt="Logo"
-              className=" w-20  h-12 lg:w-[150px] lg:h-[90px] object-contain lg:-mt-10"
+              className=" w-20  h-12 lg:w-[140px] lg:h-[95px] object-contain lg:-mt-10"
             />
           </a>
 

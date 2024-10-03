@@ -41,7 +41,7 @@ const First: React.FC<FirstProps> = ({ onNext }) => {
   return (
     <div className="bg-[#F6ECED] p-6 md:p-10 rounded-t-3xl shadow-lg w-[90%] md:w-[60%] lg:w-[50%] mt-10 mx-auto">
       <img
-        src="/logo2.png"
+        src="/logobg.png"
         alt="Skill Spot Australia Logo"
         className="mx-auto mb-4 w-[5rem] md:w-[6rem] lg:w-[7rem]"
       />

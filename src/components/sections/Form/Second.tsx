@@ -47,7 +47,7 @@ const Second: React.FC<SecondProps> = ({ onNext, onPrevious }) => {
   return (
     <div className="bg-[#F6ECED] p-6 px-4 md:px-10 rounded-t-3xl shadow-lg w-[90%] md:w-[60%] lg:w-[50%] mt-10 mx-auto">
       <img
-        src="/logo2.png"
+        src="/logobg.png"
         alt="Skill Spot Australia Logo"
         className="mx-auto mb-4 w-[4rem] md:w-[5rem] lg:w-[6rem]"
       />
