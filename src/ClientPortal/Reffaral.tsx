@@ -190,7 +190,7 @@ const ReferFriendForm = () => {
               className="mr-2"
               required
             />
-            I accept the terms and conditions
+            I accept the terms and conditions    
           </label>
         </div>
 
