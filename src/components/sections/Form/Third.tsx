@@ -29,7 +29,7 @@ const Third: React.FC<ThirdProps> = ({ onNext, onPrevious }) => {
       <img
         src="/logobg.png"
         alt="Skill Spot Australia Logo"
-        className="mx-auto mb-4 w-[4rem] md:w-[5rem] lg:w-[6rem]"
+        className="mx-auto mb-4 w-[4rem] md:w-[5rem]  lg:w-[6rem]"
       />
 
       {/* Heading */}

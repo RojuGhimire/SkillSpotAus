@@ -12,7 +12,7 @@ const Fifth: React.FC<FifthProps> = ({  onNext, onPrevious }) => {
             <img
                 src="/logobg.png"
                 alt="Skill Spot Australia Logo"
-                className="mx-auto  mb-4"
+                className="mx-auto mb-4 w-[4rem] md:w-[5rem]  lg:w-[6rem]"
             />
             <div className='flex w-full items-center justify-center flex-col '>
                 <h2 className="text-xl  font-semibold text-center mb-4">

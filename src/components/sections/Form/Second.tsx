@@ -166,16 +166,16 @@ const Second: React.FC<SecondProps> = ({ onNext, onPrevious }) => {
 
         {errors.workLocation && <p className="text-red-500 text-sm">{errors.workLocation}</p>}
 
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-5">
+        <div className="flex space-x-4 mt-5">
           <button
             onClick={onPrevious}
-            className="bg-primary text-white font-bold text-sm md:text-md font-overpass hover:bg-primary-dark w-[150px] md:w-[175px] p-2 rounded-full"
+            className="font-bold bg-white text-md font-overpass border border-primary hover:text-white hover:bg-primary text-black w-[175px] p-2 rounded-full"
           >
             Previous
           </button>
           <button
             onClick={handleNext}
-            className="bg-primary text-white font-bold text-sm md:text-md font-overpass hover:bg-primary-dark w-[150px] md:w-[175px] p-2 rounded-full"
+            className="bg-primary text-white font-bold w-[175px] p-2 rounded-full"
           >
             Next
           </button>
