@@ -8,16 +8,16 @@ interface Testimonial {
   id: number;
   author: string;
   content: string;
-  image: string;
+  image: string | File; // Changed to accept a File object for uploaded images
 }
 
 // Sample testimonial data
-const testimonialData: Testimonial[] = [
-  { id: 1, author: "John Doe", content: "This is a great service!", image: "https://randomuser.me/api/portraits/women/44.jpg" },
-  { id: 2, author: "Jane Smith", content: "Highly recommend this company.", image: 'https://randomuser.me/api/portraits/women/44.jpg' },
+const initialTestimonials: Testimonial[] = [
+  { id: 1, author: "John Doe", content: "This is a great service!", image: 'https://via.placeholder.com/150' },
+  { id: 2, author: "Jane Smith", content: "Highly recommend this company.", image: 'https://via.placeholder.com/150' },
 ];
 
-const TestimonialTable = ({ onEdit, onDelete }: { onEdit: (testimonial: Testimonial) => void, onDelete: (testimonial: Testimonial) => void }) => {
+const TestimonialTable = ({ testimonials, onEdit, onDelete }: { testimonials: Testimonial[], onEdit: (testimonial: Testimonial) => void, onDelete: (testimonial: Testimonial) => void }) => {
   return (
     <div className="overflow-x-auto">
       <table className="table-auto w-full bg-gray-50 rounded-lg">
@@ -30,10 +30,14 @@ const TestimonialTable = ({ onEdit, onDelete }: { onEdit: (testimonial: Testimon
           </tr>
         </thead>
         <tbody>
-          {testimonialData.map((testimonial) => (
+          {testimonials.map((testimonial) => (
             <tr key={testimonial.id} className="border-t">
               <td className="p-4">
-                <img src={testimonial.image} alt={testimonial.author} className="w-16 h-16 rounded-full" />
+                <img
+                  src={typeof testimonial.image === 'string' ? testimonial.image : URL.createObjectURL(testimonial.image)}
+                  alt={testimonial.author}
+                  className="w-16 h-16 rounded-full"
+                />
               </td>
               <td className="p-4">{testimonial.author}</td>
               <td className="p-4">{testimonial.content}</td>
@@ -54,13 +58,15 @@ const TestimonialTable = ({ onEdit, onDelete }: { onEdit: (testimonial: Testimon
 };
 
 export const TestimonialPost = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>(initialTestimonials);
   const [isCreateModalOpen, setCreateModalOpen] = useState(false);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
   const [author, setAuthor] = useState('');
   const [content, setContent] = useState('');
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   const handleCreateTestimonial = () => {
     setCreateModalOpen(true);
@@ -70,13 +76,21 @@ export const TestimonialPost = () => {
     setSelectedTestimonial(testimonial);
     setAuthor(testimonial.author);
     setContent(testimonial.content);
-    setImage(testimonial.image);
+    setImagePreview(typeof testimonial.image === 'string' ? testimonial.image : URL.createObjectURL(testimonial.image));
     setEditModalOpen(true);
   };
 
   const handleDeleteTestimonial = (testimonial: Testimonial) => {
     setSelectedTestimonial(testimonial);
     setDeleteModalOpen(true);
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setImage(file);
+      setImagePreview(URL.createObjectURL(file));
+    }
   };
 
   const handleCloseModal = () => {
@@ -86,12 +100,28 @@ export const TestimonialPost = () => {
     setSelectedTestimonial(null);
     setAuthor('');
     setContent('');
-    setImage('');
+    setImage(null);
+    setImagePreview(null);
   };
 
   const handleDeleteConfirm = () => {
     if (selectedTestimonial) {
-      console.log('Testimonial Deleted:', selectedTestimonial.id); // Replace with API call for deletion
+      setTestimonials((prev) => prev.filter((t) => t.id !== selectedTestimonial.id));
+    }
+    handleCloseModal();
+  };
+
+  const handleEditConfirm = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (selectedTestimonial) {
+      const updatedTestimonial = {
+        ...selectedTestimonial,
+        author,
+        content,
+        image: image || selectedTestimonial.image, // Use uploaded image or keep the existing one
+      };
+
+      setTestimonials((prev) => prev.map((t) => (t.id === selectedTestimonial.id ? updatedTestimonial : t)));
     }
     handleCloseModal();
   };
@@ -109,17 +139,14 @@ export const TestimonialPost = () => {
         </button>
       </div>
 
-      <TestimonialTable onEdit={handleEditTestimonial} onDelete={handleDeleteTestimonial} />
+      <TestimonialTable testimonials={testimonials} onEdit={handleEditTestimonial} onDelete={handleDeleteTestimonial} />
 
       {/* Create Testimonial Modal */}
       {isCreateModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
           <div className="bg-white rounded-lg w-1/2 p-6">
             <div className="flex justify-end items-center mb-4">
-              <button
-                className="text-secondary font-bold"
-                onClick={handleCloseModal}
-              >
+              <button className="text-secondary font-bold" onClick={handleCloseModal}>
                 <ImCross />
               </button>
             </div>
@@ -145,20 +172,20 @@ export const TestimonialPost = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">Image URL:</label>
-                <input
-                  type="text"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  placeholder="Image URL"
-                  value={image}
-                  onChange={(e) => setImage(e.target.value)}
-                />
+                <label className="block text-gray-700 text-sm font-bold mb-2">Image:</label>
+                <input type="file" accept="image/*" onChange={handleImageChange} />
+                {imagePreview && (
+                  <img src={imagePreview} alt="Preview" className="mt-2 w-32 h-32 object-cover rounded-full" />
+                )}
               </div>
               <div className="flex justify-end">
                 <button
                   type="submit"
                   className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                  onClick={() => console.log('Testimonial Created')}
+                  onClick={() => {
+                    console.log('Testimonial Created');
+                    // Logic to create testimonial here
+                  }}
                 >
                   Create
                 </button>
@@ -173,15 +200,12 @@ export const TestimonialPost = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
           <div className="bg-white rounded-lg w-1/2 p-6">
             <div className="flex justify-end items-center mb-4">
-              <button
-                className="text-secondary font-bold"
-                onClick={handleCloseModal}
-              >
+              <button className="text-secondary font-bold" onClick={handleCloseModal}>
                 <ImCross />
               </button>
             </div>
             <h2 className="text-2xl font-bold mb-4">Edit Testimonial</h2>
-            <form>
+            <form onSubmit={handleEditConfirm}>
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2">Author:</label>
                 <input
@@ -200,21 +224,18 @@ export const TestimonialPost = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">Image URL:</label>
-                <input
-                  type="text"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  value={image}
-                  onChange={(e) => setImage(e.target.value)}
-                />
+                <label className="block text-gray-700 text-sm font-bold mb-2">Image:</label>
+                <input type="file" accept="image/*" onChange={handleImageChange} />
+                {imagePreview && (
+                  <img src={imagePreview} alt="Preview" className="mt-2 w-32 h-32 object-cover rounded-full" />
+                )}
               </div>
               <div className="flex justify-end">
                 <button
                   type="submit"
                   className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                  onClick={() => console.log('Testimonial Updated')}
                 >
-                  Update
+                  Save Changes
                 </button>
               </div>
             </form>
@@ -222,23 +243,15 @@ export const TestimonialPost = () => {
         </div>
       )}
 
-      {/* Delete Testimonial Modal */}
+      {/* Delete Confirmation Modal */}
       {isDeleteModalOpen && selectedTestimonial && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
-          <div className="bg-white rounded-lg w-1/2 p-6">
-            <h2 className="text-2xl font-bold mb-4">Delete Testimonial</h2>
-            <p>Are you sure you want to delete this testimonial?</p>
-            <div className="flex justify-end space-x-4 mt-4">
-              <button
-                className="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg focus:outline-none"
-                onClick={handleCloseModal}
-              >
-                Cancel
-              </button>
-              <button
-                className="bg-secondary hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none"
-                onClick={handleDeleteConfirm}
-              >
+          <div className="bg-white rounded-lg w-1/3 p-6">
+            <h2 className="text-2xl font-bold mb-4">Confirm Delete</h2>
+            <p>Are you sure you want to delete the testimonial from {selectedTestimonial.author}?</p>
+            <div className="flex justify-end mt-4">
+              <button className="text-gray-500 hover:text-gray-700" onClick={handleCloseModal}>Cancel</button>
+              <button className="bg-secondary hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg ml-2" onClick={handleDeleteConfirm}>
                 Delete
               </button>
             </div>
