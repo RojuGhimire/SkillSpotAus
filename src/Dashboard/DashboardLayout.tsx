@@ -29,6 +29,16 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
+          <Link to="/CreateTestimonial" className="flex items-center">
+            <TiMessages className="mr-2" />Course
+          </Link>
+        </li>
+        <li>
+          <Link to="/CreateNoticeBoard" className="flex items-center">
+            <TiMessages className="mr-2" />Notice Board
+          </Link>
+        </li>
+        <li>
           <Link to="/settings" className="flex items-center">
             <FaCogs className="mr-2" />Settings
           </Link>

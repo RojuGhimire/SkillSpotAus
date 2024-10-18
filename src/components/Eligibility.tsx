@@ -61,7 +61,7 @@ const Eligibility: React.FC = () => {
 
   return (
     <div className="relative z-50 mx-auto">
-      <div className="fixed bottom-28 lg:bottom-24 left-1/2 transform -translate-x-1/2">
+      <div className="fixed lg:bottom-1  w-full flex  items-center justify-center left-1/2 transform -translate-x-1/2">
         <button
           onClick={handleApplyNowClick}
           type="button"
