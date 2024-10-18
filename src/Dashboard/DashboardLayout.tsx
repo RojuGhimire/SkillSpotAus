@@ -8,9 +8,8 @@ const Sidebar = () => {
   return (
     <div className="bg-[#b6aeaf] w-64  mt-0 p-5 rounded-t-3xl">
       <div className="flex flex-col justify-center items-center mb-8">
-        <img src="/cou.png" alt="Admin" className="w-16 h-16 rounded-full" />
-        <div className="ml-4">
-          <h2 className="font-bold text-lg">Admin</h2>
+        <div className=" flex items-center justify-center ">
+          <h2 className="font-bold text-xl ">Admin</h2>
         </div>
       </div>
       <ul className="space-y-6 text-primary font-overpass text-lg font-bold">
@@ -25,7 +24,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/blogpost" className="flex items-center">
+          <Link to="/CreateTestimonial" className="flex items-center">
             <TiMessages className="mr-2" />Testimonial
           </Link>
         </li>
